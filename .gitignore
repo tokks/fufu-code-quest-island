@@ -19,6 +19,5 @@ run_*.py
 day*.json
 exercises_*.json
 part*.json
-*.txt
 *.log
 admin_setup.py
