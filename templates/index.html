@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编程闯关岛</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="start-page">
+    <div class="container min-vh-100 d-flex flex-column justify-content-center align-items-center">
+        <div class="text-center mb-8">
+            <h1 class="game-title">
+                <i class="fas fa-gamepad text-yellow"></i>
+                编程闯关岛
+            </h1>
+            <p class="subtitle">游戏化编程学习项目</p>
+            <div class="mt-4">
+                <img src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=pixel%20art%20island%20with%20coding%20symbols%20and%20adventure%20elements%20colorful%20retro%20style&image_size=square_hd" 
+                     alt="编程闯关岛" class="island-image">
+            </div>
+        </div>
+        
+        <div class="card start-card">
+            <div class="card-body">
+                <h2 class="card-title text-center mb-4">创建你的冒险者</h2>
+                
+                <form id="newGameForm" class="mb-4">
+                    <div class="mb-3">
+                        <label for="playerName" class="form-label">角色名称</label>
+                        <input type="text" class="form-control" id="playerName" placeholder="输入你的名字" maxlength="20">
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        <i class="fas fa-play"></i> 开始冒险
+                    </button>
+                </form>
+                
+                <div class="text-center text-muted">
+                    <p>准备好踏上编程之旅了吗？</p>
+                    <p class="small">学习 Python，收集装备，击败 Bug 之王！</p>
+                </div>
+                
+                <div class="mt-4 pt-4 border-top">
+                    <button type="button" class="btn btn-link text-secondary" onclick="toggleAdminLogin()">
+                        <i class="fas fa-key"></i> 管理员登录
+                    </button>
+                </div>
+                
+                <form id="adminLoginForm" class="mt-4 d-none">
+                    <div class="mb-3">
+                        <label for="adminUsername" class="form-label">管理员用户名</label>
+                        <input type="text" class="form-control" id="adminUsername" placeholder="admin">
+                    </div>
+                    <div class="mb-3">
+                        <label for="adminPassword" class="form-label">管理员密码</label>
+                        <input type="password" class="form-control" id="adminPassword" placeholder="admin123">
+                    </div>
+                    <button type="submit" class="btn btn-warning btn-lg w-100">
+                        <i class="fas fa-shield-alt"></i> 管理员登录
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="features mt-6">
+            <div class="row g-4">
+                <div class="col-md-3 feature-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-map"></i>
+                    </div>
+                    <h4>世界地图</h4>
+                    <p>探索8个神秘区域</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-sword"></i>
+                    </div>
+                    <h4>角色成长</h4>
+                    <p>升级提升战斗力</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-shield"></i>
+                    </div>
+                    <h4>收集装备</h4>
+                    <p>变量戒指、函数宝典</p>
+                </div>
+                <div class="col-md-3 feature-card">
+                    <div class="icon-circle">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h4>成就系统</h4>
+                    <p>解锁全部成就</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('newGameForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('playerName').value.trim() || '冒险者';
+            
+            fetch('/new_game', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `name=${encodeURIComponent(name)}`
+            })
+            .then(response => response.redirected ? window.location.href = response.url : response.json())
+            .then(() => window.location.href = '/game');
+        });
+        
+        function toggleAdminLogin() {
+            const form = document.getElementById('adminLoginForm');
+            form.classList.toggle('d-none');
+        }
+        
+        document.getElementById('adminLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const username = document.getElementById('adminUsername').value.trim();
+            const password = document.getElementById('adminPassword').value.trim();
+            
+            fetch('/admin_login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: `username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+            })
+            .then(response => {
+                if (response.redirected) {
+                    window.location.href = response.url;
+                } else {
+                    return response.json();
+                }
+            })
+            .then(data => {
+                if (data && !data.success) {
+                    alert(data.message);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
