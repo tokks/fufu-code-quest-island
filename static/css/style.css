@@ -32,12 +32,21 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: 
-        radial-gradient(ellipse at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(0, 255, 128, 0.05) 0%, transparent 60%),
-        linear-gradient(135deg, #0a0a0f 0%, #0d0d1a 30%, #1a0a2e 60%, #0a1a2e 100%);
+    background-image: url('/static/images/login_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     z-index: 0;
+}
+
+.cyber-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .cyber-grid {
