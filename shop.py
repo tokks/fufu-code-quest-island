@@ -29,22 +29,20 @@ class Shop:
         player.spend_gold(item['price'])
         
         if item['type'] == 'equipment':
-            if self.can_equip(player, item):
-                player.equip_item(item.copy())
-                return True, f"成功装备 {item['name']}"
-            else:
-                player.add_to_inventory(item.copy())
-                return True, f"已放入背包: {item['name']}"
+            slot = item.get('slot')
+            if slot in player.equipment:
+                old_item = player.equipment[slot]
+                sell_price = old_item['price'] // 2
+                player.add_gold(sell_price)
+            
+            player.equip_item(item.copy())
+            return True, f"成功装备 {item['name']}"
         else:
             player.add_to_inventory(item.copy())
             return True, f"已放入背包: {item['name']}"
 
     def can_equip(self, player, item):
         if item.get('type') != 'equipment':
-            return False
-        
-        slot = item.get('slot')
-        if slot in player.equipment:
             return False
         
         return True

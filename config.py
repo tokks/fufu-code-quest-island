@@ -17,8 +17,8 @@ BASE_GOLD_REWARD = 10
 GOLD_MULTIPLIER = 1.2
 
 INITIAL_HP = 100
-INITIAL_ATTACK = 10
-INITIAL_DEFENSE = 5
+INITIAL_ATTACK = 0
+INITIAL_DEFENSE = 0
 
 COLORS = {
     'reset': '\033[0m',
@@ -54,26 +54,10 @@ ACHIEVEMENTS = [
 ]
 
 SHOP_ITEMS = [
-    # 消耗品
-    {'id': 'hp_potion_small', 'name': '小型生命药水', 'description': '恢复30点生命值', 'price': 20, 'type': 'consumable', 'effect': {'hp': 30}},
-    {'id': 'hp_potion', 'name': '生命药水', 'description': '恢复50点生命值', 'price': 30, 'type': 'consumable', 'effect': {'hp': 50}},
-    {'id': 'hp_potion_large', 'name': '大型生命药水', 'description': '恢复100点生命值', 'price': 50, 'type': 'consumable', 'effect': {'hp': 100}},
-    {'id': 'attack_boost', 'name': '攻击药剂', 'description': '临时提升20点攻击力（答题减伤）', 'price': 50, 'type': 'consumable', 'effect': {'defense': 10}},
-    {'id': 'defense_boost', 'name': '防御药剂', 'description': '临时提升20点防御力（答题减伤）', 'price': 50, 'type': 'consumable', 'effect': {'defense': 20}},
-    
-    # 装备 - 基础属性
-    {'id': 'variable_ring', 'name': '变量戒指', 'description': '永久提升10点攻击力', 'price': 200, 'type': 'equipment', 'slot': 'ring', 'stats': {'attack': 10}},
-    {'id': 'function_book', 'name': '函数宝典', 'description': '永久提升15点攻击力', 'price': 300, 'type': 'equipment', 'slot': 'book', 'stats': {'attack': 15}},
-    {'id': 'condition_shield', 'name': '条件之盾', 'description': '永久提升20点防御力，答错减伤2点', 'price': 250, 'type': 'equipment', 'slot': 'shield', 'stats': {'defense': 20}, 'damage_reduction': 2},
-    {'id': 'loop_boots', 'name': '循环之靴', 'description': '永久提升10点速度', 'price': 150, 'type': 'equipment', 'slot': 'boots', 'stats': {'speed': 10}},
-    {'id': 'data_amulet', 'name': '数据护符', 'description': '永久提升15点防御力', 'price': 280, 'type': 'equipment', 'slot': 'amulet', 'stats': {'defense': 15}},
-    
-    # 装备 - 答题战斗专属
-    {'id': 'wisdom_hat', 'name': '智慧之帽', 'description': '答对时额外获得10%经验值', 'price': 350, 'type': 'equipment', 'slot': 'hat', 'exp_bonus': 0.1},
-    {'id': 'gold_ring', 'name': '财富戒指', 'description': '答对时额外获得5金币', 'price': 400, 'type': 'equipment', 'slot': 'ring2', 'gold_bonus': 5},
-    {'id': 'iron_armor', 'name': '铁甲护身', 'description': '答错时减少3点伤害', 'price': 500, 'type': 'equipment', 'slot': 'armor', 'damage_reduction': 3, 'stats': {'defense': 10}},
-    {'id': 'master_cloak', 'name': '大师斗篷', 'description': '答错时减少5点伤害，答对额外10%经验', 'price': 800, 'type': 'equipment', 'slot': 'cloak', 'damage_reduction': 5, 'exp_bonus': 0.1, 'stats': {'defense': 25}},
-    {'id': 'hint_scroll', 'name': '提示卷轴', 'description': '每关可查看一次免费提示', 'price': 600, 'type': 'equipment', 'slot': 'scroll', 'hint_count': 1}
+    {'id': 'wisdom_hat', 'name': '智慧之帽', 'description': '答对时额外获得10%经验值', 'price': 150, 'type': 'equipment', 'slot': 'hat', 'exp_bonus': 0.1},
+    {'id': 'gold_ring', 'name': '财富戒指', 'description': '答对时额外获得5金币', 'price': 100, 'type': 'equipment', 'slot': 'ring', 'gold_bonus': 5},
+    {'id': 'iron_armor', 'name': '铁甲护身', 'description': '答错时减少3点伤害', 'price': 200, 'type': 'equipment', 'slot': 'armor', 'damage_reduction': 3, 'stats': {'defense': 10}},
+    {'id': 'hint_scroll', 'name': '提示卷轴', 'description': '查看答案时消耗一个', 'price': 50, 'type': 'consumable', 'effect': {'hint': 1}}
 ]
 
-EQUIPMENT_SLOTS = ['weapon', 'armor', 'shield', 'ring', 'ring2', 'amulet', 'boots', 'book', 'hat', 'cloak', 'scroll']
+EQUIPMENT_SLOTS = ['hat', 'ring', 'armor']

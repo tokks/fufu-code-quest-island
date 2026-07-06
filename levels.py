@@ -75,75 +75,68 @@ REGIONS = [
     {
         "id": "region_11",
         "name": "函数进阶",
-        "description": "函数参数与返回值",
+        "description": "函数参数、返回值、递归、闭包与匿名函数",
         "icon": "fa-code",
         "levels": []
     },
     {
         "id": "region_12",
-        "name": "函数深化",
-        "description": "递归、闭包、匿名函数",
-        "icon": "fa-code-branch",
-        "levels": []
-    },
-    {
-        "id": "region_13",
         "name": "面向对象",
         "description": "类与对象",
         "icon": "fa-object-group",
         "levels": []
     },
     {
-        "id": "region_14",
+        "id": "region_13",
         "name": "继承之城",
         "description": "类的继承与重写",
         "icon": "fa-sitemap",
         "levels": []
     },
     {
-        "id": "region_15",
+        "id": "region_14",
         "name": "多态之塔",
         "description": "多继承、多态和鸭子类型",
         "icon": "fa-layer-group",
         "levels": []
     },
     {
-        "id": "region_16",
+        "id": "region_15",
         "name": "魔法之屋",
         "description": "魔法方法",
         "icon": "fa-sparkles",
         "levels": []
     },
     {
-        "id": "region_17",
+        "id": "region_16",
         "name": "单例秘境",
         "description": "单例模式与模块",
         "icon": "fa-key",
         "levels": []
     },
     {
-        "id": "region_18",
+        "id": "region_17",
         "name": "文件港湾",
         "description": "文件操作",
         "icon": "fa-file",
         "levels": []
     },
     {
-        "id": "region_19",
+        "id": "region_18",
         "name": "正则海域",
         "description": "正则表达式",
         "icon": "fa-search",
         "levels": []
     },
     {
-        "id": "region_20",
+        "id": "region_19",
         "name": "装饰器峰",
         "description": "装饰器与生成器",
         "icon": "fa-gem",
         "levels": []
     },
     {
-        "id": "region_21",
+        "id": "region_20",
         "name": "Bug巢穴",
         "description": "最终挑战！击败Bug之王",
         "icon": "fa-skull",
@@ -179,20 +172,22 @@ for region in REGIONS:
             }
         else:
             answer_code = q['answer'] if q['answer'] else ''
+            template = q.get('code_template', '')
             
-            if answer_code:
-                first_line = answer_code.split('\n')[0].strip()
-                if first_line.startswith('print'):
-                    template = first_line[:-1] if first_line.endswith(')') else first_line
-                elif '=' in first_line:
-                    parts = first_line.split('=', 1)
-                    template = parts[0].strip() + ' = '
-                elif first_line.startswith('def'):
-                    template = first_line + '\n    '
+            if not template:
+                if answer_code:
+                    first_line = answer_code.split('\n')[0].strip()
+                    if first_line.startswith('print'):
+                        template = first_line[:-1] if first_line.endswith(')') else first_line
+                    elif '=' in first_line:
+                        parts = first_line.split('=', 1)
+                        template = parts[0].strip() + ' = '
+                    elif first_line.startswith('def'):
+                        template = first_line + '\n    '
+                    else:
+                        template = ''
                 else:
                     template = ''
-            else:
-                template = ''
             
             level = {
                 'id': level_id,
@@ -263,20 +258,22 @@ def load_all_levels():
                 }
             else:
                 answer_code = q['answer'] if q['answer'] else ''
+                template = q.get('code_template', '')
                 
-                if answer_code:
-                    first_line = answer_code.split('\n')[0].strip()
-                    if first_line.startswith('print'):
-                        template = first_line[:-1] if first_line.endswith(')') else first_line
-                    elif '=' in first_line:
-                        parts = first_line.split('=', 1)
-                        template = parts[0].strip() + ' = '
-                    elif first_line.startswith('def'):
-                        template = first_line + '\n    '
+                if not template:
+                    if answer_code:
+                        first_line = answer_code.split('\n')[0].strip()
+                        if first_line.startswith('print'):
+                            template = first_line[:-1] if first_line.endswith(')') else first_line
+                        elif '=' in first_line:
+                            parts = first_line.split('=', 1)
+                            template = parts[0].strip() + ' = '
+                        elif first_line.startswith('def'):
+                            template = first_line + '\n    '
+                        else:
+                            template = ''
                     else:
                         template = ''
-                else:
-                    template = ''
                 
                 level = {
                     'id': level_id,
@@ -425,8 +422,10 @@ class LevelManager:
             
             options = level.get('options', [])
             for opt in options:
-                if user_answer_clean in opt.upper() and correct_answer.upper() in opt.upper():
-                    return True
+                opt_upper = opt.upper()
+                if opt_upper.startswith(correct_answer.upper() + '.') or opt_upper.startswith(correct_answer.upper() + ')'):
+                    if opt_upper.startswith(user_answer_clean + '.') or opt_upper.startswith(user_answer_clean + ')'):
+                        return True
             
             return False
         

@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./saves:/app/saves
+    environment:
+      - FLASK_ENV=production
+      - SECRET_KEY=code_quest_island_production_key
+    restart: always
+    container_name: code-quest-island

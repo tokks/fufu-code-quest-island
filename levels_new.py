@@ -10,36 +10,256 @@ REGIONS = [
             {
                 "id": "day1_q1",
                 "name": "第1题",
-                "description": "day1选择题...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "day1选择题",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "Python是一种什么类型的语言？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "Python是一种什么类型的语言？",
+                "type": "choice",
+                "options": [
+                    "A. 编译型语言",
+                    "B. 解释型语言",
+                    "C. 标记语言",
+                    "D. 前端语言"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day1_q2",
                 "name": "第2题",
-                "description": "day1编程题...",
+                "description": "PyCharm是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "PyCharm是什么？",
+                "type": "choice",
+                "options": [
+                    "A. 一种编程语言",
+                    "B. 一种操作系统",
+                    "C. 一款Python集成开发环境（IDE）",
+                    "D. 一种数据库管理系统"
+                ],
+                "answer": "C",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "C"
+            },
+            {
+                "id": "day1_q3",
+                "name": "第3题",
+                "description": "在PyCharm中，如何创建一个新的Python项目？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在PyCharm中，如何创建一个新的Python项目？",
+                "type": "choice",
+                "options": [
+                    "A. 通过菜单选择“文件” -> “新建项目”",
+                    "B. 通过命令行创建",
+                    "C. 直接打开一个Python文件",
+                    "D. 无法在PyCharm中创建新项目"
+                ],
+                "answer": "A",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "A"
+            },
+            {
+                "id": "day1_q4",
+                "name": "第4题",
+                "description": "Python的主要特点之一是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "Python的主要特点之一是什么？",
+                "type": "choice",
+                "options": [
+                    "A. 语法复杂",
+                    "B. 简单易学，适合初学者",
+                    "C. 仅适用于Web开发",
+                    "D. 运行速度极快"
+                ],
+                "answer": "B",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "B"
+            },
+            {
+                "id": "day1_q5",
+                "name": "第5题",
+                "description": "下列哪个领域不是Python的典型应用？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "下列哪个领域不是Python的典型应用？",
+                "type": "choice",
+                "options": [
+                    "A. Web开发",
+                    "B. 数据分析",
+                    "C. 高性能实时游戏引擎开发",
+                    "D. 人工智能与机器学习"
+                ],
+                "answer": "C",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "C"
+            },
+            {
+                "id": "day1_q6",
+                "name": "第6题",
+                "description": "以下哪个是python语法的特点:...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个是python语法的特点:",
+                "type": "choice",
+                "options": [
+                    "A. 解释性语言",
+                    "B. 面向对象",
+                    "C. 跨平台",
+                    "D. 以上全是"
+                ],
+                "answer": "D",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "D"
+            },
+            {
+                "id": "day1_q7",
+                "name": "第7题",
+                "description": "在PyCharm中，如何运行一个Python脚本？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在PyCharm中，如何运行一个Python脚本？",
+                "type": "choice",
+                "options": [
+                    "A. 右键点击文件并选择“运行”",
+                    "B. 通过命令行运行",
+                    "C. 直接在编辑器中输入代码",
+                    "D. 无法在PyCharm中运行脚本"
+                ],
+                "answer": "A",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "A"
+            },
+            {
+                "id": "day1_q8",
+                "name": "第8题",
+                "description": "Python文件的扩展名是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "Python文件的扩展名是什么？",
+                "type": "choice",
+                "options": [
+                    "A. .java",
+                    "B. .py",
+                    "C. .cpp",
+                    "D. .js"
+                ],
+                "answer": "B",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "B"
+            },
+            {
+                "id": "day1_q9",
+                "name": "第9题",
+                "description": "在Python中，单行注释使用什么符号？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在Python中，单行注释使用什么符号？",
+                "type": "choice",
+                "options": [
+                    "A. //",
+                    "B. /* */",
+                    "C. #",
+                    "D. --"
+                ],
+                "answer": "C",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "C"
+            },
+            {
+                "id": "day1_q10",
+                "name": "第10题",
+                "description": "以下哪个不是Python的关键字？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个不是Python的关键字？",
+                "type": "choice",
+                "options": [
+                    "A. if",
+                    "B. for",
+                    "C. function",
+                    "D. else"
+                ],
+                "answer": "C",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "C"
+            },
+            {
+                "id": "day1_q11",
+                "name": "第11题",
+                "description": "使用print函数输出两行内容：第一行'欢迎来到Python世界'，第二行'开始你的编程之旅吧'...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "day1编程题",
+                "question": "使用print函数输出两行内容：第一行'欢迎来到Python世界'，第二行'开始你的编程之旅吧'",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "print('欢迎来到Python世界')\nprint('开始你的编程之旅吧')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "print('欢迎来到Python世界'",
+                "solution": "print('欢迎来到Python世界')\nprint('开始你的编程之旅吧')"
+            },
+            {
+                "id": "day1_q12",
+                "name": "第12题",
+                "description": "编写一段代码，输出以下图案：\n*\n**\n***...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "编写一段代码，输出以下图案：\n*\n**\n***",
+                "type": "code",
+                "options": [],
+                "answer": "print('*')\nprint('**')\nprint('***')",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "print('*'",
+                "solution": "print('*')\nprint('**')\nprint('***')"
             }
         ]
     },
@@ -59,228 +279,256 @@ REGIONS = [
                 "question": "下面选项中，哪个是Python中的整数字面量？",
                 "type": "choice",
                 "options": [
-                    "'123'"
+                    "'123'",
+                    "3.14",
+                    "1101",
+                    "\"hello\""
                 ],
-                "answer": null,
+                "answer": "C",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "C"
             },
             {
                 "id": "day2_q2",
                 "name": "第2题",
-                "description": "14...",
+                "description": "下面选项中，哪个是符合Python变量命名规则的正确赋值语句？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "14",
+                "question": "下面选项中，哪个是符合Python变量命名规则的正确赋值语句？",
                 "type": "choice",
                 "options": [
-                    "1101",
-                    "下面选项中，哪个是符合Python变量命名规则的正确赋值语句？",
                     "1num = 10",
-                    "int = 10"
+                    "int = 10",
+                    "int_01 = 10",
+                    "$money = 100"
                 ],
-                "answer": null,
+                "answer": "C",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "C"
             },
             {
                 "id": "day2_q3",
                 "name": "第3题",
-                "description": "int_01 = 10...",
+                "description": "下面关于python变量类型的说法，正确的是？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "int_01 = 10",
+                "question": "下面关于python变量类型的说法，正确的是？",
                 "type": "choice",
                 "options": [
-                    "下面关于python变量类型的说法，正确的是？",
                     "变量类型必须在定义时指定",
                     "变量类型在赋值时确定",
-                    "变量类型一旦确定就不能改变"
+                    "变量类型一旦确定就不能改变",
+                    "变量类型与赋值无关"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day2_q4",
                 "name": "第4题",
-                "description": "变量类型与赋值无关...",
+                "description": "下面变量x的类型是什么？x = 123_456_789...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "变量类型与赋值无关",
+                "question": "下面变量x的类型是什么？x = 123_456_789",
                 "type": "choice",
                 "options": [
-                    "下面变量x的类型是什么？",
-                    "x = 123_456_789",
-                    "print(x)",
-                    "print(type(x))"
+                    "float",
+                    "int",
+                    "str",
+                    "bool"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day2_q5",
                 "name": "第5题",
-                "description": "float...",
+                "description": "在Python中，使用input()函数接收用户输入时，输入的值默认是什么类型？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "float",
+                "question": "在Python中，使用input()函数接收用户输入时，输入的值默认是什么类型？",
                 "type": "choice",
                 "options": [
-                    "int",
-                    "str",
-                    "bool",
-                    "在Python中，使用input()函数接收用户输入时，输入的值默认是什么类型？"
+                    "输入什么类型就是什么类型。",
+                    "字符串类型。",
+                    "整数类型。",
+                    "浮点数类型。"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day2_q6",
                 "name": "第6题",
-                "description": "输入什么类型就是什么类型。...",
+                "description": "在Python中，print函数的主要用途是什么？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "输入什么类型就是什么类型。",
+                "question": "在Python中，print函数的主要用途是什么？",
                 "type": "choice",
                 "options": [
-                    "字符串类型。",
-                    "整数类型。",
-                    "浮点数类型。",
-                    "在Python中，print函数的主要用途是什么？"
+                    "从用户那里接收输入",
+                    "将数据写入文件",
+                    "在控制台输出内容",
+                    "执行数学计算"
                 ],
-                "answer": null,
+                "answer": "C",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "C"
             },
             {
                 "id": "day2_q7",
                 "name": "第7题",
-                "description": "从用户那里接收输入...",
+                "description": "以下哪个表达式的结果是True？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "从用户那里接收输入",
+                "question": "以下哪个表达式的结果是True？",
                 "type": "choice",
                 "options": [
-                    "将数据写入文件",
-                    "在控制台输出内容",
-                    "执行数学计算",
-                    "在Python中，下面哪个函数用于创建浮点数？"
+                    "3 > 5",
+                    "2 == 2",
+                    "1 != 1",
+                    "4 < 3"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day2_q8",
                 "name": "第8题",
-                "description": "double()...",
+                "description": "以下哪个是Python中的字符串？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "double()",
+                "question": "以下哪个是Python中的字符串？",
                 "type": "choice",
                 "options": [
-                    "Number()",
-                    "float()",
-                    "float32()",
-                    "在Python中，有变量x = -5和y = -3.14，以下哪个代码片段可以正确地将x和y转换为它们的绝对值？"
+                    "123",
+                    "3.14",
+                    "\"hello\"",
+                    "True"
                 ],
-                "answer": null,
+                "answer": "C",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "C"
             },
             {
                 "id": "day2_q9",
                 "name": "第9题",
-                "description": "x = abs(x) 和 y = abs(y)...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "x = abs(x) 和 y = abs(y)",
-                "type": "choice",
-                "options": [
-                    "x = |x| 和 y = |y|",
-                    "x = fabs(x) 和 y = fabs(y)",
-                    "x = absolute(x) 和 y = absolute(y)",
-                    "在PyCharm中，默认用来添加注释、移除注释的快捷键是：（多选）"
-                ],
-                "answer": null,
+                "description": "字符串与数字类型（int、float）之间的转换：将字符串'123'转换为整数，将字符串'3.14'...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "字符串与数字类型（int、float）之间的转换：将字符串'123'转换为整数，将字符串'3.14'转换为浮点数",
+                "type": "code",
+                "options": [],
+                "answer": "num1 = int('123')\nnum2 = float('3.14')\nprint(num1)\nprint(num2)",
                 "hints": [
-                    "选择正确的选项"
+                    "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": null
+                "code_template": "num1 = ",
+                "solution": "num1 = int('123')\nnum2 = float('3.14')\nprint(num1)\nprint(num2)"
             },
             {
                 "id": "day2_q10",
                 "name": "第10题",
-                "description": "Ctrl + /...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "Ctrl + /",
-                "type": "choice",
-                "options": [
-                    "Ctrl + D",
-                    "Shift+Alt+鼠标从光标位置按住下滑或上滑",
-                    "command + /"
-                ],
-                "answer": null,
+                "description": "从控制台接收用户输入的一个浮点数，打印输入值的类型，再将其转换为整数并打印转换后的值及其类型...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "从控制台接收用户输入的一个浮点数，打印输入值的类型，再将其转换为整数并打印转换后的值及其类型",
+                "type": "code",
+                "options": [],
+                "answer": "num = float(input())\nprint(type(num))\nnum_int = int(num)\nprint(num_int)\nprint(type(num_int))",
                 "hints": [
-                    "选择正确的选项"
+                    "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": null
+                "code_template": "num = ",
+                "solution": "num = float(input())\nprint(type(num))\nnum_int = int(num)\nprint(num_int)\nprint(type(num_int))"
             },
             {
                 "id": "day2_q11",
                 "name": "第11题",
-                "description": "字符串与数字类型（int、float）之间的转换：...",
+                "description": "转换为绝对值：计算数字-5和-3.14的绝对值...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "字符串与数字类型（int、float）之间的转换：",
+                "question": "转换为绝对值：计算数字-5和-3.14的绝对值",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "x = -5\ny = -3.14\nprint(abs(x))\nprint(abs(y))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "x = ",
+                "solution": "x = -5\ny = -3.14\nprint(abs(x))\nprint(abs(y))"
+            },
+            {
+                "id": "day2_q12",
+                "name": "第12题",
+                "description": "将整数100转换为字符串，将浮点数3.14转换为字符串...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "将整数100转换为字符串，将浮点数3.14转换为字符串",
+                "type": "code",
+                "options": [],
+                "answer": "str1 = str(100)\nstr2 = str(3.14)\nprint(str1)\nprint(str2)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "str1 = ",
+                "solution": "str1 = str(100)\nstr2 = str(3.14)\nprint(str1)\nprint(str2)"
+            },
+            {
+                "id": "day2_q13",
+                "name": "第13题",
+                "description": "编写一个Python程序：提示用户输入一个负整数，使用abs函数计算其绝对值，输出格式为“其绝对值是...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "编写一个Python程序：提示用户输入一个负整数，使用abs函数计算其绝对值，输出格式为“其绝对值是XXX”",
+                "type": "code",
+                "options": [],
+                "answer": "num = int(input())\nresult = abs(num)\nprint('其绝对值是', result)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "num = ",
+                "solution": "num = int(input())\nresult = abs(num)\nprint('其绝对值是', result)"
             }
         ]
     },
@@ -293,818 +541,464 @@ REGIONS = [
             {
                 "id": "day3_q1",
                 "name": "第1题",
-                "description": "选择题：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "选择题：",
-                "type": "code",
-                "options": [],
-                "answer": "# 编写一个程序，让用户在控制台输入他们的名字，然后打印出来。打印示例：\"你好，Alice！欢迎来到Python的世界。\"\n# 详细步骤：\n#       1.定义一个变量名name，使用input()接收用户输入。\n#       2.使用print()打印：\"你好，\" + name + \"！欢迎来到Python的世界。\"\nname = input(\"请输入您的名字：\")\nprint(\"你好，\" + name + \"！欢迎来到Python的世界。\")\n'''---------------------------第 2 题：浮点数之和--------------------------------'''\n# 编写一个程序，让用户输入两个数字，在将数字转换为浮点数（float），然后两个数字相加，显示它们的和。\n# 详细步骤：\n#       1.定义变量num1，使用input()接收用户输入的数字1.\n#       2.定义变量num2，使用input()接收用户输入的数字2.\n#       3.定义变量sums，将上面两个字符串，转成float，再相加。\n#       4.使用print()。输出第3点的sums。\nnum1 = input(\"输入第一个数字：\")\nnum2 = input(\"输入第二个数字：\")\nsums = float(num1) + float(num2)\nprint(\"两数之和：\",sums)\n'''---------------------------第 3 题：字符串与数字的类型转换--------------------------------'''\n# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "变量名命名规则中，以下哪个是非法的变量名？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "变量名命名规则中，以下哪个是非法的变量名？",
+                "type": "choice",
+                "options": [
+                    "A. lala111",
+                    "B. 222baby",
+                    "C. Zhou",
+                    "D. _zhou"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 编写一个程序，让用户在控制台输入他们的名字，然后打印出来。打印示例：\"你好，Alice！欢迎来到Python的世界。\"\n# 详细步骤：\n#       1.定义一个变量名name，使用input()接收用户输入。\n#       2.使用print()打印：\"你好，\" + name + \"！欢迎来到Python的世界。\"\nname = input(\"请输入您的名字：\")\nprint(\"你好，\" + name + \"！欢迎来到Python的世界。\")\n'''---------------------------第 2 题：浮点数之和--------------------------------'''\n# 编写一个程序，让用户输入两个数字，在将数字转换为浮点数（float），然后两个数字相加，显示它们的和。\n# 详细步骤：\n#       1.定义变量num1，使用input()接收用户输入的数字1.\n#       2.定义变量num2，使用input()接收用户输入的数字2.\n#       3.定义变量sums，将上面两个字符串，转成float，再相加。\n#       4.使用print()。输出第3点的sums。\nnum1 = input(\"输入第一个数字：\")\nnum2 = input(\"输入第二个数字：\")\nsums = float(num1) + float(num2)\nprint(\"两数之和：\",sums)\n'''---------------------------第 3 题：字符串与数字的类型转换--------------------------------'''\n# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "B"
             },
             {
                 "id": "day3_q2",
                 "name": "第2题",
-                "description": "编程题-上手操作：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "编程题-上手操作：",
-                "type": "code",
-                "options": [],
-                "answer": "# 编写一个程序，让用户输入两个数字，在将数字转换为浮点数（float），然后两个数字相加，显示它们的和。\n# 详细步骤：\n#       1.定义变量num1，使用input()接收用户输入的数字1.\n#       2.定义变量num2，使用input()接收用户输入的数字2.\n#       3.定义变量sums，将上面两个字符串，转成float，再相加。\n#       4.使用print()。输出第3点的sums。\nnum1 = input(\"输入第一个数字：\")\nnum2 = input(\"输入第二个数字：\")\nsums = float(num1) + float(num2)\nprint(\"两数之和：\",sums)\n'''---------------------------第 3 题：字符串与数字的类型转换--------------------------------'''\n# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "python3中，如何打印变量message的值，其中message的值为Hello, World!...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "python3中，如何打印变量message的值，其中message的值为Hello, World!？",
+                "type": "choice",
+                "options": [
+                    "A. print 'Hello, World!'",
+                    "B. print \"message\"",
+                    "C. print message",
+                    "D. print(message)"
+                ],
+                "answer": "D",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 编写一个程序，让用户输入两个数字，在将数字转换为浮点数（float），然后两个数字相加，显示它们的和。\n# 详细步骤：\n#       1.定义变量num1，使用input()接收用户输入的数字1.\n#       2.定义变量num2，使用input()接收用户输入的数字2.\n#       3.定义变量sums，将上面两个字符串，转成float，再相加。\n#       4.使用print()。输出第3点的sums。\nnum1 = input(\"输入第一个数字：\")\nnum2 = input(\"输入第二个数字：\")\nsums = float(num1) + float(num2)\nprint(\"两数之和：\",sums)\n'''---------------------------第 3 题：字符串与数字的类型转换--------------------------------'''\n# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "D"
             },
             {
                 "id": "day3_q3",
                 "name": "第3题",
-                "description": "输出简单的问候语'''...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "输出简单的问候语'''",
-                "type": "code",
-                "options": [],
-                "answer": "# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "以下哪个是Python中的布尔值？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个是Python中的布尔值？",
+                "type": "choice",
+                "options": [
+                    "A. 只有True",
+                    "B. false",
+                    "C. 1",
+                    "D. True 和 False"
+                ],
+                "answer": "D",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "D"
             },
             {
                 "id": "day3_q4",
                 "name": "第4题",
-                "description": "定义一个变量名name，使用input()接收用户输入。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义一个变量名name，使用input()接收用户输入。",
-                "type": "code",
-                "options": [],
-                "answer": "# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "如何将整数10转换为字符串？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "如何将整数10转换为字符串？",
+                "type": "choice",
+                "options": [
+                    "A. str(10)",
+                    "B. int(\"10\")",
+                    "C. float(10)",
+                    "D. bool(10)"
+                ],
+                "answer": "A",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "A"
             },
             {
                 "id": "day3_q5",
                 "name": "第5题",
-                "description": "使用print()打印：\"你好，\" + name + \"！欢迎来到Python的世界。\"...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用print()打印：\"你好，\" + name + \"！欢迎来到Python的世界。\"",
-                "type": "code",
-                "options": [],
-                "answer": "# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "下列哪个不是Python的内置数据类型？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "下列哪个不是Python的内置数据类型？",
+                "type": "choice",
+                "options": [
+                    "A. int",
+                    "B. str",
+                    "C. boolean",
+                    "D. float"
+                ],
+                "answer": "C",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "C"
             },
             {
                 "id": "day3_q6",
                 "name": "第6题",
-                "description": "浮点数之和...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "浮点数之和",
-                "type": "code",
-                "options": [],
-                "answer": "# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "在Python中，以下哪个表达式的值是False？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在Python中，以下哪个表达式的值是False？",
+                "type": "choice",
+                "options": [
+                    "A. True and True",
+                    "B. True or False",
+                    "C. not True",
+                    "D. True and not False"
+                ],
+                "answer": "C",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "C"
             },
             {
                 "id": "day3_q7",
                 "name": "第7题",
-                "description": "定义变量num1，使用input()接收用户输入的数字1....",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义变量num1，使用input()接收用户输入的数字1.",
-                "type": "code",
-                "options": [],
-                "answer": "# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "以下哪个表达式的结果是True？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个表达式的结果是True？",
+                "type": "choice",
+                "options": [
+                    "A. \"abc\" == \"ABC\"",
+                    "B. 10 > 5 and 3 < 2",
+                    "C. 5 != 6",
+                    "D. not (2 == 2)"
+                ],
+                "answer": "C",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "C"
             },
             {
                 "id": "day3_q8",
                 "name": "第8题",
-                "description": "定义变量num2，使用input()接收用户输入的数字2....",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义变量num2，使用input()接收用户输入的数字2.",
-                "type": "code",
-                "options": [],
-                "answer": "# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "在Python中，使用哪个关键字来定义条件判断？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在Python中，使用哪个关键字来定义条件判断？",
+                "type": "choice",
+                "options": [
+                    "A. for",
+                    "B. while",
+                    "C. if",
+                    "D. def"
+                ],
+                "answer": "C",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "C"
             },
             {
                 "id": "day3_q9",
                 "name": "第9题",
-                "description": "定义变量sums，将上面两个字符串，转成float，再相加。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义变量sums，将上面两个字符串，转成float，再相加。",
-                "type": "code",
-                "options": [],
-                "answer": "# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "以下哪个表达式的值是True？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个表达式的值是True？",
+                "type": "choice",
+                "options": [
+                    "A. 3 >= 5",
+                    "B. 4 <= 4",
+                    "C. 2 > 2",
+                    "D. 1 != 1"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "B"
             },
             {
                 "id": "day3_q10",
                 "name": "第10题",
-                "description": "使用print()。输出第3点的sums。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用print()。输出第3点的sums。",
-                "type": "code",
-                "options": [],
-                "answer": "# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)",
+                "description": "如何判断两个变量是否相等？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "如何判断两个变量是否相等？",
+                "type": "choice",
+                "options": [
+                    "A. =",
+                    "B. ==",
+                    "C. ===",
+                    "D. equals()"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": "# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+                "solution": "B"
             },
             {
                 "id": "day3_q11",
                 "name": "第11题",
-                "description": "字符串与数字的类型转换...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "字符串与数字的类型转换",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "以下哪个是Python中的转义字符？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个是Python中的转义字符？",
+                "type": "choice",
+                "options": [
+                    "A. \\\\n",
+                    "B. \\n",
+                    "C. /n",
+                    "D. \\\\N"
+                ],
+                "answer": "A",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "A"
             },
             {
                 "id": "day3_q12",
                 "name": "第12题",
-                "description": "定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "在字符串中，如何表示换行？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在字符串中，如何表示换行？",
+                "type": "choice",
+                "options": [
+                    "A. \\r",
+                    "B. \\n",
+                    "C. \\t",
+                    "D. \\b"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q13",
                 "name": "第13题",
-                "description": "定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "以下哪个转义字符表示制表符？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个转义字符表示制表符？",
+                "type": "choice",
+                "options": [
+                    "A. \\n",
+                    "B. \\t",
+                    "C. \\r",
+                    "D. \\f"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q14",
                 "name": "第14题",
-                "description": "分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "布尔类型有几个值？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "布尔类型有几个值？",
+                "type": "choice",
+                "options": [
+                    "A. 一个",
+                    "B. 两个",
+                    "C. 三个",
+                    "D. 无数个"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q15",
                 "name": "第15题",
-                "description": "分别打印int_value 和 float_value 以及 type(int_value) 和 t...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "not True 的结果是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "not True 的结果是什么？",
+                "type": "choice",
+                "options": [
+                    "A. True",
+                    "B. False",
+                    "C. None",
+                    "D. Error"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q16",
                 "name": "第16题",
-                "description": "使用转义字符打印特殊文本...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用转义字符打印特殊文本",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "True and False 的结果是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "True and False 的结果是什么？",
+                "type": "choice",
+                "options": [
+                    "A. True",
+                    "B. False",
+                    "C. None",
+                    "D. Error"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q17",
                 "name": "第17题",
-                "description": "打印包含单引号和双引号的字符串...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "打印包含单引号和双引号的字符串",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "True or False 的结果是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "True or False 的结果是什么？",
+                "type": "choice",
+                "options": [
+                    "A. True",
+                    "B. False",
+                    "C. None",
+                    "D. Error"
+                ],
+                "answer": "A",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "A"
             },
             {
                 "id": "day3_q18",
                 "name": "第18题",
-                "description": "打印包含换行符和制表符的字符串...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "打印包含换行符和制表符的字符串",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "在Python中，0的布尔值是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在Python中，0的布尔值是什么？",
+                "type": "choice",
+                "options": [
+                    "A. True",
+                    "B. False",
+                    "C. None",
+                    "D. Error"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q19",
                 "name": "第19题",
-                "description": "使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "空字符串的布尔值是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "空字符串的布尔值是什么？",
+                "type": "choice",
+                "options": [
+                    "A. True",
+                    "B. False",
+                    "C. None",
+                    "D. Error"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day3_q20",
                 "name": "第20题",
-                "description": "简单的数学运算...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "简单的数学运算",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "以下哪个表达式的值是True？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "以下哪个表达式的值是True？",
+                "type": "choice",
+                "options": [
+                    "A. bool(0)",
+                    "B. bool(\"\")",
+                    "C. bool([1])",
+                    "D. bool(None)"
+                ],
+                "answer": "C",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "C"
             },
             {
                 "id": "day3_q21",
                 "name": "第21题",
-                "description": "分别定义两个变量：num1,num2，让用户输入两个数字。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "分别定义两个变量：num1,num2，让用户输入两个数字。",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "在Python中，如何将字符串转换为布尔值？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "在Python中，如何将字符串转换为布尔值？",
+                "type": "choice",
+                "options": [
+                    "A. bool()",
+                    "B. boolean()",
+                    "C. to_bool()",
+                    "D. convert_bool()"
+                ],
+                "answer": "A",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q22",
-                "name": "第22题",
-                "description": "在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q23",
-                "name": "第23题",
-                "description": "分别使用+，-，*，/四个符合，计算n1 和 n2的结果。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "分别使用+，-，*，/四个符合，计算n1 和 n2的结果。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q24",
-                "name": "第24题",
-                "description": "使用转义字符和字符串操作打印格式化路径...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用转义字符和字符串操作打印格式化路径",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q25",
-                "name": "第25题",
-                "description": "定义变量filename，用来接收用户输入的文件名。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义变量filename，用来接收用户输入的文件名。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q26",
-                "name": "第26题",
-                "description": "定义变量extension，用来接收用户输入的文件扩展名。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义变量extension，用来接收用户输入的文件扩展名。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q27",
-                "name": "第27题",
-                "description": "定义变量path，拼接字符串。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义变量path，拼接字符串。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q28",
-                "name": "第28题",
-                "description": "打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。【...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。【拼接可以参照第一题】",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q29",
-                "name": "第29题",
-                "description": "NoneType 的实际应用场景...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "NoneType 的实际应用场景",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q30",
-                "name": "第30题",
-                "description": "定义一个初始值value为 None 的变量.然后分别打印value和type(value)....",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义一个初始值value为 None 的变量.然后分别打印value和type(value).",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q31",
-                "name": "第31题",
-                "description": "获取用户输入的文本....",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "获取用户输入的文本.",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q32",
-                "name": "第32题",
-                "description": "将变量赋值为用户输入的文本...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "将变量赋值为用户输入的文本",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q33",
-                "name": "第33题",
-                "description": "再次打印变量的值和类型...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "再次打印变量的值和类型",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q34",
-                "name": "第34题",
-                "description": "布尔值的操作和展示...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "布尔值的操作和展示",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q35",
-                "name": "第35题",
-                "description": "定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q36",
-                "name": "第36题",
-                "description": "打印两个布尔变量的值和类型。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "打印两个布尔变量的值和类型。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q37",
-                "name": "第37题",
-                "description": "将两个布尔值转换为整数并打印。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "将两个布尔值转换为整数并打印。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q38",
-                "name": "第38题",
-                "description": "is和==...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "is和==",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q39",
-                "name": "第39题",
-                "description": "编写代码，打印出a、b和c的内存地址，即它们各自的id。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "编写代码，打印出a、b和c的内存地址，即它们各自的id。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q40",
-                "name": "第40题",
-                "description": "比较a==b；a is b；a == c；a is c的结果。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "比较a==b；a is b；a == c；a is c的结果。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q41",
-                "name": "第41题",
-                "description": "修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q42",
-                "name": "第42题",
-                "description": "逻辑表达式的综合运用...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "逻辑表达式的综合运用",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q43",
-                "name": "第43题",
-                "description": "【示例】给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "【示例】给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q44",
-                "name": "第44题",
-                "description": "编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q45",
-                "name": "第45题",
-                "description": "给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q46",
-                "name": "第46题",
-                "description": "给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 10...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q47",
-                "name": "第47题",
-                "description": "编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day3_q48",
-                "name": "第48题",
-                "description": "编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
+                "solution": "A"
             }
         ]
     },
@@ -1117,325 +1011,197 @@ REGIONS = [
             {
                 "id": "day4_q1",
                 "name": "第1题",
-                "description": "判断一个数的正负...",
+                "description": "从键盘上输入一个浮点数，使用if-else语句来判断这个数是正数、负数还是零，并输出相应的结果。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "判断一个数的正负",
+                "question": "从键盘上输入一个浮点数，使用if-else语句来判断这个数是正数、负数还是零，并输出相应的结果。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "number = float(input('请输入一个浮点数：'))\nif number > 0:\n    print(number, '是正数。')\nelif number < 0:\n    print(number, '是负数。')\nelse:\n    print(number, '是零。')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "number = ",
+                "solution": "number = float(input('请输入一个浮点数：'))\nif number > 0:\n    print(number, '是正数。')\nelif number < 0:\n    print(number, '是负数。')\nelse:\n    print(number, '是零。')"
             },
             {
                 "id": "day4_q2",
                 "name": "第2题",
-                "description": "定义一个变量number，用来接收用户输入的数值。并转换为float。...",
+                "description": "第 02 题：判断是否水仙花数\n题目描述：从键盘上输入一个三位数的数，判断这个数字是否是三位数的数字...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "定义一个变量number，用来接收用户输入的数值。并转换为float。",
+                "question": "第 02 题：判断是否水仙花数\n题目描述：从键盘上输入一个三位数的数，判断这个数字是否是三位数的数字，再判断是否是水仙花数。\n(水仙花数：一个n位数（n≥3），它的每个位上的数字的n次幂之和等于它本身。本题只需要输入3位数。)",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "number = int(input('请输入一个三位数：'))\nif number < 100 or number > 999:\n    print('无效的输入')\nelse:\n    hundreds = number // 100\n    tens = (number // 10) % 10\n    ones = number % 10\n    cube_sum = hundreds ** 3 + tens ** 3 + ones ** 3\n    if cube_sum == number:\n        print(number, '是水仙花数')\n    else:\n        print(number, '不是水仙花数')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "number = ",
+                "solution": "number = int(input('请输入一个三位数：'))\nif number < 100 or number > 999:\n    print('无效的输入')\nelse:\n    hundreds = number // 100\n    tens = (number // 10) % 10\n    ones = number % 10\n    cube_sum = hundreds ** 3 + tens ** 3 + ones ** 3\n    if cube_sum == number:\n        print(number, '是水仙花数')\n    else:\n        print(number, '不是水仙花数')"
             },
             {
                 "id": "day4_q3",
                 "name": "第3题",
-                "description": "使用 if-elif-else 语句判断正负：...",
+                "description": "编写一个计算商品购物折扣的程序，折扣规则如下：\n如果购物金额小于100元，则不享受折扣。\n如果购物金...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "使用 if-elif-else 语句判断正负：",
+                "question": "编写一个计算商品购物折扣的程序，折扣规则如下：\n如果购物金额小于100元，则不享受折扣。\n如果购物金额在100元（含）至300元之间，则享受9折优惠。\n如果购物金额超过300元，则享受85折优惠。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "shopping_amount = float(input('请输入购物金额：'))\nif shopping_amount < 100:\n    print('您没有享受折扣,需支付:', str(shopping_amount), '元')\nelif shopping_amount >= 100 and shopping_amount < 300:\n    discount = shopping_amount * 0.9\n    print('您可享受9折优惠,需支付:', str(discount), '元')\nelse:\n    discount = shopping_amount * 0.85\n    print('您可享受85折优惠,需支付:', str(discount), '元')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "shopping_amount = ",
+                "solution": "shopping_amount = float(input('请输入购物金额：'))\nif shopping_amount < 100:\n    print('您没有享受折扣,需支付:', str(shopping_amount), '元')\nelif shopping_amount >= 100 and shopping_amount < 300:\n    discount = shopping_amount * 0.9\n    print('您可享受9折优惠,需支付:', str(discount), '元')\nelse:\n    discount = shopping_amount * 0.85\n    print('您可享受85折优惠,需支付:', str(discount), '元')"
             },
             {
                 "id": "day4_q4",
                 "name": "第4题",
-                "description": "判断是否水仙花数...",
+                "description": "编写一段代码，模拟交通信号灯的工作。要求用户输入颜色（红、黄、绿），根据颜色输出相应的指示信息。\n输...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "判断是否水仙花数",
+                "question": "编写一段代码，模拟交通信号灯的工作。要求用户输入颜色（红、黄、绿），根据颜色输出相应的指示信息。\n输入红色(red),输出:请停车\n输入黄色(yellow),输出:准备停车/尽快通行\n输入绿色(green),输出:允许通行",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "color = input('请输入颜色（红、黄、绿）：')\nif color == 'red' or color == '红色':\n    print('请停车')\nelif color == 'yellow' or color == '黄色':\n    print('准备停车/尽快通行')\nelif color == 'green' or color == '绿色':\n    print('允许通行')\nelse:\n    print('无效的颜色，请输入红色(red)、黄色(yellow)或绿色(green)')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "color = ",
+                "solution": "color = input('请输入颜色（红、黄、绿）：')\nif color == 'red' or color == '红色':\n    print('请停车')\nelif color == 'yellow' or color == '黄色':\n    print('准备停车/尽快通行')\nelif color == 'green' or color == '绿色':\n    print('允许通行')\nelse:\n    print('无效的颜色，请输入红色(red)、黄色(yellow)或绿色(green)')"
             },
             {
                 "id": "day4_q5",
                 "name": "第5题",
-                "description": "计算商品购物折扣...",
+                "description": "编写一个程序，让用户输入三角形的三条边长，判断并输出三角形的类型：\n等边三角形：三条边相等\n等腰三角...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "计算商品购物折扣",
+                "question": "编写一个程序，让用户输入三角形的三条边长，判断并输出三角形的类型：\n等边三角形：三条边相等\n等腰三角形：至少有两条边相等\n直角三角形：满足勾股定理\n不是三角形：不符合三角形的边长关系",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "side1 = float(input('请输入第一条边：'))\nside2 = float(input('请输入第二条边：'))\nside3 = float(input('请输入第三条边：'))\n\nif side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:\n    if side1 == side2 == side3:\n        print('这是一个等边三角形')\n    elif side1 == side2 or side1 == side3 or side2 == side3:\n        print('这是一个等腰三角形')\n    elif side1**2 + side2**2 == side3**2 or side1**2 + side3**2 == side2**2 or side2**2 + side3**2 == side1**2:\n        print('这是一个直角三角形')\n    else:\n        print('这是一个普通三角形')\nelse:\n    print('不是三角形')",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "side1 = ",
+                "solution": "side1 = float(input('请输入第一条边：'))\nside2 = float(input('请输入第二条边：'))\nside3 = float(input('请输入第三条边：'))\n\nif side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:\n    if side1 == side2 == side3:\n        print('这是一个等边三角形')\n    elif side1 == side2 or side1 == side3 or side2 == side3:\n        print('这是一个等腰三角形')\n    elif side1**2 + side2**2 == side3**2 or side1**2 + side3**2 == side2**2 or side2**2 + side3**2 == side1**2:\n        print('这是一个直角三角形')\n    else:\n        print('这是一个普通三角形')\nelse:\n    print('不是三角形')"
+            }
+        ]
+    },
+    {
+        "id": "region_5",
+        "name": "循环山脉",
+        "description": "for循环与while循环",
+        "icon": "fa-mountain",
+        "levels": [
+            {
+                "id": "day5_q1",
+                "name": "第1题",
+                "description": "编写一个Python程序，需要用户输入用户名（admin）和密码（password）后重复三次后登录...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "编写一个Python程序，需要用户输入用户名（admin）和密码（password）后重复三次后登录成功。",
+                "type": "code",
+                "options": [],
+                "answer": "success_count = 0\nfor i in range(3):\n    username = input('请输入用户名：')\n    password = input('请输入密码：')\n    if username == 'admin' and password == 'password':\n        success_count += 1\n        print('第{}次输入正确'.format(i+1))\n    else:\n        print('第{}次输入错误'.format(i+1))\nif success_count == 3:\n    print('登录成功')\nelse:\n    print('登录失败，失败次数：', 3 - success_count)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "success_count = ",
+                "solution": "success_count = 0\nfor i in range(3):\n    username = input('请输入用户名：')\n    password = input('请输入密码：')\n    if username == 'admin' and password == 'password':\n        success_count += 1\n        print('第{}次输入正确'.format(i+1))\n    else:\n        print('第{}次输入错误'.format(i+1))\nif success_count == 3:\n    print('登录成功')\nelse:\n    print('登录失败，失败次数：', 3 - success_count)"
+            },
+            {
+                "id": "day5_q2",
+                "name": "第2题",
+                "description": "打印一个5行5列的正方形图案。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "打印一个5行5列的正方形图案。",
+                "type": "code",
+                "options": [],
+                "answer": "for i in range(5):\n    for j in range(5):\n        print('*', end='  ')\n    print()",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "for i in range(5):\n    for j in range(5):\n        print('*', end='  ')\n    print()"
             },
             {
-                "id": "day4_q6",
+                "id": "day5_q3",
+                "name": "第3题",
+                "description": "打印一个正直角三角形图案，5行，每行星号递增。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "打印一个正直角三角形图案，5行，每行星号递增。",
+                "type": "code",
+                "options": [],
+                "answer": "for i in range(5):\n    for j in range(i + 1):\n        print('*', end='  ')\n    print()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "for i in range(5):\n    for j in range(i + 1):\n        print('*', end='  ')\n    print()"
+            },
+            {
+                "id": "day5_q4",
+                "name": "第4题",
+                "description": "打印一个倒直角三角形图案，5行，每行星号递减。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "打印一个倒直角三角形图案，5行，每行星号递减。",
+                "type": "code",
+                "options": [],
+                "answer": "for i in range(5, 0, -1):\n    for j in range(i):\n        print('*', end='  ')\n    print()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "for i in range(5, 0, -1):\n    for j in range(i):\n        print('*', end='  ')\n    print()"
+            },
+            {
+                "id": "day5_q5",
+                "name": "第5题",
+                "description": "使用for循环实现99乘法表。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用for循环实现99乘法表。",
+                "type": "code",
+                "options": [],
+                "answer": "for i in range(1, 10):\n    for j in range(1, i + 1):\n        print('{}x{}={}'.format(j, i, i * j), end='\\t')\n    print()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "for i in range(1, 10):\n    for j in range(1, i + 1):\n        print('{}x{}={}'.format(j, i, i * j), end='\\t')\n    print()"
+            },
+            {
+                "id": "day5_q6",
                 "name": "第6题",
-                "description": "定义一个变量(shopping_amount)，用户输入购物金额。...",
+                "description": "你有一个存钱罐，每天存入相同数量的硬币。编写一个Python程序，通过用户输入每天存入的硬币数量和总...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "定义一个变量(shopping_amount)，用户输入购物金额。",
+                "question": "你有一个存钱罐，每天存入相同数量的硬币。编写一个Python程序，通过用户输入每天存入的硬币数量和总天数，使用for循环计算并输出从第1天到指定天数，你总共存入了多少硬币。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "coins_per_day = int(input('请输入每天存入的硬币数量：'))\ntotal_days = int(input('请输入总天数：'))\ntotal_coins = 0\nfor day in range(1, total_days + 1):\n    total_coins += coins_per_day\n    print('第{}天：累计存入{}枚硬币'.format(day, total_coins))\nprint('总共存入{}枚硬币'.format(total_coins))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q7",
-                "name": "第7题",
-                "description": "使用if_elif_else进行折扣规则判断，如下：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用if_elif_else进行折扣规则判断，如下：",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q8",
-                "name": "第8题",
-                "description": "简单的交通信号灯判断...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "简单的交通信号灯判断",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q9",
-                "name": "第9题",
-                "description": "判断三角形类型(day02、03的课后练习题出现过，现在完善一下这道题)...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "判断三角形类型(day02、03的课后练习题出现过，现在完善一下这道题)",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q10",
-                "name": "第10题",
-                "description": "公园门票优惠政策模拟...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "公园门票优惠政策模拟",
-                "type": "code",
-                "options": [],
-                "answer": "题目要求：编写一个 Python 程序，模拟存款利息的计算。用户可以输入存款金额和存款期限（年），程序将根据以下规则计算到期后的总金额并输出结果：\n年利率为3%。\n如果存款期限超过5年，超出部分的年利率为2%。\n利息计算使用简单利息公式：利息 = 本金 × 利率 × 时间。\n解题思路：\n定义变量principal、time，分别让用户输入存款金额（float型数据）和存款期限（int型数据）。\n初始化利息（interest = 0）和总金额（total_amount = principal）\n根据存款期限计算利息：\n如果(if)存款期限超过5年：\n计算前5年的利息（按3%的年利率）。\n计算超过5年的部分的利息（按2%的年利率）。\n如果(if)存款期限不超过5年：\n直接根据存款期限和3%的年利率计算利息。\n判断结束后：计算到期后的总金额（total_amount）\n输出到期后的总金额。",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": "题目要求：编写一个 Python 程序，模拟存款利息的计算。用户可以输入存款金额和存款期限（年），程序将根据以下规则计算到期后的总金额并输出结果：\n年利率为3%。\n如果存款期限超过5年，超出部分的年利率为2%。\n利息计算使用简单利息公式：利息 = 本金 × 利率 × 时间。\n解题思路：\n定义变量principal、time，分别让用户输入存款金额（float型数据）和存款期限（int型数据）。\n初始化利息（interest = 0）和总金额（total_amount = principal）\n根据存款期限计算利息：\n如果(if)存款期限超过5年：\n计算前5年的利息（按3%的年利率）。\n计算超过5年的部分的利息（按2%的年利率）。\n如果(if)存款期限不超过5年：\n直接根据存款期限和3%的年利率计算利息。\n判断结束后：计算到期后的总金额（total_amount）\n输出到期后的总金额。"
-            },
-            {
-                "id": "day4_q11",
-                "name": "第11题",
-                "description": "实现一个简易计算器...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "实现一个简易计算器",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q12",
-                "name": "第12题",
-                "description": "提示用户输入：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "提示用户输入：",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q13",
-                "name": "第13题",
-                "description": "验证运算符的有效性：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "验证运算符的有效性：",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q14",
-                "name": "第14题",
-                "description": "根据输入的运算符执行相应的计算操作：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "根据输入的运算符执行相应的计算操作：",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q15",
-                "name": "第15题",
-                "description": "处理除以零的情况：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "处理除以零的情况：",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q16",
-                "name": "第16题",
-                "description": "输出计算结果：...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "输出计算结果：",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q17",
-                "name": "第17题",
-                "description": "计算应缴纳的车辆购置税...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "计算应缴纳的车辆购置税",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q18",
-                "name": "第18题",
-                "description": "书籍借阅最大借阅量...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "书籍借阅最大借阅量",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day4_q19",
-                "name": "第19题",
-                "description": "存款利率计算...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "存款利率计算",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "coins_per_day = ",
+                "solution": "coins_per_day = int(input('请输入每天存入的硬币数量：'))\ntotal_days = int(input('请输入总天数：'))\ntotal_coins = 0\nfor day in range(1, total_days + 1):\n    total_coins += coins_per_day\n    print('第{}天：累计存入{}枚硬币'.format(day, total_coins))\nprint('总共存入{}枚硬币'.format(total_coins))"
             }
         ]
     },
@@ -1448,11 +1214,11 @@ REGIONS = [
             {
                 "id": "day6_q1",
                 "name": "第1题",
-                "description": "在 Python 中，列表的索引是从哪个数字开始的？...",
+                "description": "1. 在 Python 中，列表的索引是从哪个数字开始的？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "在 Python 中，列表的索引是从哪个数字开始的？",
+                "question": "1. 在 Python 中，列表的索引是从哪个数字开始的？",
                 "type": "choice",
                 "options": [
                     "0",
@@ -1460,21 +1226,21 @@ REGIONS = [
                     "2",
                     "随机数"
                 ],
-                "answer": null,
+                "answer": "A",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "A"
             },
             {
                 "id": "day6_q2",
                 "name": "第2题",
-                "description": "以下哪项是 Python 列表的一个特性？...",
+                "description": "2. 以下哪项是 Python 列表的一个特性？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "以下哪项是 Python 列表的一个特性？",
+                "question": "2. 以下哪项是 Python 列表的一个特性？",
                 "type": "choice",
                 "options": [
                     "所有元素必须唯一",
@@ -1482,21 +1248,21 @@ REGIONS = [
                     "元素不能排序",
                     "不能通过索引访问元素"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day6_q3",
                 "name": "第3题",
-                "description": "以下哪个方法用于向列表末尾添加一个元素？...",
+                "description": "3. 以下哪个方法用于向列表末尾添加一个元素？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "以下哪个方法用于向列表末尾添加一个元素？",
+                "question": "3. 以下哪个方法用于向列表末尾添加一个元素？",
                 "type": "choice",
                 "options": [
                     "append()",
@@ -1504,21 +1270,21 @@ REGIONS = [
                     "insert()",
                     "pop()"
                 ],
-                "answer": null,
+                "answer": "A",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "A"
             },
             {
                 "id": "day6_q4",
                 "name": "第4题",
-                "description": "以下哪个方法用于从列表中移除指定位置的元素？...",
+                "description": "4.以下哪个方法用于从列表中移除指定位置的元素？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "以下哪个方法用于从列表中移除指定位置的元素？",
+                "question": "4.以下哪个方法用于从列表中移除指定位置的元素？",
                 "type": "choice",
                 "options": [
                     "remove()",
@@ -1526,162 +1292,144 @@ REGIONS = [
                     "delete()",
                     "erase()"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day6_q5",
                 "name": "第5题",
-                "description": "填空题：...",
+                "description": "5. 以下哪个方法用于对列表进行排序？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "填空题：",
+                "question": "5. 以下哪个方法用于对列表进行排序？",
                 "type": "choice",
                 "options": [
-                    "语句：sorted([1, 2, 3], reverse=True) 输出结果为                   。",
-                    "切片操作 list(range(6))[::2] 执行结果为                   。",
-                    "已知 y = [4, 5, 6, 5, 7]，执行语句 y.remove(5) 和 y.pop(2) 之后，y 的值为                   。",
-                    "实操题："
+                    "sort()",
+                    "order()",
+                    "arrange()",
+                    "sort_list()"
                 ],
-                "answer": null,
+                "answer": "A",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "A"
             },
             {
                 "id": "day6_q6",
                 "name": "第6题",
-                "description": "反转列表。...",
+                "description": "6. 以下哪个表达式可以获取列表的长度？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "反转列表。",
+                "question": "6. 以下哪个表达式可以获取列表的长度？",
                 "type": "choice",
                 "options": [
-                    "题目要求：将下面列表反转并打印。",
-                    "lst = list(range(1, 11))",
-                    "解题思路：方法一",
-                    "使用切片的方式"
+                    "length(list)",
+                    "len(list)",
+                    "list.length",
+                    "list.size()"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day6_q7",
                 "name": "第7题",
-                "description": "解题思路：方法二...",
+                "description": "7. 以下哪个是列表的切片操作？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "解题思路：方法二",
+                "question": "7. 以下哪个是列表的切片操作？",
                 "type": "choice",
                 "options": [
-                    "使用方法reverse()/sort()"
+                    "list[1]",
+                    "list[1:3]",
+                    "list(1,3)",
+                    "get_slice(list,1,3)"
                 ],
-                "answer": null,
+                "answer": "B",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "B"
             },
             {
                 "id": "day6_q8",
                 "name": "第8题",
-                "description": "遍历列表找出长度大于3的字符...",
+                "description": "8. 以下哪个方法用于在列表指定位置插入元素？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "遍历列表找出长度大于3的字符",
+                "question": "8. 以下哪个方法用于在列表指定位置插入元素？",
                 "type": "choice",
                 "options": [
-                    "题目要求：遍历下面的列表，找出长度大于3的字符。",
-                    "words = [\"六一\", \"儿童节\", \"五一劳动节\", \"元旦节快乐\", 'Christmas', 'happy', \"day\" ]",
-                    "解题思路：",
-                    "使用for循环遍历字典。"
+                    "append()",
+                    "extend()",
+                    "insert()",
+                    "add()"
                 ],
-                "answer": null,
+                "answer": "C",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "C"
             },
             {
                 "id": "day6_q9",
                 "name": "第9题",
-                "description": "使用len()计算取出来的字符串长度。...",
+                "description": "9. 以下哪个方法用于反转列表？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "使用len()计算取出来的字符串长度。",
+                "question": "9. 以下哪个方法用于反转列表？",
                 "type": "choice",
                 "options": [
-                    "使用if判断字符串长度是否大于3。",
-                    "大于--打印出来",
-                    "小于等于--无需打印。"
+                    "reverse()",
+                    "invert()",
+                    "flip()",
+                    "backwards()"
                 ],
-                "answer": null,
+                "answer": "A",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
+                "solution": "A"
             },
             {
                 "id": "day6_q10",
                 "name": "第10题",
-                "description": "有两个列表A和B，使用列表C来获取两个列表中公共的元素...",
+                "description": "10. 以下哪个表达式可以检查元素是否在列表中？...",
                 "difficulty": "简单",
                 "exp_reward": 20,
                 "gold_reward": 10,
-                "question": "有两个列表A和B，使用列表C来获取两个列表中公共的元素",
+                "question": "10. 以下哪个表达式可以检查元素是否在列表中？",
                 "type": "choice",
                 "options": [
-                    "题目要求：将下面列表的重复值取出，放入到列表C中，并打印列表C。",
-                    "A = [\"吃饭\", '睡觉', \"打豆豆\"]",
-                    "B = [\"上班\", \"跑步\", \"睡觉\"]",
-                    "解题思路："
+                    "element in list",
+                    "list.contains(element)",
+                    "check(list, element)",
+                    "has_element(list, element)"
                 ],
-                "answer": null,
+                "answer": "A",
                 "hints": [
                     "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day6_q11",
-                "name": "第11题",
-                "description": "定义一个空列表C。...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "定义一个空列表C。",
-                "type": "choice",
-                "options": [
-                    "使用循环遍历的方式遍历列表A。",
-                    "再内循环遍历列表B。",
-                    "使用if判断两个列表遍历的值是否相等。",
-                    "将相等的值添加进入列表C即可。"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
+                "solution": "A"
             }
         ]
     },
@@ -1694,53 +1442,179 @@ REGIONS = [
             {
                 "id": "day7_q1",
                 "name": "第1题",
-                "description": "将规定字符串转为列表后去重...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "将规定字符串转为列表后去重",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "1. Python 集合中的元素是有序的吗？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "1. Python 集合中的元素是有序的吗？",
+                "type": "choice",
+                "options": [
+                    "是的，它们是有序的",
+                    "不是的，它们是无序的",
+                    "只有在特定情况下才是无序的",
+                    "取决于集合的大小"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
             },
             {
                 "id": "day7_q2",
                 "name": "第2题",
-                "description": "查找元组中最大值及其索引。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "查找元组中最大值及其索引。",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "2.以下哪种定义方式，不是元组：...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "2.以下哪种定义方式，不是元组：",
+                "type": "choice",
+                "options": [
+                    "tuple_01 = (1, 2, 3)",
+                    "tuple_02 = ()",
+                    "tuple_03 = (4,)",
+                    "tuple_04 = tuple([5, 6, 7])",
+                    "tuple_05 = (8)"
+                ],
+                "answer": "E",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "E"
             },
             {
                 "id": "day7_q3",
                 "name": "第3题",
-                "description": "循环完毕后，输出最大值max_value和最大值索引值max_index。...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "循环完毕后，输出最大值max_value和最大值索引值max_index。",
-                "type": "code",
-                "options": [],
-                "answer": "",
+                "description": "3. 元组和列表的主要区别是什么？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "3. 元组和列表的主要区别是什么？",
+                "type": "choice",
+                "options": [
+                    "元组可以被修改，列表不可以",
+                    "列表可以被修改，元组不可以",
+                    "元组和列表都可以被修改",
+                    "元组和列表都不可以被修改"
+                ],
+                "answer": "B",
                 "hints": [
-                    "编写正确的Python代码"
+                    "选择正确的选项"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "B"
+            },
+            {
+                "id": "day7_q4",
+                "name": "第4题",
+                "description": "4. 假设有一个元组 t = (5, 'a', 3, 'b', 1)，那么 t[2:4] 的结果是什...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "4. 假设有一个元组 t = (5, 'a', 3, 'b', 1)，那么 t[2:4] 的结果是什么？",
+                "type": "choice",
+                "options": [
+                    "(3, 'b')",
+                    "('a', 3)",
+                    "(5, 'a', 3)",
+                    "(3, 'b', 1)"
+                ],
+                "answer": "A",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "A"
+            },
+            {
+                "id": "day7_q5",
+                "name": "第5题",
+                "description": "5. 以下哪个方法可以向集合中添加元素？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "5. 以下哪个方法可以向集合中添加元素？",
+                "type": "choice",
+                "options": [
+                    "append()",
+                    "add()",
+                    "insert()",
+                    "extend()"
+                ],
+                "answer": "B",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "B"
+            },
+            {
+                "id": "day7_q6",
+                "name": "第6题",
+                "description": "6. 以下哪个方法可以求两个集合的交集？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "6. 以下哪个方法可以求两个集合的交集？",
+                "type": "choice",
+                "options": [
+                    "union()",
+                    "intersection()",
+                    "difference()",
+                    "symmetric_difference()"
+                ],
+                "answer": "B",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "B"
+            },
+            {
+                "id": "day7_q7",
+                "name": "第7题",
+                "description": "7. 以下哪个方法可以求两个集合的并集？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "7. 以下哪个方法可以求两个集合的并集？",
+                "type": "choice",
+                "options": [
+                    "union()",
+                    "intersection()",
+                    "difference()",
+                    "symmetric_difference()"
+                ],
+                "answer": "A",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "A"
+            },
+            {
+                "id": "day7_q8",
+                "name": "第8题",
+                "description": "8. 以下哪个是集合的特性？...",
+                "difficulty": "简单",
+                "exp_reward": 20,
+                "gold_reward": 10,
+                "question": "8. 以下哪个是集合的特性？",
+                "type": "choice",
+                "options": [
+                    "元素可以重复",
+                    "元素是有序的",
+                    "元素是唯一的",
+                    "可以通过索引访问"
+                ],
+                "answer": "C",
+                "hints": [
+                    "选择正确的选项"
+                ],
+                "code_template": "",
+                "solution": "C"
             }
         ]
     },
@@ -1753,70 +1627,104 @@ REGIONS = [
             {
                 "id": "day8_q1",
                 "name": "第1题",
-                "description": "填空题：...",
+                "description": "使用format方法格式化字符串。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "填空题：",
+                "question": "使用format方法格式化字符串。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "city = '哈尔滨'\ntemperature = -15.5\nreport = '当前城市 {} 温度为 {} 摄氏度。'\nformatted_report = report.format(city, temperature)\nprint(formatted_report)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "city = ",
+                "solution": "city = '哈尔滨'\ntemperature = -15.5\nreport = '当前城市 {} 温度为 {} 摄氏度。'\nformatted_report = report.format(city, temperature)\nprint(formatted_report)"
             },
             {
                 "id": "day8_q2",
                 "name": "第2题",
-                "description": "实战题：...",
+                "description": "使用f-string格式化字符串。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "实战题：",
+                "question": "使用f-string格式化字符串。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "city = '哈尔滨'\ntemperature = -15.5\nreport = f'当前城市 {city} 温度为 {temperature} 摄氏度。'\nprint(report)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "city = ",
+                "solution": "city = '哈尔滨'\ntemperature = -15.5\nreport = f'当前城市 {city} 温度为 {temperature} 摄氏度。'\nprint(report)"
             },
             {
                 "id": "day8_q3",
                 "name": "第3题",
-                "description": "使用while循环表述上面的内容。...",
+                "description": "使用round函数进行四舍五入。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "使用while循环表述上面的内容。",
+                "question": "使用round函数进行四舍五入。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "print(round(3.7))\nprint(round(3.2))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "print(round(3.7)",
+                "solution": "print(round(3.7))\nprint(round(3.2))"
             },
             {
                 "id": "day8_q4",
                 "name": "第4题",
-                "description": "表述要求，必须用到break 和 continue...",
+                "description": "使用math模块的ceil和floor函数。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "表述要求，必须用到break 和 continue",
+                "question": "使用math模块的ceil和floor函数。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "import math\nprint(math.ceil(3.2))\nprint(math.floor(3.7))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "import math\nprint(math.ceil(3.2))\nprint(math.floor(3.7))"
+            },
+            {
+                "id": "day8_q5",
+                "name": "第5题",
+                "description": "计算绝对值。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "计算绝对值。",
+                "type": "code",
+                "options": [],
+                "answer": "print(abs(-5))\nprint(abs(-3.14))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "print(abs(-5)",
+                "solution": "print(abs(-5))\nprint(abs(-3.14))"
+            },
+            {
+                "id": "day8_q6",
+                "name": "第6题",
+                "description": "找出最大值和最小值。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "找出最大值和最小值。",
+                "type": "code",
+                "options": [],
+                "answer": "print(max(1, 2, 3))\nprint(min(1, 2, 3))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "print(max(1, 2, 3)",
+                "solution": "print(max(1, 2, 3))\nprint(min(1, 2, 3))"
             }
         ]
     },
@@ -1829,1046 +1737,991 @@ REGIONS = [
             {
                 "id": "day9_q1",
                 "name": "第1题",
-                "description": "填空题：...",
+                "description": "定义一个函数greet(name)，接收一个姓名参数，打印'Hello, '加上姓名并加感叹号。然后...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "填空题：",
+                "question": "定义一个函数greet(name)，接收一个姓名参数，打印'Hello, '加上姓名并加感叹号。然后调用greet('World')测试。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def greet(name):\n    print('Hello, ' + name + '!')\ngreet('World')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def greet(name):\n    ",
+                "solution": "def greet(name):\n    print('Hello, ' + name + '!')\ngreet('World')"
             },
             {
                 "id": "day9_q2",
                 "name": "第2题",
-                "description": "next()函数用于获取迭代器的下一个          。...",
+                "description": "定义一个函数add(a, b)，接收两个参数，返回它们的和。调用add(3, 5)并打印结果。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "next()函数用于获取迭代器的下一个          。",
+                "question": "定义一个函数add(a, b)，接收两个参数，返回它们的和。调用add(3, 5)并打印结果。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def add(a, b):\n    return a + b\nresult = add(3, 5)\nprint(result)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def add(a, b):\n    ",
+                "solution": "def add(a, b):\n    return a + b\nresult = add(3, 5)\nprint(result)"
             },
             {
                 "id": "day9_q3",
                 "name": "第3题",
-                "description": "如果迭代器中没有更多的元素，调用next()函数会抛出一个            异常。...",
+                "description": "定义一个函数calculate_area(radius)，接收半径参数，返回圆的面积（π取3.141...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "如果迭代器中没有更多的元素，调用next()函数会抛出一个            异常。",
+                "question": "定义一个函数calculate_area(radius)，接收半径参数，返回圆的面积（π取3.14159）。调用函数计算半径为5的圆面积。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def calculate_area(radius):\n    return 3.14159 * radius ** 2\narea = calculate_area(5)\nprint(area)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def calculate_area(radius):\n    ",
+                "solution": "def calculate_area(radius):\n    return 3.14159 * radius ** 2\narea = calculate_area(5)\nprint(area)"
             },
             {
                 "id": "day9_q4",
                 "name": "第4题",
-                "description": "在Python中，使用for循环迭代一个对象时，实际上是在内部调用该对象的           方法...",
+                "description": "定义一个函数is_even(num)，接收一个整数参数，返回该数是否为偶数的布尔值。分别传入4和5测...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "在Python中，使用for循环迭代一个对象时，实际上是在内部调用该对象的           方法。",
+                "question": "定义一个函数is_even(num)，接收一个整数参数，返回该数是否为偶数的布尔值。分别传入4和5测试并打印结果。",
                 "type": "code",
                 "options": [],
-                "answer": "具体任务：\n解题思路：\n参考答案：\n# 获取用户输入的数据\nuser_input = input(\"请输入一组数据（列表包元组），例如 [(1, 2), (3, 4), (5, 6)]: \")\ntry:\n# 使用 eval() 将输入字符串转换为 Python 数据结构\ndata_structure = eval(user_input)\n# 创建迭代器\ndata_iterator = iter(data_structure)\nprint(\"开始对每个元组内的数据进行简单运算：\")\nwhile True:\ntry:\n# 获取下一个元组\ntuple_data = next(data_iterator)\na, b = tuple_data\n# 执行简单运算\nprint(f\"元组: {tuple_data}\")\nprint(f\"加法: {a} + {b} = {a + b}\")\nprint(f\"减法: {a} - {b} = {a - b}\")\nprint(f\"乘法: {a} * {b} = {a * b}\")\nif b != 0:\nprint(f\"除法: {a} / {b} = {a / b}\")\nelse:\nprint(\"除法: 分母不能为零\")\nexcept StopIteration:\nbreak  # 当所有元素都被访问过后停止循环\nexcept Exception as e:\nprint(f\"无效输入或处理错误: {e}\")",
+                "answer": "def is_even(num):\n    return num % 2 == 0\nprint(is_even(4))\nprint(is_even(5))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": "具体任务：\n解题思路：\n参考答案：\n# 获取用户输入的数据\nuser_input = input(\"请输入一组数据（列表包元组），例如 [(1, 2), (3, 4), (5, 6)]: \")\ntry:\n# 使用 eval() 将输入字符串转换为 Python 数据结构\ndata_structure = eval(user_input)\n# 创建迭代器\ndata_iterator = iter(data_structure)\nprint(\"开始对每个元组内的数据进行简单运算：\")\nwhile True:\ntry:\n# 获取下一个元组\ntuple_data = next(data_iterator)\na, b = tuple_data\n# 执行简单运算\nprint(f\"元组: {tuple_data}\")\nprint(f\"加法: {a} + {b} = {a + b}\")\nprint(f\"减法: {a} - {b} = {a - b}\")\nprint(f\"乘法: {a} * {b} = {a * b}\")\nif b != 0:\nprint(f\"除法: {a} / {b} = {a / b}\")\nelse:\nprint(\"除法: 分母不能为零\")\nexcept StopIteration:\nbreak  # 当所有元素都被访问过后停止循环\nexcept Exception as e:\nprint(f\"无效输入或处理错误: {e}\")"
+                "code_template": "def is_even(num):\n    ",
+                "solution": "def is_even(num):\n    return num % 2 == 0\nprint(is_even(4))\nprint(is_even(5))"
+            }
+        ]
+    },
+    {
+        "id": "region_10",
+        "name": "字典王国",
+        "description": "字典、深拷贝与浅拷贝",
+        "icon": "fa-book-open",
+        "levels": [
+            {
+                "id": "day10_q1",
+                "name": "第1题",
+                "description": "创建一个字典student，包含name（张三）、age（18）、score（95）三个键值对。分别...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "创建一个字典student，包含name（张三）、age（18）、score（95）三个键值对。分别打印name和score的值。",
+                "type": "code",
+                "options": [],
+                "answer": "student = {'name': '张三', 'age': 18, 'score': 95}\nprint(student['name'])\nprint(student['age'])\nprint(student['score'])",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "student = ",
+                "solution": "student = {'name': '张三', 'age': 18, 'score': 95}\nprint(student['name'])\nprint(student['age'])\nprint(student['score'])"
             },
             {
-                "id": "day9_q5",
-                "name": "第5题",
-                "description": "实战题...",
+                "id": "day10_q2",
+                "name": "第2题",
+                "description": "创建一个字典student，包含name（张三）、age（18）。添加score为95、gender...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "实战题",
+                "question": "创建一个字典student，包含name（张三）、age（18）。添加score为95、gender为'男'，然后打印完整字典。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "student = {'name': '张三', 'age': 18}\nstudent['score'] = 95\nstudent['gender'] = '男'\nprint(student)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "student = ",
+                "solution": "student = {'name': '张三', 'age': 18}\nstudent['score'] = 95\nstudent['gender'] = '男'\nprint(student)"
             },
             {
-                "id": "day9_q6",
-                "name": "第6题",
-                "description": "第 01 题：...",
+                "id": "day10_q3",
+                "name": "第3题",
+                "description": "创建字典student，包含name、age、score三个键值对。分别使用keys()、value...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "第 01 题：",
+                "question": "创建字典student，包含name、age、score三个键值对。分别使用keys()、values()、items()方法获取并打印所有键、值、键值对。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "student = {'name': '张三', 'age': 18, 'score': 95}\nkeys = list(student.keys())\nvalues = list(student.values())\nitems = list(student.items())\nprint(keys)\nprint(values)\nprint(items)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "student = ",
+                "solution": "student = {'name': '张三', 'age': 18, 'score': 95}\nkeys = list(student.keys())\nvalues = list(student.values())\nitems = list(student.items())\nprint(keys)\nprint(values)\nprint(items)"
             },
             {
-                "id": "day9_q7",
-                "name": "第7题",
-                "description": "第 02 题：...",
+                "id": "day10_q4",
+                "name": "第4题",
+                "description": "创建字典student，包含name和age。使用in关键字检查'score'是否存在于字典中，如果...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "第 02 题：",
+                "question": "创建字典student，包含name和age。使用in关键字检查'score'是否存在于字典中，如果存在则打印对应值，否则打印提示信息。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "student = {'name': '张三', 'age': 18}\nif 'score' in student:\n    print(student['score'])\nelse:\n    print('成绩不存在')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day9_q8",
-                "name": "第8题",
-                "description": "iter()和next()的应用...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "iter()和next()的应用",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day9_q9",
-                "name": "第9题",
-                "description": "使用eval()计算简单的数学表达式...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用eval()计算简单的数学表达式",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "student = ",
+                "solution": "student = {'name': '张三', 'age': 18}\nif 'score' in student:\n    print(student['score'])\nelse:\n    print('成绩不存在')"
             }
         ]
     },
     {
         "id": "region_11",
         "name": "函数进阶",
-        "description": "函数参数与返回值",
+        "description": "函数参数、返回值、递归、闭包与匿名函数",
         "icon": "fa-code",
         "levels": [
             {
                 "id": "day11_q1",
                 "name": "第1题",
-                "description": "函数的参数和返回值...",
+                "description": "定义一个函数greet(name, message='Hello')，name为必传参数，messa...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "函数的参数和返回值",
+                "question": "定义一个函数greet(name, message='Hello')，name为必传参数，message有默认值'Hello'。函数打印message加逗号加name加感叹号。调用greet('Alice')和greet('Bob', 'Hi')。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def greet(name, message='Hello'):\n    print(message + ', ' + name + '!')\ngreet('World')\ngreet('World', 'Hi')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def greet(name, message = ",
+                "solution": "def greet(name, message='Hello'):\n    print(message + ', ' + name + '!')\ngreet('World')\ngreet('World', 'Hi')"
             },
             {
                 "id": "day11_q2",
                 "name": "第2题",
-                "description": "计算三角形面积（基本参数传递与返回值理解）...",
+                "description": "定义一个函数add(*args)，使用可变参数接收任意数量的数字，返回它们的总和。调用add(1, ...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "计算三角形面积（基本参数传递与返回值理解）",
+                "question": "定义一个函数add(*args)，使用可变参数接收任意数量的数字，返回它们的总和。调用add(1, 2, 3, 4)并打印结果。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def add(*args):\n    total = 0\n    for num in args:\n        total += num\n    return total\nprint(add(1, 2, 3))\nprint(add(1, 2, 3, 4, 5))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def add(*args):\n    ",
+                "solution": "def add(*args):\n    total = 0\n    for num in args:\n        total += num\n    return total\nprint(add(1, 2, 3))\nprint(add(1, 2, 3, 4, 5))"
             },
             {
                 "id": "day11_q3",
                 "name": "第3题",
-                "description": "计算统计数据(多个位置参数与返回值)...",
+                "description": "使用递归实现一个函数factorial(n)，计算n的阶乘。当n为0或1时返回1，否则返回n乘以fa...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "计算统计数据(多个位置参数与返回值)",
+                "question": "使用递归实现一个函数factorial(n)，计算n的阶乘。当n为0或1时返回1，否则返回n乘以factorial(n-1)。调用factorial(5)测试。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\nprint(factorial(5))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def factorial(n):\n    ",
+                "solution": "def factorial(n):\n    if n == 0 or n == 1:\n        return 1\n    return n * factorial(n - 1)\nprint(factorial(5))"
+            },
+            {
+                "id": "day11_q4",
+                "name": "第4题",
+                "description": "使用递归实现斐波那契数列函数fibonacci(n)，当n<=1时返回n，否则返回fibonacci...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用递归实现斐波那契数列函数fibonacci(n)，当n<=1时返回n，否则返回fibonacci(n-1)+fibonacci(n-2)。调用fibonacci(10)测试。",
+                "type": "code",
+                "options": [],
+                "answer": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\nfor i in range(10):\n    print(fibonacci(i))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "def fibonacci(n):\n    ",
+                "solution": "def fibonacci(n):\n    if n <= 1:\n        return n\n    return fibonacci(n - 1) + fibonacci(n - 2)\nfor i in range(10):\n    print(fibonacci(i))"
+            },
+            {
+                "id": "day11_q5",
+                "name": "第5题",
+                "description": "创建一个闭包函数make_counter()，内部定义count变量初始为0，返回一个counter...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "创建一个闭包函数make_counter()，内部定义count变量初始为0，返回一个counter函数，每次调用counter()时count加1并返回当前值。",
+                "type": "code",
+                "options": [],
+                "answer": "def make_counter():\n    count = 0\n    def counter():\n        nonlocal count\n        count += 1\n        return count\n    return counter\nc = make_counter()\nprint(c())\nprint(c())\nprint(c())",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "def make_counter():\n    ",
+                "solution": "def make_counter():\n    count = 0\n    def counter():\n        nonlocal count\n        count += 1\n        return count\n    return counter\nc = make_counter()\nprint(c())\nprint(c())\nprint(c())"
+            },
+            {
+                "id": "day11_q6",
+                "name": "第6题",
+                "description": "使用lambda表达式创建一个匿名函数add，接收两个参数x和y，返回x+y。调用add(3, 5)...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用lambda表达式创建一个匿名函数add，接收两个参数x和y，返回x+y。调用add(3, 5)并打印结果。",
+                "type": "code",
+                "options": [],
+                "answer": "add = lambda x, y: x + y\nprint(add(3, 5))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "add = ",
+                "solution": "add = lambda x, y: x + y\nprint(add(3, 5))"
+            },
+            {
+                "id": "day11_q7",
+                "name": "第7题",
+                "description": "创建列表numbers = [1, 2, 3, 4, 5]。使用map将每个元素平方，使用filte...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "创建列表numbers = [1, 2, 3, 4, 5]。使用map将每个元素平方，使用filter过滤出偶数，分别打印结果。",
+                "type": "code",
+                "options": [],
+                "answer": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x ** 2, numbers))\nevens = list(filter(lambda x: x % 2 == 0, numbers))\nprint(squared)\nprint(evens)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "numbers = ",
+                "solution": "numbers = [1, 2, 3, 4, 5]\nsquared = list(map(lambda x: x ** 2, numbers))\nevens = list(filter(lambda x: x % 2 == 0, numbers))\nprint(squared)\nprint(evens)"
             }
         ]
     },
     {
         "id": "region_12",
-        "name": "函数深化",
-        "description": "递归、闭包、匿名函数",
-        "icon": "fa-code-branch",
+        "name": "面向对象",
+        "description": "类与对象",
+        "icon": "fa-object-group",
         "levels": [
             {
                 "id": "day12_q1",
                 "name": "第1题",
-                "description": "创建问候语（默认值参数）...",
+                "description": "定义一个类Person，包含__init__方法接收name和age参数并赋值给实例属性。创建一个P...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "创建问候语（默认值参数）",
+                "question": "定义一个类Person，包含__init__方法接收name和age参数并赋值给实例属性。创建一个Person实例并打印其属性。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    def introduce(self):\n        print('我叫', self.name, '今年', self.age, '岁')\np = Person('张三', 18)\np.introduce()",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n    def introduce(self):\n        print('我叫', self.name, '今年', self.age, '岁')\np = Person('张三', 18)\np.introduce()"
             },
             {
                 "id": "day12_q2",
                 "name": "第2题",
-                "description": "模拟航班预定(关键字参数)...",
+                "description": "定义类Student，包含类属性school='第一中学'，以及__init__方法接收name和g...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "模拟航班预定(关键字参数)",
+                "question": "定义类Student，包含类属性school='第一中学'，以及__init__方法接收name和grade参数。创建两个实例，修改其中一个的school属性，观察类属性和实例属性的区别。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Student:\n    school = '第一中学'\n    def __init__(self, name, grade):\n        self.name = name\n        self.grade = grade\ns = Student('张三', '高三')\nprint(Student.school)\nprint(s.name, s.grade)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class Student:\n    school = '第一中学'\n    def __init__(self, name, grade):\n        self.name = name\n        self.grade = grade\ns = Student('张三', '高三')\nprint(Student.school)\nprint(s.name, s.grade)"
             },
             {
                 "id": "day12_q3",
                 "name": "第3题",
-                "description": "计算任意数量参数的总和（可变位置参数）...",
+                "description": "定义类Circle，使用私有属性__radius存储半径。提供get_radius和set_radi...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "计算任意数量参数的总和（可变位置参数）",
+                "question": "定义类Circle，使用私有属性__radius存储半径。提供get_radius和set_radius方法来访问和修改半径。创建实例并测试方法。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Circle:\n    def __init__(self, radius):\n        self.__radius = radius\n    def get_radius(self):\n        return self.__radius\n    def set_radius(self, radius):\n        if radius > 0:\n            self.__radius = radius\n    def area(self):\n        return 3.14159 * self.__radius ** 2\nc = Circle(5)\nprint(c.area())",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class Circle:\n    def __init__(self, radius):\n        self.__radius = radius\n    def get_radius(self):\n        return self.__radius\n    def set_radius(self, radius):\n        if radius > 0:\n            self.__radius = radius\n    def area(self):\n        return 3.14159 * self.__radius ** 2\nc = Circle(5)\nprint(c.area())"
             },
             {
                 "id": "day12_q4",
                 "name": "第4题",
-                "description": "创建活动信息-可变关键字参数...",
+                "description": "定义类Calculator，包含add、subtract、multiply、divide四个方法，分...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "创建活动信息-可变关键字参数",
+                "question": "定义类Calculator，包含add、subtract、multiply、divide四个方法，分别实现加减乘除运算。创建实例并测试这些方法。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Calculator:\n    def add(self, a, b):\n        return a + b\n    def subtract(self, a, b):\n        return a - b\n    def multiply(self, a, b):\n        return a * b\n    def divide(self, a, b):\n        if b != 0:\n            return a / b\n        return None\ncalc = Calculator()\nprint(calc.add(10, 5))\nprint(calc.divide(10, 5))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day12_q5",
-                "name": "第5题",
-                "description": "计算购物车折扣后的总价-混合参数练习...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "计算购物车折扣后的总价-混合参数练习",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day12_q6",
-                "name": "第6题",
-                "description": "使用回调函数进行用户问候...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用回调函数进行用户问候",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day12_q7",
-                "name": "第7题",
-                "description": "使用回调函数实现基本算术运算...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "使用回调函数实现基本算术运算",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
+                "solution": "class Calculator:\n    def add(self, a, b):\n        return a + b\n    def subtract(self, a, b):\n        return a - b\n    def multiply(self, a, b):\n        return a * b\n    def divide(self, a, b):\n        if b != 0:\n            return a / b\n        return None\ncalc = Calculator()\nprint(calc.add(10, 5))\nprint(calc.divide(10, 5))"
             }
         ]
     },
     {
-        "id": "region_14",
+        "id": "region_13",
         "name": "继承之城",
         "description": "类的继承与重写",
         "icon": "fa-sitemap",
         "levels": [
             {
-                "id": "day14_q1",
+                "id": "day13_q1",
                 "name": "第1题",
-                "description": "完善Bicycle类...",
+                "description": "定义父类Animal，包含speak方法。定义子类Dog继承Animal，重写speak方法使其打印...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "完善Bicycle类",
+                "question": "定义父类Animal，包含speak方法。定义子类Dog继承Animal，重写speak方法使其打印'汪汪汪'。创建Dog实例并调用speak方法。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Animal:\n    def speak(self):\n        pass\nclass Dog(Animal):\n    def speak(self):\n        print('汪汪汪')\nclass Cat(Animal):\n    def speak(self):\n        print('喵喵喵')\nd = Dog()\nd.speak()",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class Animal:\n    def speak(self):\n        pass\nclass Dog(Animal):\n    def speak(self):\n        print('汪汪汪')\nclass Cat(Animal):\n    def speak(self):\n        print('喵喵喵')\nd = Dog()\nd.speak()"
+            },
+            {
+                "id": "day13_q2",
+                "name": "第2题",
+                "description": "定义父类Person，包含__init__方法接收name参数。定义子类Student继承Perso...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义父类Person，包含__init__方法接收name参数。定义子类Student继承Person，使用super()调用父类构造方法，并添加grade属性。",
+                "type": "code",
+                "options": [],
+                "answer": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def introduce(self):\n        print('我是', self.name)\nclass Student(Person):\n    def __init__(self, name, grade):\n        super().__init__(name)\n        self.grade = grade\n    def introduce(self):\n        super().introduce()\n        print('我在读', self.grade)\ns = Student('张三', '高三')\ns.introduce()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def introduce(self):\n        print('我是', self.name)\nclass Student(Person):\n    def __init__(self, name, grade):\n        super().__init__(name)\n        self.grade = grade\n    def introduce(self):\n        super().introduce()\n        print('我在读', self.grade)\ns = Student('张三', '高三')\ns.introduce()"
+            },
+            {
+                "id": "day13_q3",
+                "name": "第3题",
+                "description": "定义父类Shape，包含area方法返回0。定义子类Rectangle继承Shape，重写area方...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义父类Shape，包含area方法返回0。定义子类Rectangle继承Shape，重写area方法计算矩形面积（长×宽）。创建Rectangle实例并调用area。",
+                "type": "code",
+                "options": [],
+                "answer": "class Shape:\n    def area(self):\n        pass\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    def area(self):\n        return self.width * self.height\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14159 * self.radius ** 2\nshapes = [Rectangle(4, 5), Circle(3)]\nfor shape in shapes:\n    print(shape.area())",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Shape:\n    def area(self):\n        pass\nclass Rectangle(Shape):\n    def __init__(self, width, height):\n        self.width = width\n        self.height = height\n    def area(self):\n        return self.width * self.height\nclass Circle(Shape):\n    def __init__(self, radius):\n        self.radius = radius\n    def area(self):\n        return 3.14159 * self.radius ** 2\nshapes = [Rectangle(4, 5), Circle(3)]\nfor shape in shapes:\n    print(shape.area())"
+            },
+            {
+                "id": "day13_q4",
+                "name": "第4题",
+                "description": "定义类A和类B，都包含show方法。定义类C同时继承A和B，调用C实例的show方法观察MRO（方法...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义类A和类B，都包含show方法。定义类C同时继承A和B，调用C实例的show方法观察MRO（方法解析顺序）。",
+                "type": "code",
+                "options": [],
+                "answer": "class A:\n    def show(self):\n        print('A')\nclass B:\n    def show(self):\n        print('B')\nclass C(A, B):\n    pass\nc = C()\nc.show()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class A:\n    def show(self):\n        print('A')\nclass B:\n    def show(self):\n        print('B')\nclass C(A, B):\n    pass\nc = C()\nc.show()"
             }
         ]
     },
     {
-        "id": "region_15",
+        "id": "region_14",
         "name": "多态之塔",
         "description": "多继承、多态和鸭子类型",
         "icon": "fa-layer-group",
         "levels": [
             {
-                "id": "day15_q1",
+                "id": "day14_q1",
                 "name": "第1题",
-                "description": "Vehicle类中__init__方法的作用是什么？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "Vehicle类中__init__方法的作用是什么？",
-                "type": "choice",
-                "options": [
-                    "启动车辆",
-                    "打印车辆",
-                    "初始化车辆的品牌和型号",
-                    "充电"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q2",
-                "name": "第2题",
-                "description": "Car类继承自哪个类？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "Car类继承自哪个类？",
-                "type": "choice",
-                "options": [
-                    "Bicycle",
-                    "ElectricCar",
-                    "Vehicle",
-                    "不继承任何类"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q3",
-                "name": "第3题",
-                "description": "ElectricCar类可以访问哪些方法？（多选）...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "ElectricCar类可以访问哪些方法？（多选）",
-                "type": "choice",
-                "options": [
-                    "start",
-                    "drive",
-                    "charge",
-                    "只有charge"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q4",
-                "name": "第4题",
-                "description": "创建ElectricCar对象my_car后，调用drive方法会打印什么？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "创建ElectricCar对象my_car后，调用drive方法会打印什么？",
-                "type": "choice",
-                "options": [
-                    "\"特斯拉 Model S 启动了。\"",
-                    "\"特斯拉 Model S 在路上行驶。\"",
-                    "\"特斯拉 Model S 正在充电。\"",
-                    "\"自行车正在骑行中。\""
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q5",
-                "name": "第5题",
-                "description": "在提供的代码示例中，Bicycle类显式地继承了哪个类？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "在提供的代码示例中，Bicycle类显式地继承了哪个类？",
-                "type": "choice",
-                "options": [
-                    "Object类",
-                    "Vehicle类",
-                    "没有显示的继承任何类",
-                    "它自己"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q6",
-                "name": "第6题",
-                "description": "什么是类的继承？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "什么是类的继承？",
-                "type": "choice",
-                "options": [
-                    "类的继承是指一个类（称为子类）可以继承另一个类（称为父类）的属性和方法。",
-                    "类的继承是指一个类可以从多个类继承属性和方法，但只能有一个主要父类。",
-                    "类的继承是指一个类可以完全替换另一个类的所有属性和方法。",
-                    "类的继承是指一个类可以复制另一个类的属性和方法，但不能修改它们。"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q7",
-                "name": "第7题",
-                "description": "关于Python类的继承正确的说法是？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "关于Python类的继承正确的说法是？",
-                "type": "choice",
-                "options": [
-                    "Python类无法继承其他类",
-                    "子类继承父类后，无法调用父类的构造函数",
-                    "可以有多个父类",
-                    "不能有多个父类"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q8",
-                "name": "第8题",
-                "description": "在Python中，如何正确地在子类中重写父类的方法？？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "在Python中，如何正确地在子类中重写父类的方法？？",
-                "type": "choice",
-                "options": [
-                    "使用override关键字定义一个与父类中相同名称的方法",
-                    "在子类中定义一个与父类中相同名称的方法即可",
-                    "使用super()函数直接修改父类的方法定义",
-                    "在子类的方法中使用@overload装饰器来指定要重写的方法"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q9",
-                "name": "第9题",
-                "description": "在Python中，当你创建了一个从多个类继承的子类时，Python使用什么规则来决定应该首先检查哪个...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "在Python中，当你创建了一个从多个类继承的子类时，Python使用什么规则来决定应该首先检查哪个父类的方法或属性？",
-                "type": "choice",
-                "options": [
-                    "随机选择一个父类开始查找",
-                    "总是从最后一个列出的父类开始查找",
-                    "使用一种叫做方法解析顺序（MRO）的特殊规则来决定查找顺序",
-                    "只查找第一个父类，忽略其他的父类"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q10",
-                "name": "第10题",
-                "description": "按照字母顺序排列父类名称后进行查找...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "按照字母顺序排列父类名称后进行查找",
-                "type": "choice",
-                "options": [
-                    "什么是多继承？",
-                    "多继承是指一个类可以从多个父类继承属性和方法",
-                    "多继承是指一个类可以在不同程序中被多次定义",
-                    "多继承是指多个子类可以共享同一个父类"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q11",
-                "name": "第11题",
-                "description": "多继承是指一个类可以作为多个其他类的父类...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "多继承是指一个类可以作为多个其他类的父类",
-                "type": "choice",
-                "options": [
-                    "以下哪一项描述了实例方法和实例属性之间的正确关系？",
-                    "实例方法可以在不使用self的情况下直接访问和修改实例属性。",
-                    "实例方法只能修改但不能读取实例属性 。",
-                    "实例方法可以通过self参数访问并修改实例属性。"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q12",
-                "name": "第12题",
-                "description": "关于Python中的实例方法和实例属性，以下哪项陈述是正确的？...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "关于Python中的实例方法和实例属性，以下哪项陈述是正确的？",
-                "type": "choice",
-                "options": [
-                    "A. 实例方法必须通过类名来访问实例属性。",
-                    "B. 实例属性只能在__init__方法中定义。",
-                    "C. 实例方法可以通过self参数读取和修改其他实例的属性。",
-                    "D. 实例方法可以通过self参数读取和修改同一个实例的属性。"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q13",
-                "name": "第13题",
-                "description": "填空题...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "填空题",
-                "type": "choice",
-                "options": [
-                    "洗衣机",
-                    "在上述代码中，Washer类是一个                 。",
-                    "它有两个实例属性（brand（品牌）和负载量（load）），以及 wash 和 dry 两个方法。",
-                    "AdvancedWasher 类继承自 SpinDryer 和 SteamCleaner 类，"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q14",
-                "name": "第14题",
-                "description": "其中 SpinDryer 继承自 Washer 类，...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "其中 SpinDryer 继承自 Washer 类，",
-                "type": "choice",
-                "options": [
-                    "因此 AdvancedWasher 类具有 Washer 类的             方法和 SteamCleaner 类的             方法。",
-                    "已知SpinDryer继承了 Washer 类，因此在 AdvancedWasher 类的__init__函数中，可以通过调用                 方法来初始化品牌属性。",
-                    "\"\"\"。。。省略。。。\"\"\"",
-                    "class AdvancedWasher(SpinDryer, SteamCleaner):"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q15",
-                "name": "第15题",
-                "description": "def __init__(self, brand, has_steam=True):...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "def __init__(self, brand, has_steam=True):",
-                "type": "choice",
-                "options": [
-                    "第3小题：_________________________",
-                    "self.has_steam = has_steam",
-                    "\"\"\"。。。省略。。。\"\"\"",
-                    "AdvancedWasher 类的 wash 方法中，如果洗衣机具有蒸汽功能，则会调用             方法来启动蒸汽清洁。"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q16",
-                "name": "第16题",
-                "description": "\"\"\"。。。省略。。。\"\"\"...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "\"\"\"。。。省略。。。\"\"\"",
-                "type": "choice",
-                "options": [
-                    "class AdvancedWasher(SpinDryer, SteamCleaner):",
-                    "def __init__(self, brand, has_steam=True):",
-                    "第3小题：_________________________",
-                    "self.has_steam = has_steam"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q17",
-                "name": "第17题",
-                "description": "def wash(self):...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "def wash(self):",
-                "type": "choice",
-                "options": [
-                    "print(f\"{self.brand} 高级洗衣机开始洗衣程序。\")",
-                    "if self.has_steam:",
-                    "第4小题：____________",
-                    "Washer.wash(self)  # 直接调用Washer类的wash方法"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q18",
-                "name": "第18题",
-                "description": "\"\"\"。。。省略。。。\"\"\"...",
-                "difficulty": "简单",
-                "exp_reward": 20,
-                "gold_reward": 10,
-                "question": "\"\"\"。。。省略。。。\"\"\"",
-                "type": "choice",
-                "options": [
-                    "当调用 advanced_washer.dry() 时，首先执行的是              类重写的 dry方法，该方法内部调用了 super().dry()，这会执行             类的原始 dry 方法。"
-                ],
-                "answer": null,
-                "hints": [
-                    "选择正确的选项"
-                ],
-                "code_template": "",
-                "solution": null
-            },
-            {
-                "id": "day15_q19",
-                "name": "第19题",
-                "description": "实现烤箱-烤玉米...",
+                "description": "定义抽象父类Animal，包含speak方法。定义Dog和Cat子类分别实现speak方法。编写函数...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "实现烤箱-烤玉米",
+                "question": "定义抽象父类Animal，包含speak方法。定义Dog和Cat子类分别实现speak方法。编写函数make_speak(animal)调用传入对象的speak方法，体现多态性。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Animal:\n    def speak(self):\n        pass\nclass Dog(Animal):\n    def speak(self):\n        print('汪汪汪')\nclass Cat(Animal):\n    def speak(self):\n        print('喵喵喵')\ndef make_speak(animal):\n    animal.speak()\nmake_speak(Dog())\nmake_speak(Cat())",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class Animal:\n    def speak(self):\n        pass\nclass Dog(Animal):\n    def speak(self):\n        print('汪汪汪')\nclass Cat(Animal):\n    def speak(self):\n        print('喵喵喵')\ndef make_speak(animal):\n    animal.speak()\nmake_speak(Dog())\nmake_speak(Cat())"
+            },
+            {
+                "id": "day14_q2",
+                "name": "第2题",
+                "description": "定义Bird类和Airplane类，都包含fly方法。定义函数let_it_fly(obj)调用fl...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义Bird类和Airplane类，都包含fly方法。定义函数let_it_fly(obj)调用fly方法。传入Bird和Airplane实例，演示鸭子类型。",
+                "type": "code",
+                "options": [],
+                "answer": "class Bird:\n    def fly(self):\n        print('鸟在飞')\nclass Airplane:\n    def fly(self):\n        print('飞机在飞')\ndef let_fly(obj):\n    obj.fly()\nlet_fly(Bird())\nlet_fly(Airplane())",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Bird:\n    def fly(self):\n        print('鸟在飞')\nclass Airplane:\n    def fly(self):\n        print('飞机在飞')\ndef let_fly(obj):\n    obj.fly()\nlet_fly(Bird())\nlet_fly(Airplane())"
+            },
+            {
+                "id": "day14_q3",
+                "name": "第3题",
+                "description": "定义类A包含method方法打印'A'，类B继承A并重写method打印'B'，类C继承B并重写me...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义类A包含method方法打印'A'，类B继承A并重写method打印'B'，类C继承B并重写method打印'C'。创建C实例调用method方法。",
+                "type": "code",
+                "options": [],
+                "answer": "class A:\n    def method(self):\n        print('A')\nclass B(A):\n    def method(self):\n        print('B')\nclass C(B):\n    def method(self):\n        print('C')\nc = C()\nc.method()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class A:\n    def method(self):\n        print('A')\nclass B(A):\n    def method(self):\n        print('B')\nclass C(B):\n    def method(self):\n        print('C')\nc = C()\nc.method()"
+            },
+            {
+                "id": "day14_q4",
+                "name": "第4题",
+                "description": "定义Animal类和Dog类（继承Animal）。创建Dog实例，使用isinstance判断该实例...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义Animal类和Dog类（继承Animal）。创建Dog实例，使用isinstance判断该实例是否为Animal类型和Dog类型。",
+                "type": "code",
+                "options": [],
+                "answer": "class Animal:\n    pass\nclass Dog(Animal):\n    def bark(self):\n        print('汪汪汪')\nclass Cat(Animal):\n    def meow(self):\n        print('喵喵喵')\nanimals = [Dog(), Cat()]\nfor animal in animals:\n    if isinstance(animal, Dog):\n        animal.bark()\n    elif isinstance(animal, Cat):\n        animal.meow()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Animal:\n    pass\nclass Dog(Animal):\n    def bark(self):\n        print('汪汪汪')\nclass Cat(Animal):\n    def meow(self):\n        print('喵喵喵')\nanimals = [Dog(), Cat()]\nfor animal in animals:\n    if isinstance(animal, Dog):\n        animal.bark()\n    elif isinstance(animal, Cat):\n        animal.meow()"
             }
         ]
     },
     {
-        "id": "region_16",
+        "id": "region_15",
         "name": "魔法之屋",
         "description": "魔法方法",
         "icon": "fa-sparkles",
         "levels": [
             {
-                "id": "day16_q1",
+                "id": "day15_q1",
                 "name": "第1题",
-                "description": "作业 01：车辆租赁费用计算...",
+                "description": "定义Person类，实现__str__方法返回'Person: '加上name属性。创建实例并打印，...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "作业 01：车辆租赁费用计算",
+                "question": "定义Person类，实现__str__方法返回'Person: '加上name属性。创建实例并打印，观察输出效果。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return 'Person: ' + self.name\np = Person('张三')\nprint(p)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class Person:\n    def __init__(self, name):\n        self.name = name\n    def __str__(self):\n        return 'Person: ' + self.name\np = Person('张三')\nprint(p)"
+            },
+            {
+                "id": "day15_q2",
+                "name": "第2题",
+                "description": "定义Vector类，包含x和y属性。实现__add__方法，使得两个Vector实例可以使用+运算符...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义Vector类，包含x和y属性。实现__add__方法，使得两个Vector实例可以使用+运算符相加，返回新的Vector对象。",
+                "type": "code",
+                "options": [],
+                "answer": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\n    def __str__(self):\n        return f'({self.x}, {self.y})'\nv1 = Vector(1, 2)\nv2 = Vector(3, 4)\nprint(v1 + v2)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Vector:\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n    def __add__(self, other):\n        return Vector(self.x + other.x, self.y + other.y)\n    def __str__(self):\n        return f'({self.x}, {self.y})'\nv1 = Vector(1, 2)\nv2 = Vector(3, 4)\nprint(v1 + v2)"
+            },
+            {
+                "id": "day15_q3",
+                "name": "第3题",
+                "description": "定义Counter类，实现__call__方法，每次调用实例时count加1并返回当前计数。创建实例...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义Counter类，实现__call__方法，每次调用实例时count加1并返回当前计数。创建实例并多次调用测试。",
+                "type": "code",
+                "options": [],
+                "answer": "class Counter:\n    def __init__(self):\n        self.count = 0\n    def __call__(self):\n        self.count += 1\n        return self.count\nc = Counter()\nprint(c())\nprint(c())\nprint(c())",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Counter:\n    def __init__(self):\n        self.count = 0\n    def __call__(self):\n        self.count += 1\n        return self.count\nc = Counter()\nprint(c())\nprint(c())\nprint(c())"
+            },
+            {
+                "id": "day15_q4",
+                "name": "第4题",
+                "description": "定义MyList类包装一个列表。实现__len__方法返回列表长度，实现__getitem__方法支...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "定义MyList类包装一个列表。实现__len__方法返回列表长度，实现__getitem__方法支持索引访问。创建实例测试这些特殊方法。",
+                "type": "code",
+                "options": [],
+                "answer": "class MyList:\n    def __init__(self, items):\n        self.items = items\n    def __len__(self):\n        return len(self.items)\n    def __getitem__(self, index):\n        return self.items[index]\nml = MyList([1, 2, 3, 4, 5])\nprint(len(ml))\nprint(ml[2])",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class MyList:\n    def __init__(self, items):\n        self.items = items\n    def __len__(self):\n        return len(self.items)\n    def __getitem__(self, index):\n        return self.items[index]\nml = MyList([1, 2, 3, 4, 5])\nprint(len(ml))\nprint(ml[2])"
             }
         ]
     },
     {
-        "id": "region_18",
+        "id": "region_16",
+        "name": "单例秘境",
+        "description": "单例模式与模块",
+        "icon": "fa-key",
+        "levels": [
+            {
+                "id": "day16_q1",
+                "name": "第1题",
+                "description": "使用__new__方法实现单例模式。定义Singleton类，确保无论创建多少次实例，都返回同一个对...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用__new__方法实现单例模式。定义Singleton类，确保无论创建多少次实例，都返回同一个对象。测试创建多个实例并比较它们的id。",
+                "type": "code",
+                "options": [],
+                "answer": "class Singleton:\n    _instance = None\n    def __new__(cls, *args, **kwargs):\n        if not cls._instance:\n            cls._instance = super().__new__(cls)\n        return cls._instance\ns1 = Singleton()\ns2 = Singleton()\nprint(s1 is s2)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "class Singleton:\n    _instance = None\n    def __new__(cls, *args, **kwargs):\n        if not cls._instance:\n            cls._instance = super().__new__(cls)\n        return cls._instance\ns1 = Singleton()\ns2 = Singleton()\nprint(s1 is s2)"
+            },
+            {
+                "id": "day16_q2",
+                "name": "第2题",
+                "description": "导入math模块，使用math.pi打印圆周率，使用math.sqrt(16)计算并打印16的平方根...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "导入math模块，使用math.pi打印圆周率，使用math.sqrt(16)计算并打印16的平方根。",
+                "type": "code",
+                "options": [],
+                "answer": "import math\nprint(math.pi)\nprint(math.sqrt(16))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "import math\nprint(math.pi)\nprint(math.sqrt(16))"
+            },
+            {
+                "id": "day16_q3",
+                "name": "第3题",
+                "description": "使用from math import pi, sqrt导入特定函数，直接使用pi和sqrt(16)进...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用from math import pi, sqrt导入特定函数，直接使用pi和sqrt(16)进行计算并打印结果。",
+                "type": "code",
+                "options": [],
+                "answer": "from math import pi, sqrt\nprint(pi)\nprint(sqrt(16))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "from math import pi, sqrt\nprint(pi)\nprint(sqrt(16))"
+            },
+            {
+                "id": "day16_q4",
+                "name": "第4题",
+                "description": "创建一个模块文件，使用__all__列表控制导出的函数。定义public_function和_pri...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "创建一个模块文件，使用__all__列表控制导出的函数。定义public_function和_private_function，__all__只包含public_function。",
+                "type": "code",
+                "options": [],
+                "answer": "__all__ = ['public_function']\ndef public_function():\n    return 'public'\ndef _private_function():\n    return 'private'",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "__all__ = ",
+                "solution": "__all__ = ['public_function']\ndef public_function():\n    return 'public'\ndef _private_function():\n    return 'private'"
+            }
+        ]
+    },
+    {
+        "id": "region_17",
         "name": "文件港湾",
         "description": "文件操作",
         "icon": "fa-file",
         "levels": [
             {
-                "id": "day18_q1",
+                "id": "day17_q1",
                 "name": "第1题",
-                "description": "游戏全局状态管理器 - GameManager 类设计...",
+                "description": "使用with语句打开文件'test.txt'，以写入模式写入'Hello, World!'。确保文件...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "游戏全局状态管理器 - GameManager 类设计",
+                "question": "使用with语句打开文件'test.txt'，以写入模式写入'Hello, World!'。确保文件正确关闭。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "with open('test.txt', 'w') as f:\n    f.write('Hello, World!')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "with open('test.txt', 'w') as f:\n    f.write('Hello, World!')"
             },
             {
-                "id": "day18_q2",
+                "id": "day17_q2",
                 "name": "第2题",
-                "description": "数据验证...",
+                "description": "使用with语句打开文件'test.txt'，以读取模式读取全部内容并打印。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "数据验证",
+                "question": "使用with语句打开文件'test.txt'，以读取模式读取全部内容并打印。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "with open('test.txt', 'r') as f:\n    content = f.read()\n    print(content)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "with open('test.txt', 'r') as f:\n    content = f.read()\n    print(content)"
             },
             {
-                "id": "day18_q3",
+                "id": "day17_q3",
                 "name": "第3题",
-                "description": "测试代码和主程序保护...",
+                "description": "使用with语句打开文件'test.txt'，以追加模式写入换行符和'Appended conten...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "测试代码和主程序保护",
+                "question": "使用with语句打开文件'test.txt'，以追加模式写入换行符和'Appended content'。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "with open('test.txt', 'a') as f:\n    f.write('\\nAppended content')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "with open('test.txt', 'a') as f:\n    f.write('\\nAppended content')"
             },
             {
-                "id": "day18_q4",
+                "id": "day17_q4",
                 "name": "第4题",
-                "description": "命名空间包...",
+                "description": "使用with语句打开文件'test.txt'，使用readlines()方法逐行读取内容并打印每一行...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "命名空间包",
+                "question": "使用with语句打开文件'test.txt'，使用readlines()方法逐行读取内容并打印每一行。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "with open('test.txt', 'r') as f:\n    lines = f.readlines()\n    for line in lines:\n        print(line.strip())",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
-            },
-            {
-                "id": "day18_q5",
-                "name": "第5题",
-                "description": "模块的导入方式...",
-                "difficulty": "中等",
-                "exp_reward": 50,
-                "gold_reward": 25,
-                "question": "模块的导入方式",
-                "type": "code",
-                "options": [],
-                "answer": "",
-                "hints": [
-                    "编写正确的Python代码"
-                ],
-                "code_template": "",
-                "solution": ""
+                "solution": "with open('test.txt', 'r') as f:\n    lines = f.readlines()\n    for line in lines:\n        print(line.strip())"
             }
         ]
     },
     {
-        "id": "region_19",
+        "id": "region_18",
         "name": "正则海域",
         "description": "正则表达式",
         "icon": "fa-search",
         "levels": [
             {
-                "id": "day19_q1",
+                "id": "day18_q1",
                 "name": "第1题",
-                "description": "完成下列操作前。先创建一个day_18的文件夹。所有操作，均在这个文件夹下完成。...",
+                "description": "使用正则表达式匹配字符串中的所有数字。定义pattern为匹配一个或多个数字，在文本'abc123d...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "完成下列操作前。先创建一个day_18的文件夹。所有操作，均在这个文件夹下完成。",
+                "question": "使用正则表达式匹配字符串中的所有数字。定义pattern为匹配一个或多个数字，在文本'abc123def456'中查找所有匹配并打印。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "import re\npattern = r'\\d+'\ntext = 'abc123def456'\nresult = re.findall(pattern, text)\nprint(result)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "import re\npattern = r'\\d+'\ntext = 'abc123def456'\nresult = re.findall(pattern, text)\nprint(result)"
+            },
+            {
+                "id": "day18_q2",
+                "name": "第2题",
+                "description": "使用正则表达式判断字符串是否为纯字母组成。定义pattern匹配以字母开头和结尾的字符串，测试'He...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用正则表达式判断字符串是否为纯字母组成。定义pattern匹配以字母开头和结尾的字符串，测试'Hello'和'Hello123'。",
+                "type": "code",
+                "options": [],
+                "answer": "import re\npattern = r'^[a-zA-Z]+$'\ntext = 'Hello'\nresult = re.match(pattern, text)\nprint(bool(result))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "import re\npattern = r'^[a-zA-Z]+$'\ntext = 'Hello'\nresult = re.match(pattern, text)\nprint(bool(result))"
+            },
+            {
+                "id": "day18_q3",
+                "name": "第3题",
+                "description": "使用正则表达式替换字符串中的内容。将文本中所有'cat'替换为'dog'，包括'Cats'中的'ca...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用正则表达式替换字符串中的内容。将文本中所有'cat'替换为'dog'，包括'Cats'中的'cat'。",
+                "type": "code",
+                "options": [],
+                "answer": "import re\npattern = r'cat'\ntext = 'The cat is cute. Cats are nice.'\nresult = re.sub(pattern, 'dog', text)\nprint(result)",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "import re\npattern = r'cat'\ntext = 'The cat is cute. Cats are nice.'\nresult = re.sub(pattern, 'dog', text)\nprint(result)"
+            },
+            {
+                "id": "day18_q4",
+                "name": "第4题",
+                "description": "使用正则分组提取日期信息。定义pattern匹配YYYY-MM-DD格式的日期，从文本中提取年、月、...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "使用正则分组提取日期信息。定义pattern匹配YYYY-MM-DD格式的日期，从文本中提取年、月、日并分别打印。",
+                "type": "code",
+                "options": [],
+                "answer": "import re\npattern = r'(\\d{4})-(\\d{2})-(\\d{2})'\ntext = 'Date: 2024-01-15'\nresult = re.search(pattern, text)\nif result:\n    print('Year:', result.group(1))\n    print('Month:', result.group(2))\n    print('Day:', result.group(3))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "",
+                "solution": "import re\npattern = r'(\\d{4})-(\\d{2})-(\\d{2})'\ntext = 'Date: 2024-01-15'\nresult = re.search(pattern, text)\nif result:\n    print('Year:', result.group(1))\n    print('Month:', result.group(2))\n    print('Day:', result.group(3))"
+            }
+        ]
+    },
+    {
+        "id": "region_19",
+        "name": "装饰器峰",
+        "description": "装饰器与生成器",
+        "icon": "fa-gem",
+        "levels": [
+            {
+                "id": "day19_q1",
+                "name": "第1题",
+                "description": "创建一个装饰器decorator，在函数执行前打印'Before'，执行后打印'After'。使用该...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "创建一个装饰器decorator，在函数执行前打印'Before'，执行后打印'After'。使用该装饰器装饰一个简单函数并调用测试。",
+                "type": "code",
+                "options": [],
+                "answer": "def decorator(func):\n    def wrapper(*args, **kwargs):\n        print('Before')\n        result = func(*args, **kwargs)\n        print('After')\n        return result\n    return wrapper\n@decorator\ndef greet():\n    print('Hello')\ngreet()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "def decorator(func):\n    ",
+                "solution": "def decorator(func):\n    def wrapper(*args, **kwargs):\n        print('Before')\n        result = func(*args, **kwargs)\n        print('After')\n        return result\n    return wrapper\n@decorator\ndef greet():\n    print('Hello')\ngreet()"
             },
             {
                 "id": "day19_q2",
                 "name": "第2题",
-                "description": "5...",
+                "description": "创建一个带参数的装饰器repeat(times)，可以指定函数重复执行的次数。使用@repeat(3...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "5",
+                "question": "创建一个带参数的装饰器repeat(times)，可以指定函数重复执行的次数。使用@repeat(3)装饰函数，调用时函数将执行3次。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def repeat(times):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            results = []\n            for _ in range(times):\n                results.append(func(*args, **kwargs))\n            return results\n        return wrapper\n    return decorator\n@repeat(3)\ndef greet():\n    return 'Hello'\nprint(greet())",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def repeat(times):\n    ",
+                "solution": "def repeat(times):\n    def decorator(func):\n        def wrapper(*args, **kwargs):\n            results = []\n            for _ in range(times):\n                results.append(func(*args, **kwargs))\n            return results\n        return wrapper\n    return decorator\n@repeat(3)\ndef greet():\n    return 'Hello'\nprint(greet())"
             },
             {
                 "id": "day19_q3",
                 "name": "第3题",
-                "description": "8...",
+                "description": "创建一个生成器函数generator()，依次yield 1、2、3。获取生成器对象并使用for循环...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "8",
+                "question": "创建一个生成器函数generator()，依次yield 1、2、3。获取生成器对象并使用for循环遍历打印每个值。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def generator():\n    yield 1\n    yield 2\n    yield 3\ng = generator()\nfor num in g:\n    print(num)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def generator():\n    ",
+                "solution": "def generator():\n    yield 1\n    yield 2\n    yield 3\ng = generator()\nfor num in g:\n    print(num)"
             },
             {
                 "id": "day19_q4",
                 "name": "第4题",
-                "description": "将排序后的结果依次输入到新文件中。排序结果要求如下：...",
+                "description": "使用生成器表达式创建一个生成器，生成0到9的平方数。使用for循环遍历并打印每个元素。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "将排序后的结果依次输入到新文件中。排序结果要求如下：",
+                "question": "使用生成器表达式创建一个生成器，生成0到9的平方数。使用for循环遍历并打印每个元素。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "numbers = (x ** 2 for x in range(10))\nfor num in numbers:\n    print(num)",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "numbers = ",
+                "solution": "numbers = (x ** 2 for x in range(10))\nfor num in numbers:\n    print(num)"
             },
             {
                 "id": "day19_q5",
                 "name": "第5题",
-                "description": "0...",
+                "description": "创建一个无限生成器fibonacci()，无限生成斐波那契数列。使用for循环获取前10个值并打印。...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "0",
+                "question": "创建一个无限生成器fibonacci()，无限生成斐波那契数列。使用for循环获取前10个值并打印。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\nfib = fibonacci()\nfor _ in range(10):\n    print(next(fib))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def fibonacci():\n    ",
+                "solution": "def fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\nfib = fibonacci()\nfor _ in range(10):\n    print(next(fib))"
+            }
+        ]
+    },
+    {
+        "id": "region_20",
+        "name": "Bug巢穴",
+        "description": "最终挑战！击败Bug之王",
+        "icon": "fa-skull",
+        "levels": [
+            {
+                "id": "day20_q1",
+                "name": "第1题",
+                "description": "创建一个调试装饰器debug，在函数调用前打印函数名和参数，调用后打印返回值。装饰一个加法函数并测试...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "创建一个调试装饰器debug，在函数调用前打印函数名和参数，调用后打印返回值。装饰一个加法函数并测试。",
+                "type": "code",
+                "options": [],
+                "answer": "def debug(func):\n    def wrapper(*args, **kwargs):\n        print(f'Calling {func.__name__} with args={args}, kwargs={kwargs}')\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} returned {result}')\n        return result\n    return wrapper\n@debug\ndef add(a, b):\n    return a + b\nprint(add(3, 5))",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "def debug(func):\n    ",
+                "solution": "def debug(func):\n    def wrapper(*args, **kwargs):\n        print(f'Calling {func.__name__} with args={args}, kwargs={kwargs}')\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} returned {result}')\n        return result\n    return wrapper\n@debug\ndef add(a, b):\n    return a + b\nprint(add(3, 5))"
             },
             {
-                "id": "day19_q6",
-                "name": "第6题",
-                "description": "8...",
+                "id": "day20_q2",
+                "name": "第2题",
+                "description": "创建一个上下文管理器类ErrorHandler，在__enter__方法中返回自身，在__exit_...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "8",
+                "question": "创建一个上下文管理器类ErrorHandler，在__enter__方法中返回自身，在__exit__方法中捕获并处理异常。使用with语句测试。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "class ErrorHandler:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if exc_type:\n            print(f'Error: {exc_val}')\n            return True\n        return False\nwith ErrorHandler():\n    raise ValueError('Test error')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "class ErrorHandler:\n    def __enter__(self):\n        return self\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if exc_type:\n            print(f'Error: {exc_val}')\n            return True\n        return False\nwith ErrorHandler():\n    raise ValueError('Test error')"
             },
             {
-                "id": "day19_q7",
-                "name": "第7题",
-                "description": "5...",
+                "id": "day20_q3",
+                "name": "第3题",
+                "description": "编写一个函数process_file(filename)，使用try-except语句处理文件打开异...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "5",
+                "question": "编写一个函数process_file(filename)，使用try-except语句处理文件打开异常。当文件不存在时打印友好的错误提示。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "def process_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            content = f.read()\n            return content\n    except FileNotFoundError:\n        print(f'File {filename} not found')\n        return None\n    except Exception as e:\n        print(f'Error: {e}')\n        return None\nprint(process_file('test.txt'))",
                 "hints": [
                     "编写正确的Python代码"
                 ],
-                "code_template": "",
-                "solution": ""
+                "code_template": "def process_file(filename):\n    ",
+                "solution": "def process_file(filename):\n    try:\n        with open(filename, 'r') as f:\n            content = f.read()\n            return content\n    except FileNotFoundError:\n        print(f'File {filename} not found')\n        return None\n    except Exception as e:\n        print(f'Error: {e}')\n        return None\nprint(process_file('test.txt'))"
             },
             {
-                "id": "day19_q8",
-                "name": "第8题",
-                "description": "0...",
+                "id": "day20_q4",
+                "name": "第4题",
+                "description": "使用logging模块配置日志输出，设置级别为DEBUG，格式包含时间、级别和消息。分别输出DEBU...",
                 "difficulty": "中等",
                 "exp_reward": 50,
                 "gold_reward": 25,
-                "question": "0",
+                "question": "使用logging模块配置日志输出，设置级别为DEBUG，格式包含时间、级别和消息。分别输出DEBUG、INFO、WARNING级别的日志。",
                 "type": "code",
                 "options": [],
-                "answer": "",
+                "answer": "import logging\nlogging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')\nlogging.debug('Debug message')\nlogging.info('Info message')\nlogging.warning('Warning message')\nlogging.error('Error message')",
                 "hints": [
                     "编写正确的Python代码"
                 ],
                 "code_template": "",
-                "solution": ""
+                "solution": "import logging\nlogging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')\nlogging.debug('Debug message')\nlogging.info('Info message')\nlogging.warning('Warning message')\nlogging.error('Error message')"
+            },
+            {
+                "id": "day20_q5",
+                "name": "第5题",
+                "description": "完成最终挑战！编写一个综合程序，包含函数、类、异常处理等知识点，实现一个简单的学生成绩管理系统。...",
+                "difficulty": "中等",
+                "exp_reward": 50,
+                "gold_reward": 25,
+                "question": "完成最终挑战！编写一个综合程序，包含函数、类、异常处理等知识点，实现一个简单的学生成绩管理系统。",
+                "type": "code",
+                "options": [],
+                "answer": "def challenge():\n    print('Congratulations!')\n    print('You have completed all challenges!')\n    print('Welcome to the world of Python!')\nchallenge()",
+                "hints": [
+                    "编写正确的Python代码"
+                ],
+                "code_template": "def challenge():\n    ",
+                "solution": "def challenge():\n    print('Congratulations!')\n    print('You have completed all challenges!')\n    print('Welcome to the world of Python!')\nchallenge()"
             }
         ]
     }

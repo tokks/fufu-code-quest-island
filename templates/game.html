@@ -6,7 +6,7 @@
     <title>编程闯关岛 - 游戏</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}?v=9">
 </head>
 <body class="game-page">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
@@ -38,20 +38,36 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-btn" data-section="inventory">
-                            <i class="fas fa-backpack"></i> 背包
+                        <button class="nav-btn" data-section="leaderboard">
+                            <i class="fas fa-ranking-star"></i> 排行榜
+                        </button>
+                    </li>
+                    <li class="nav-item" id="adminSettingsNav" style="display: none;">
+                        <button class="nav-btn" data-section="admin-settings">
+                            <i class="fas fa-cog"></i> 设置
                         </button>
                     </li>
                 </ul>
                 
                 <div class="d-flex align-items-center">
                     <div class="player-info me-3">
+                        <span class="player-avatar" onclick="openAvatarModal()" title="点击更换头像">
+                            {% if player.avatar and player.avatar.startswith('data:image') %}
+                                <img src="{{ player.avatar }}" class="avatar-img" alt="头像">
+                            {% else %}
+                                {{ player.avatar or '👤' }}
+                            {% endif %}
+                        </span>
                         <span class="text-yellow">{{ player.name }}</span>
                         <span class="text-gray"> Lv.{{ player.level }}</span>
                     </div>
                     <div class="gold-info">
                         <i class="fas fa-coins text-yellow"></i>
                         <span class="text-yellow" id="playerGold">{{ player.gold }}</span>
+                    </div>
+                    <div class="scroll-info">
+                        <i class="fas fa-scroll text-blue"></i>
+                        <span class="text-blue" id="playerScrolls">0</span>
                     </div>
                     <button class="btn btn-outline-light ms-3" onclick="saveGame()">
                         <i class="fas fa-save"></i> 保存
@@ -69,7 +85,14 @@
             <div class="col-3 sidebar">
                 <div class="card player-card">
                     <div class="card-header">
-                        <h3><i class="fas fa-user"></i> {{ player.name }}</h3>
+                        <div class="player-avatar-sidebar" onclick="openAvatarModal()" title="点击更换头像">
+                            {% if player.avatar and player.avatar.startswith('data:image') %}
+                                <img src="{{ player.avatar }}" class="avatar-img" alt="头像">
+                            {% else %}
+                                {{ player.avatar or '👤' }}
+                            {% endif %}
+                        </div>
+                        <h3>{{ player.name }}</h3>
                     </div>
                     <div class="card-body">
                         <div class="level-bar">
@@ -89,7 +112,7 @@
                                 <span class="stat-value">{{ player.hp }}/{{ player.max_hp }}</span>
                             </div>
                             <div class="stat-item">
-                                <i class="fas fa-sword text-orange"></i>
+                                <i class="fas fa-bolt text-orange"></i>
                                 <span>攻击</span>
                                 <span class="stat-value">{{ player.attack }}</span>
                             </div>
@@ -103,16 +126,29 @@
                         <div class="equipment mt-4">
                             <h4><i class="fas fa-shield-alt"></i> 装备</h4>
                             <div class="equipment-slots">
-                                {% for slot in ['weapon', 'armor', 'shield', 'ring', 'amulet', 'boots', 'book'] %}
-                                    <div class="slot">
-                                        {% if player.equipment.get(slot) %}
-                                            <span class="slot-item">{{ player.equipment[slot].name }}</span>
-                                        {% else %}
-                                            <span class="slot-empty">空</span>
-                                        {% endif %}
+                                {% for slot, item in player.equipment.items() %}
+                                    {% set icon = 'fa-question' %}
+                                    {% if item.id == 'wisdom_hat' %}{% set icon = 'fa-graduation-cap' %}{% endif %}
+                                    {% if item.id == 'gold_ring' %}{% set icon = 'fa-ring' %}{% endif %}
+                                    {% if item.id == 'iron_armor' %}{% set icon = 'fa-shield-alt' %}{% endif %}
+                                    <div class="slot has-tooltip" title="{{ item.name }}: {{ item.description }}">
+                                        <i class="fas {{ icon }}"></i>
                                     </div>
                                 {% endfor %}
                             </div>
+                            
+                            {% set scroll_count = player.inventory|selectattr('id', 'equalto', 'hint_scroll')|list|length %}
+                            {% if scroll_count > 0 %}
+                            <div class="consumables mt-4">
+                                <h4><i class="fas fa-scroll"></i> 消耗品</h4>
+                                <div class="consumable-slots">
+                                    <div class="slot has-tooltip" title="提示卷轴: 查看答案时消耗一个，剩余 {{ scroll_count }} 个">
+                                        <i class="fas fa-scroll"></i>
+                                        <span class="slot-count">×{{ scroll_count }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
@@ -153,12 +189,33 @@
                     <h2><i class="fas fa-trophy"></i> 成就</h2>
                     <div id="achievementsContainer"></div>
                 </div>
-                
-                <div id="inventory" class="section hidden">
-                    <h2><i class="fas fa-backpack"></i> 背包</h2>
-                    <div id="inventoryContainer"></div>
+
+                <div id="leaderboard" class="section hidden">
+                    <h2><i class="fas fa-ranking-star"></i> 排行榜</h2>
+                    <div id="leaderboardContainer"></div>
+                </div>
+
+                <div id="admin-settings" class="section hidden">
+                    <h2><i class="fas fa-cog"></i> 管理员设置</h2>
+                    <div id="adminSettingsContainer"></div>
                 </div>
             </div>
+        </div>
+    </div>
+    
+    <div id="avatarModal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3><i class="fas fa-user-circle"></i> 选择头像</h3>
+                <button class="close-btn" onclick="closeAvatarModal()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="upload-section mb-4">
+                <label class="upload-btn">
+                    <i class="fas fa-upload"></i> 上传头像
+                    <input type="file" id="avatarUpload" accept="image/*" onchange="handleAvatarUpload(event)" style="display: none;">
+                </label>
+            </div>
+            <div class="avatar-grid" id="avatarGrid"></div>
         </div>
     </div>
     
@@ -169,7 +226,23 @@
         </div>
     </div>
 
+    <div id="customModal" class="custom-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-info-circle modal-icon"></i>
+                <h3 id="modalTitle">提示</h3>
+            </div>
+            <div class="modal-body">
+                <p id="modalMessage"></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary modal-btn-cancel" onclick="closeModal()">关闭</button>
+                <button class="btn btn-primary modal-btn-confirm" id="modalConfirmBtn" onclick="confirmModal()">确定</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <script src="{{ url_for('static', filename='js/game.js') }}?v=5"></script>
+    <script src="{{ url_for('static', filename='js/game.js') }}?v=9"></script>
 </body>
 </html>

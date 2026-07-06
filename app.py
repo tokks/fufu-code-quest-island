@@ -2,8 +2,11 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 import json
 import os
 
+from config import SAVE_DIR
+
 app = Flask(__name__)
 app.secret_key = 'code_quest_island_secret_key'
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 from game_state import GameState
 from player import Player
@@ -23,38 +26,51 @@ shop = Shop()
 achievement_manager = AchievementManager()
 
 def get_game_state():
-    if 'game_state' in session:
+    player_name = session.get('player_name')
+    
+    if player_name:
+        saved_state = GameState.load_game(player_name)
+        
+        if saved_state and saved_state.player:
+            state = saved_state
+            
+            if 'tutorial' in state.unlocked_regions and 'region_1' not in state.unlocked_regions:
+                state.unlocked_regions = ['region_1']
+            
+            migrated = False
+            new_unlocked = []
+            for region_id in state.unlocked_regions:
+                if region_id.startswith('region_'):
+                    day_num = region_id.split('_')[1]
+                    new_unlocked.append(f'day{day_num}')
+                    migrated = True
+                else:
+                    new_unlocked.append(region_id)
+            
+            if migrated:
+                state.unlocked_regions = new_unlocked
+            
+            return state
+    
+    if 'game_state' in session and 'player' in session:
         state = GameState.from_dict(session['game_state'])
+        state.player = Player.from_dict(session['player'])
         
         if 'tutorial' in state.unlocked_regions and 'region_1' not in state.unlocked_regions:
             state.unlocked_regions = ['region_1']
-        
-        migrated = False
-        new_unlocked = []
-        for region_id in state.unlocked_regions:
-            if region_id.startswith('region_'):
-                day_num = region_id.split('_')[1]
-                new_unlocked.append(f'day{day_num}')
-                migrated = True
-            else:
-                new_unlocked.append(region_id)
-        
-        if migrated:
-            state.unlocked_regions = new_unlocked
-            session['game_state'] = state.to_dict()
+        return state
     else:
         state = GameState()
         state.unlocked_regions = ['day1']
     
-    if 'player' in session:
-        state.player = Player.from_dict(session['player'])
-    
     return state
 
 def save_game_state(state):
-    session['game_state'] = state.to_dict()
     if state.player:
-        session['player'] = state.player.to_dict()
+        state.save_game(state.player.name)
+        session['player_name'] = state.player.name
+    else:
+        state.save_game()
     session.permanent = True
 
 @app.route('/')
@@ -64,15 +80,30 @@ def index():
 
 @app.route('/new_game', methods=['POST'])
 def new_game():
-    name = request.form.get('name', '冒险者')
+    name = request.form.get('name', '冒险者').strip()
     
-    player = Player(name.strip())
+    if not name:
+        return jsonify({'success': False, 'message': '角色名称不能为空'})
+    
+    if GameState.player_exists(name):
+        saved_state = GameState.load_game(name)
+        if saved_state and saved_state.player:
+            save_game_state(saved_state)
+            return redirect(url_for('game'))
+    
+    player = Player(name)
     game_state = GameState()
     game_state.player = player
     
     save_game_state(game_state)
     
     return redirect(url_for('game'))
+
+@app.route('/api/check_player', methods=['POST'])
+def check_player():
+    name = request.form.get('name', '').strip()
+    exists = GameState.player_exists(name)
+    return jsonify({'exists': exists})
 
 @app.route('/admin_login', methods=['POST'])
 def admin_login():
@@ -100,6 +131,8 @@ def admin_login():
         
         save_game_state(game_state)
         
+        session['is_admin'] = True
+        
         return redirect(url_for('game'))
     else:
         return jsonify({'success': False, 'message': '用户名或密码错误'})
@@ -110,6 +143,9 @@ def game():
     
     if not game_state.player:
         return redirect(url_for('index'))
+    
+    if game_state.player.is_admin:
+        session['is_admin'] = True
     
     return render_template('game.html', 
                            player=game_state.player,
@@ -163,6 +199,25 @@ def api_level(region_id, level_id):
     
     return jsonify(level_data)
 
+@app.route('/api/reset_region/<region_id>', methods=['POST'])
+def api_reset_region(region_id):
+    game_state = get_game_state()
+    
+    region = level_manager.get_region_by_id(region_id)
+    if not region:
+        return jsonify({'success': False, 'message': '区域不存在'}), 404
+    
+    levels = level_manager.get_levels_for_region(region_id)
+    for level in levels:
+        if level['id'] in game_state.completed_quests:
+            game_state.completed_quests.remove(level['id'])
+        if level['id'] in game_state.revealed_quests:
+            game_state.revealed_quests.remove(level['id'])
+    
+    save_game_state(game_state)
+    
+    return jsonify({'success': True, 'message': '区域已重置'})
+
 @app.route('/api/submit_answer', methods=['POST'])
 def api_submit_answer():
     data = request.get_json()
@@ -183,18 +238,32 @@ def api_submit_answer():
     if not level:
         return jsonify({'success': False, 'message': '关卡不存在'})
     
-    if level_id in game_state.completed_quests and not is_admin:
-        return jsonify({'success': False, 'message': '该关卡已完成'})
-    
     print(f"DEBUG - user_answer: '{user_answer}', type: {type(user_answer)}, level_answer: '{level.get('answer')}'")
     
     is_correct = level_manager.check_answer(level, user_answer)
     
     if is_correct:
+        if level_id not in game_state.completed_quests:
+            game_state.complete_quest(level_id)
+        
         if not is_admin:
-            player.add_exp(level['exp_reward'])
-            player.add_gold(level['gold_reward'])
-            game_state.add_gold_earned(level['gold_reward'])
+            completion_count = game_state.completed_quests_count.get(level_id, 0)
+            
+            if level_id in game_state.revealed_quests:
+                exp_reward = 5
+                gold_reward = 5
+            elif completion_count >= 1:
+                exp_reward = level['exp_reward'] // 2
+                gold_reward = level['gold_reward'] // 2
+            else:
+                exp_reward = level['exp_reward']
+                gold_reward = level['gold_reward']
+            
+            game_state.completed_quests_count[level_id] = completion_count + 1
+            
+            player.add_exp(exp_reward)
+            player.add_gold(gold_reward)
+            game_state.add_gold_earned(gold_reward)
             
             newly_unlocked = achievement_manager.check_achievements(game_state, player)
             
@@ -211,16 +280,16 @@ def api_submit_answer():
             all_completed = False
             next_region_id = None
         
-        if level_id not in game_state.completed_quests:
-            game_state.complete_quest(level_id)
-        
         save_game_state(game_state)
+        
+        reward_exp = exp_reward if not is_admin else level['exp_reward']
+        reward_gold = gold_reward if not is_admin else level['gold_reward']
         
         return jsonify({
             'success': True,
             'message': '回答正确！',
-            'exp_reward': level['exp_reward'],
-            'gold_reward': level['gold_reward'],
+            'exp_reward': reward_exp,
+            'gold_reward': reward_gold,
             'newly_unlocked': newly_unlocked,
             'all_completed': all_completed,
             'next_region': next_region_id,
@@ -260,22 +329,21 @@ def api_reveal_answer():
         if not player:
             return jsonify({'success': False, 'message': '请先登录'})
         
-        reveal_cost = level['gold_reward'] + 5
+        scroll_count = sum(1 for item in player.inventory if item.get('id') == 'hint_scroll')
         
-        if player.gold < reveal_cost:
+        if scroll_count <= 0:
             return jsonify({
                 'success': False,
-                'message': f'金币不足！需要 {reveal_cost} 金币，你有 {player.gold} 金币'
+                'message': '提示卷轴不足！请先购买提示卷轴'
             })
         
-        player.add_gold(-reveal_cost)
+        player.remove_from_inventory('hint_scroll')
+        game_state.reveal_quest(level_id)
         save_game_state(game_state)
-    
-    reveal_cost = level['gold_reward'] + 5 if not is_admin else 0
     
     return jsonify({
         'success': True,
-        'message': f'花费 {reveal_cost} 金币查看答案',
+        'message': '消耗一个提示卷轴查看答案',
         'answer': level['answer'],
         'player': player.to_dict() if player else None
     })
@@ -284,6 +352,46 @@ def api_reveal_answer():
 def api_player():
     game_state = get_game_state()
     return jsonify(game_state.player.to_dict() if game_state.player else {})
+
+@app.route('/api/set_avatar', methods=['POST'])
+def api_set_avatar():
+    game_state = get_game_state()
+    data = request.get_json()
+    avatar = data.get('avatar', '👤')
+    
+    if game_state.player:
+        game_state.player.avatar = avatar
+        save_game_state(game_state)
+        session['game_state'] = game_state.to_dict()
+        session['player'] = game_state.player.to_dict()
+        return jsonify({'success': True, 'avatar': avatar})
+    
+    return jsonify({'success': False, 'message': '玩家不存在'}), 400
+
+@app.route('/api/npc_config')
+def api_get_npc_config():
+    with open('npc_config.json', 'r', encoding='utf-8') as f:
+        config = json.load(f)
+    return jsonify(config)
+
+@app.route('/api/npc_config', methods=['POST'])
+def api_set_npc_config():
+    if not session.get('is_admin'):
+        return jsonify({'success': False, 'message': '需要管理员权限'}), 403
+    
+    data = request.get_json()
+    avatar = data.get('avatar', '👩‍🏫')
+    name = data.get('name', '富富')
+    
+    config = {
+        'avatar': avatar,
+        'name': name
+    }
+    
+    with open('npc_config.json', 'w', encoding='utf-8') as f:
+        json.dump(config, f, ensure_ascii=False, indent=4)
+    
+    return jsonify({'success': True, 'avatar': avatar, 'name': name})
 
 @app.route('/api/quests')
 def api_quests():
@@ -432,6 +540,86 @@ def api_save_game():
 def api_reset_game():
     session.clear()
     return redirect(url_for('index'))
+
+@app.route('/api/leaderboard')
+def api_leaderboard():
+    players = GameState.get_all_players()
+    leaderboard = []
+    
+    for player_name in players:
+        state = GameState.load_game(player_name)
+        if state and state.player and not state.player.is_admin:
+            player = state.player
+            leaderboard.append({
+                'name': player.name,
+                'level': player.level,
+                'exp': player.exp,
+                'gold': player.gold,
+                'completed_quests': len(state.completed_quests),
+                'unlocked_regions': len(state.unlocked_regions),
+                'avatar': player.avatar
+            })
+    
+    leaderboard.sort(key=lambda x: (x['level'], x['exp'], x['completed_quests']), reverse=True)
+    
+    return jsonify({'success': True, 'leaderboard': leaderboard})
+
+@app.route('/api/admin/add_gold', methods=['POST'])
+def admin_add_gold():
+    if not session.get('is_admin'):
+        return jsonify({'success': False, 'message': '没有管理员权限'})
+    
+    data = request.get_json()
+    player_name = data.get('player_name')
+    gold_amount = data.get('gold_amount', 0)
+    
+    if not player_name:
+        return jsonify({'success': False, 'message': '请指定玩家名称'})
+    
+    if player_name == '管理员':
+        return jsonify({'success': False, 'message': '不能给管理员发放金币'})
+    
+    if gold_amount <= 0:
+        return jsonify({'success': False, 'message': '金币数量必须大于0'})
+    
+    save_file = os.path.join(SAVE_DIR, f"save_{player_name}.json")
+    if not os.path.exists(save_file):
+        return jsonify({'success': False, 'message': '玩家不存在'})
+    
+    try:
+        with open(save_file, 'r', encoding='utf-8') as f:
+            save_data = json.load(f)
+        
+        if 'player' in save_data:
+            save_data['player']['gold'] = save_data['player'].get('gold', 0) + gold_amount
+        
+        with open(save_file, 'w', encoding='utf-8') as f:
+            json.dump(save_data, f, ensure_ascii=False, indent=2)
+        
+        return jsonify({'success': True, 'message': f'成功给玩家 {player_name} 发放 {gold_amount} 金币'})
+    except Exception as e:
+        return jsonify({'success': False, 'message': f'操作失败：{str(e)}'})
+
+@app.route('/api/admin/delete_player', methods=['POST'])
+def admin_delete_player():
+    if not session.get('is_admin'):
+        return jsonify({'success': False, 'message': '没有管理员权限'})
+    
+    data = request.get_json()
+    player_name = data.get('player_name')
+    
+    if not player_name:
+        return jsonify({'success': False, 'message': '请指定要删除的玩家名称'})
+    
+    if player_name == '管理员':
+        return jsonify({'success': False, 'message': '不能删除管理员账号'})
+    
+    success = GameState.delete_player(player_name)
+    
+    if success:
+        return jsonify({'success': True, 'message': f'玩家 {player_name} 已被删除'})
+    else:
+        return jsonify({'success': False, 'message': '删除失败，玩家不存在'})
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

@@ -13,8 +13,15 @@ class GameState:
         self.total_gold_earned = 0
         self.game_start_time = datetime.now().isoformat()
         self.last_save_time = None
+        self.revealed_quests = []
+        self.completed_quests_count = {}
 
-    def save_game(self, filename="save.json"):
+    def save_game(self, player_name=None):
+        if player_name:
+            filename = f"save_{player_name}.json"
+        else:
+            filename = f"save_{self.player.name}.json" if self.player else "save.json"
+        
         save_data = {
             'player': self.player.to_dict() if self.player else None,
             'current_region': self.current_region,
@@ -23,7 +30,9 @@ class GameState:
             'unlocked_achievements': self.unlocked_achievements,
             'total_gold_earned': self.total_gold_earned,
             'game_start_time': self.game_start_time,
-            'last_save_time': datetime.now().isoformat()
+            'last_save_time': datetime.now().isoformat(),
+            'revealed_quests': self.revealed_quests,
+            'completed_quests_count': self.completed_quests_count
         }
         
         save_path = os.path.join(SAVE_DIR, filename)
@@ -34,7 +43,12 @@ class GameState:
         return save_path
 
     @classmethod
-    def load_game(cls, filename="save.json"):
+    def load_game(cls, player_name=None):
+        if player_name:
+            filename = f"save_{player_name}.json"
+        else:
+            filename = "save.json"
+        
         save_path = os.path.join(SAVE_DIR, filename)
         
         if not os.path.exists(save_path):
@@ -51,8 +65,43 @@ class GameState:
         state.total_gold_earned = save_data['total_gold_earned']
         state.game_start_time = save_data['game_start_time']
         state.last_save_time = save_data.get('last_save_time')
+        state.revealed_quests = save_data.get('revealed_quests', [])
+        state.completed_quests_count = save_data.get('completed_quests_count', {})
+        
+        if save_data.get('player'):
+            from player import Player
+            state.player = Player.from_dict(save_data['player'])
         
         return state
+    
+    @classmethod
+    def player_exists(cls, player_name):
+        filename = f"save_{player_name}.json"
+        save_path = os.path.join(SAVE_DIR, filename)
+        return os.path.exists(save_path)
+    
+    @classmethod
+    def get_all_players(cls):
+        players = []
+        if not os.path.exists(SAVE_DIR):
+            return players
+        
+        for filename in os.listdir(SAVE_DIR):
+            if filename.startswith('save_') and filename.endswith('.json'):
+                player_name = filename[5:-5]
+                players.append(player_name)
+        
+        return players
+    
+    @classmethod
+    def delete_player(cls, player_name):
+        filename = f"save_{player_name}.json"
+        save_path = os.path.join(SAVE_DIR, filename)
+        
+        if os.path.exists(save_path):
+            os.remove(save_path)
+            return True
+        return False
 
     def unlock_region(self, region_id):
         if region_id not in self.unlocked_regions:
@@ -63,6 +112,12 @@ class GameState:
     def complete_quest(self, quest_id):
         if quest_id not in self.completed_quests:
             self.completed_quests.append(quest_id)
+            return True
+        return False
+
+    def reveal_quest(self, quest_id):
+        if quest_id not in self.revealed_quests:
+            self.revealed_quests.append(quest_id)
             return True
         return False
 
@@ -83,7 +138,8 @@ class GameState:
             'unlocked_achievements': self.unlocked_achievements,
             'total_gold_earned': self.total_gold_earned,
             'game_start_time': self.game_start_time,
-            'last_save_time': self.last_save_time
+            'last_save_time': self.last_save_time,
+            'revealed_quests': self.revealed_quests
         }
 
     @classmethod

@@ -14,22 +14,21 @@ region_mapping = {
     8: {'id': 'region_8', 'name': '函数殿堂', 'description': '函数定义与使用', 'icon': 'fa-book'},
     9: {'id': 'region_9', 'name': '迭代器谷', 'description': '迭代器和常用函数', 'icon': 'fa-repeat'},
     10: {'id': 'region_10', 'name': '字典王国', 'description': '字典、深拷贝与浅拷贝', 'icon': 'fa-book-open'},
-    11: {'id': 'region_11', 'name': '函数进阶', 'description': '函数参数与返回值', 'icon': 'fa-code'},
-    12: {'id': 'region_12', 'name': '函数深化', 'description': '递归、闭包、匿名函数', 'icon': 'fa-code-branch'},
-    13: {'id': 'region_13', 'name': '面向对象', 'description': '类与对象', 'icon': 'fa-object-group'},
-    14: {'id': 'region_14', 'name': '继承之城', 'description': '类的继承与重写', 'icon': 'fa-sitemap'},
-    15: {'id': 'region_15', 'name': '多态之塔', 'description': '多继承、多态和鸭子类型', 'icon': 'fa-layer-group'},
-    16: {'id': 'region_16', 'name': '魔法之屋', 'description': '魔法方法', 'icon': 'fa-sparkles'},
-    17: {'id': 'region_17', 'name': '单例秘境', 'description': '单例模式与模块', 'icon': 'fa-key'},
-    18: {'id': 'region_18', 'name': '文件港湾', 'description': '文件操作', 'icon': 'fa-file'},
-    19: {'id': 'region_19', 'name': '正则海域', 'description': '正则表达式', 'icon': 'fa-search'},
-    20: {'id': 'region_20', 'name': '装饰器峰', 'description': '装饰器与生成器', 'icon': 'fa-gem'},
-    21: {'id': 'region_21', 'name': 'Bug巢穴', 'description': '最终挑战！击败Bug之王', 'icon': 'fa-skull'}
+    11: {'id': 'region_11', 'name': '函数进阶', 'description': '函数参数、返回值、递归、闭包与匿名函数', 'icon': 'fa-code'},
+    12: {'id': 'region_12', 'name': '面向对象', 'description': '类与对象', 'icon': 'fa-object-group'},
+    13: {'id': 'region_13', 'name': '继承之城', 'description': '类的继承与重写', 'icon': 'fa-sitemap'},
+    14: {'id': 'region_14', 'name': '多态之塔', 'description': '多继承、多态和鸭子类型', 'icon': 'fa-layer-group'},
+    15: {'id': 'region_15', 'name': '魔法之屋', 'description': '魔法方法', 'icon': 'fa-sparkles'},
+    16: {'id': 'region_16', 'name': '单例秘境', 'description': '单例模式与模块', 'icon': 'fa-key'},
+    17: {'id': 'region_17', 'name': '文件港湾', 'description': '文件操作', 'icon': 'fa-file'},
+    18: {'id': 'region_18', 'name': '正则海域', 'description': '正则表达式', 'icon': 'fa-search'},
+    19: {'id': 'region_19', 'name': '装饰器峰', 'description': '装饰器与生成器', 'icon': 'fa-gem'},
+    20: {'id': 'region_20', 'name': 'Bug巢穴', 'description': '最终挑战！击败Bug之王', 'icon': 'fa-skull'}
 }
 
 regions = []
 
-for day in range(1, 22):
+for day in range(1, 21):
     day_questions = [q for q in questions if q['day'] == day]
     
     if not day_questions:

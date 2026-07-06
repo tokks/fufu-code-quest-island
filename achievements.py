@@ -29,7 +29,7 @@ class AchievementManager:
             unlocked = False
             
             if achievement['id'] == 'first_blood':
-                if game_state.completed_quests:
+                if 'day1_q11' in game_state.completed_quests:
                     unlocked = True
             
             elif achievement['id'] == 'level_10':
@@ -92,7 +92,7 @@ class AchievementManager:
             return None
         
         if achievement['id'] == 'first_blood':
-            return {'current': len(game_state.completed_quests) > 0, 'total': 1}
+            return {'current': 'day1_q11' in game_state.completed_quests, 'total': 1}
         
         elif achievement['id'] == 'level_10':
             return {'current': player.level, 'total': 10}

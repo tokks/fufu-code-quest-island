@@ -2,17 +2,27 @@ let currentRegionId = null;
 let currentLevelId = null;
 let isAdmin = false;
 
+const AVATARS = ['👤', '👨‍💻', '👩‍💻', '🧑‍💻', '🤖', '🦸', '🦸‍♀️', '🧙', '🧙‍♀️', '🐱', '🐶', '🦊', '🐼', '🐨', '🐯', '🦁', '🐸', '🦄', '👾', '🤪', '😎', '🤓', '🧐', '😺'];
+let npcAvatar = '👩‍🏫';
+let npcName = '富富';
+
 document.addEventListener('DOMContentLoaded', function() {
-    fetch('/api/player')
-        .then(response => response.json())
-        .then(playerData => {
-            isAdmin = playerData.is_admin || false;
-            console.log('Player loaded, isAdmin:', isAdmin);
-            loadWorldMap();
-        })
-        .catch(() => {
-            loadWorldMap();
-        });
+    Promise.all([
+        fetch('/api/player'),
+        fetch('/api/npc_config')
+    ])
+    .then(([playerRes, npcRes]) => Promise.all([playerRes.json(), npcRes.json()]))
+    .then(([playerData, npcConfig]) => {
+        isAdmin = playerData.is_admin || false;
+        npcAvatar = npcConfig.avatar || '👩‍🏫';
+        npcName = npcConfig.name || '富富';
+        console.log('Player loaded, isAdmin:', isAdmin);
+        console.log('NPC config loaded:', npcAvatar, npcName);
+        loadWorldMap();
+    })
+    .catch(() => {
+        loadWorldMap();
+    });
     
     document.querySelectorAll('.nav-btn').forEach(btn => {
         btn.addEventListener('click', function() {
@@ -21,6 +31,68 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+function showAchievementModal(achievements) {
+    if (!achievements || achievements.length === 0) return;
+    
+    const overlay = document.createElement('div');
+    overlay.className = 'achievement-modal-overlay';
+    
+    let currentIndex = 0;
+    
+    function showNextAchievement() {
+        if (currentIndex >= achievements.length) {
+            overlay.remove();
+            return;
+        }
+        
+        const achievement = achievements[currentIndex];
+        
+        overlay.innerHTML = `
+            <div class="achievement-modal">
+                <div class="achievement-icon">🏆</div>
+                <h3 class="achievement-title">🎉 成就解锁！</h3>
+                <h2 class="achievement-name">${achievement.name}</h2>
+                <p class="achievement-desc">${achievement.description}</p>
+                <div class="achievement-reward">
+                    <i class="fas fa-coins"></i>
+                    <span>+${achievement.reward} 金币</span>
+                </div>
+                <button class="achievement-btn" onclick="this.closest('.achievement-modal-overlay').querySelector('.achievement-modal').style.transform = 'scale(0.5)'; setTimeout(() => window.showNextAchievement(), 300);">
+                    太棒了！
+                </button>
+            </div>
+        `;
+        
+        document.body.appendChild(overlay);
+        
+        setTimeout(() => {
+            overlay.classList.add('show');
+        }, 50);
+        
+        createConfetti();
+        
+        currentIndex++;
+    }
+    
+    window.showNextAchievement = showNextAchievement;
+    showNextAchievement();
+}
+
+function createConfetti() {
+    const colors = ['#FFC107', '#FF5722', '#E91E63', '#00FFFF', '#00FF88'];
+    for (let i = 0; i < 30; i++) {
+        const confetti = document.createElement('div');
+        confetti.className = 'confetti';
+        confetti.style.left = Math.random() * 100 + '%';
+        confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDelay = Math.random() * 2 + 's';
+        confetti.style.animationDuration = (3 + Math.random() * 2) + 's';
+        document.body.appendChild(confetti);
+        
+        setTimeout(() => confetti.remove(), 5000);
+    }
+}
 
 function switchSection(sectionId) {
     document.querySelectorAll('.section').forEach(el => {
@@ -42,8 +114,16 @@ function switchSection(sectionId) {
         loadShop();
     } else if (sectionId === 'achievements') {
         loadAchievements();
+    } else if (sectionId === 'leaderboard') {
+        loadLeaderboard();
     } else if (sectionId === 'inventory') {
         loadInventory();
+    } else if (sectionId === 'admin-settings') {
+        loadAdminSettings();
+    }
+    
+    if (isAdmin) {
+        document.getElementById('adminSettingsNav').style.display = 'block';
     }
 }
 
@@ -60,6 +140,40 @@ function loadWorldMap() {
             
             const container = document.getElementById('mapContainer');
             container.innerHTML = '';
+            
+            const mapTitle = document.createElement('div');
+            mapTitle.className = 'map-title';
+            mapTitle.textContent = 'CYBER ISLAND';
+            container.appendChild(mapTitle);
+            
+            const cyberGrid = document.createElement('div');
+            cyberGrid.className = 'cyber-grid';
+            container.appendChild(cyberGrid);
+            
+            for (let i = 0; i < 8; i++) {
+                const hex = document.createElement('div');
+                hex.className = 'cyber-hex';
+                hex.style.left = `${10 + (i % 4) * 25}%`;
+                hex.style.top = `${15 + Math.floor(i / 4) * 40}%`;
+                hex.style.animationDelay = `${i * 0.8}s`;
+                container.appendChild(hex);
+            }
+            
+            for (let i = 0; i < 15; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'cyber-particle';
+                particle.style.left = `${Math.random() * 90 + 5}%`;
+                particle.style.top = `${Math.random() * 80 + 10}%`;
+                particle.style.animationDelay = `${Math.random() * 10}s`;
+                particle.style.animationDuration = `${8 + Math.random() * 6}s`;
+                container.appendChild(particle);
+            }
+            
+            ['tl', 'tr', 'bl', 'br'].forEach(corner => {
+                const el = document.createElement('div');
+                el.className = `cyber-corner ${corner}`;
+                container.appendChild(el);
+            });
             
             const regionIcons = {
                 'day1': '🏠',
@@ -81,39 +195,88 @@ function loadWorldMap() {
                 'day17': '🔑',
                 'day18': '📁',
                 'day19': '🔍',
-                'day20': '💎',
-                'day21': '💀'
+                'day20': '💎'
             };
+            
+            const positions = [
+                { x: 80, y: 100 },
+                { x: 250, y: 150 },
+                { x: 420, y: 100 },
+                { x: 580, y: 150 },
+                { x: 750, y: 100 },
+                { x: 900, y: 160 },
+                { x: 50, y: 280 },
+                { x: 220, y: 330 },
+                { x: 380, y: 270 },
+                { x: 550, y: 330 },
+                { x: 720, y: 270 },
+                { x: 880, y: 340 },
+                { x: 100, y: 460 },
+                { x: 270, y: 510 },
+                { x: 440, y: 450 },
+                { x: 610, y: 510 },
+                { x: 780, y: 450 },
+                { x: 150, y: 630 },
+                { x: 350, y: 680 },
+                { x: 550, y: 620 }
+            ];
+            
+            for (let i = 0; i < progress.length - 1; i++) {
+                const currentPos = positions[i];
+                const nextPos = positions[i + 1];
+                const currentUnlocked = progress[i].is_unlocked || isAdmin;
+                const nextUnlocked = progress[i + 1].is_unlocked || isAdmin;
+                
+                const line = document.createElement('div');
+                line.className = `connection-line ${currentUnlocked && nextUnlocked ? 'unlocked' : ''}`;
+                
+                const x1 = currentPos.x + 37;
+                const y1 = currentPos.y + 37;
+                const x2 = nextPos.x + 37;
+                const y2 = nextPos.y + 37;
+                
+                const length = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+                const angle = Math.atan2(y2 - y1, x2 - x1) * 180 / Math.PI;
+                
+                line.style.left = `${x1}px`;
+                line.style.top = `${y1}px`;
+                line.style.width = `${length}px`;
+                line.style.transform = `rotate(${angle}deg)`;
+                
+                container.appendChild(line);
+            }
             
             progress.forEach((regionData, index) => {
                 const region = regionData.region;
                 const isUnlocked = regionData.is_unlocked || isAdmin;
+                const isCompleted = regionData.completed_levels >= regionData.total_levels;
+                const pos = positions[index];
                 
-                console.log(`Region ${index}: id=${region.id}, name=${region.name}, is_unlocked=${isUnlocked}, type=${typeof isUnlocked}`);
-                
-                const card = document.createElement('div');
-                card.className = `region-card ${isUnlocked ? 'unlocked' : 'locked'}`;
+                const node = document.createElement('div');
+                node.className = `region-node ${isUnlocked ? 'unlocked' : 'locked'} ${isCompleted ? 'completed' : ''}`;
+                node.style.left = `${pos.x}px`;
+                node.style.top = `${pos.y}px`;
                 
                 if (isUnlocked) {
-                    card.onclick = () => loadRegion(region.id);
-                    card.style.cursor = 'pointer';
+                    node.onclick = () => loadRegion(region.id);
                 }
                 
-                card.innerHTML = `
-                    <div class="region-icon">${regionIcons[region.id] || '📍'}</div>
-                    <div class="region-name">${region.name}</div>
-                    <div class="region-status">
-                        ${isAdmin ? '<span class="text-yellow">[管理员]</span>' : 
-                          (regionData.is_unlocked 
-                            ? `<span class="text-green">已解锁</span> (${regionData.completed_levels}/${regionData.total_levels})` 
-                            : '<span class="text-red">未解锁</span>')}
+                const markerType = isCompleted ? 'completed' : (isUnlocked ? '' : 'locked');
+                
+                node.innerHTML = `
+                    <div class="region-circle-wrapper">
+                        <div class="region-ring"></div>
+                        <div class="region-circle">${regionIcons[region.id] || '📍'}</div>
+                        ${markerType ? `<div class="region-marker ${markerType}">${isCompleted ? '✓' : '🔒'}</div>` : ''}
                     </div>
-                    <div style="font-size: 0.85rem; color: #BDBDBD; margin-top: 0.5rem;">
-                        ${region.description}
+                    <div class="region-label">${region.name}</div>
+                    <div class="region-progress">
+                        ${isCompleted ? '<span style="color:#00ff80">COMPLETE</span>' : 
+                          (isUnlocked ? `${regionData.completed_levels}/${regionData.total_levels}` : 'LOCKED')}
                     </div>
                 `;
                 
-                container.appendChild(card);
+                container.appendChild(node);
             });
         });
 }
@@ -124,10 +287,18 @@ function loadRegion(regionId) {
     fetch(`/api/region/${regionId}`)
         .then(response => response.json())
         .then(data => {
+            const isCompleted = data.completed_quests.length === data.levels.length;
             const container = document.getElementById('regionContent');
             container.innerHTML = `
-                <h2>${data.region.name}</h2>
-                <p>${data.region.description}</p>
+                <div class="region-header">
+                    <div>
+                        <h2>${data.region.name}</h2>
+                        <p>${data.region.description}</p>
+                    </div>
+                    <button class="reset-btn" onclick="resetRegion('${regionId}')">
+                        <i class="fas fa-rotate-right"></i> 重新挑战
+                    </button>
+                </div>
                 <div class="mt-4">
                     ${data.levels.map((level, index) => {
                         const isCompleted = data.completed_quests.includes(level.id);
@@ -160,91 +331,508 @@ function loadRegion(regionId) {
         });
 }
 
+function resetRegion(regionId) {
+    showModal('提示', '确定要重置这个区域吗？重置后可以重新挑战所有题目，但不会影响已解锁的章节和获得的金币。', function() {
+        fetch(`/api/reset_region/${regionId}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' }
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                loadRegion(regionId);
+            } else {
+                showNotification(data.message, 'error');
+            }
+        })
+        .catch(error => {
+            showNotification('重置失败：' + error.message, 'error');
+        });
+    });
+}
+
+function openAvatarModal() {
+    const modal = document.getElementById('avatarModal');
+    const grid = document.getElementById('avatarGrid');
+    
+    fetch('/api/player')
+        .then(response => response.json())
+        .then(player => {
+            const currentAvatar = player.avatar || '👤';
+            
+            grid.innerHTML = AVATARS.map(avatar => `
+                <div class="avatar-item ${avatar === currentAvatar ? 'selected' : ''}" 
+                     onclick="selectAvatar('${avatar}')">
+                    ${avatar}
+                </div>
+            `).join('');
+            
+            modal.classList.remove('hidden');
+        });
+}
+
+function closeAvatarModal() {
+    document.getElementById('avatarModal').classList.add('hidden');
+}
+
+function selectAvatar(avatar) {
+    fetch('/api/set_avatar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ avatar: avatar })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            updateAvatarDisplay(data.avatar);
+            closeAvatarModal();
+        }
+    });
+}
+
+function handleAvatarUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const image = new Image();
+        image.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const size = 128;
+            canvas.width = size;
+            canvas.height = size;
+            
+            const minDimension = Math.min(image.width, image.height);
+            const x = (image.width - minDimension) / 2;
+            const y = (image.height - minDimension) / 2;
+            
+            ctx.drawImage(image, x, y, minDimension, minDimension, 0, 0, size, size);
+            
+            const base64 = canvas.toDataURL('image/png');
+            
+            fetch('/api/set_avatar', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ avatar: base64 })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    updateAvatarDisplay(data.avatar);
+                    closeAvatarModal();
+                }
+            });
+        };
+        image.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
+function updateAvatarDisplay(avatar) {
+    const avatarElements = document.querySelectorAll('.player-avatar, .player-avatar-sidebar, .chat-message.player .chat-avatar');
+    avatarElements.forEach(el => {
+        if (avatar.startsWith('data:image')) {
+            el.innerHTML = `<img src="${avatar}" class="avatar-img" alt="头像">`;
+        } else {
+            el.innerHTML = avatar;
+        }
+    });
+}
+
+function loadAdminSettings() {
+    if (!isAdmin) {
+        switchSection('world-map');
+        return;
+    }
+    
+    const container = document.getElementById('adminSettingsContainer');
+    const isImageAvatar = npcAvatar.startsWith('data:image');
+    container.innerHTML = `
+        <div class="admin-settings-panel">
+            <div class="settings-section">
+                <h3><i class="fas fa-user-circle"></i> NPC 配置</h3>
+                <div class="form-group">
+                    <label>NPC 名称</label>
+                    <input type="text" id="npcNameInput" value="${npcName}" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label>NPC 头像</label>
+                    <div class="current-avatar-preview">
+                        <span class="preview-label">当前头像：</span>
+                        <span class="preview-avatar">${isImageAvatar ? `<img src="${npcAvatar}" class="avatar-img">` : npcAvatar}</span>
+                    </div>
+                    <div class="upload-section mb-3">
+                        <label class="upload-btn">
+                            <i class="fas fa-upload"></i> 上传自定义头像
+                            <input type="file" id="npcAvatarUpload" accept="image/*" onchange="handleNpcAvatarUpload(event)" style="display: none;">
+                        </label>
+                    </div>
+                    <div class="avatar-selector">
+                        ${AVATARS.map(avatar => `
+                            <div class="avatar-option ${!isImageAvatar && avatar === npcAvatar ? 'selected' : ''}" 
+                                 onclick="selectNpcAvatar('${avatar}')">
+                                ${avatar}
+                            </div>
+                        `).join('')}
+                    </div>
+                    <input type="hidden" id="npcAvatarInput" value="${npcAvatar}">
+                </div>
+                <button class="btn btn-success mt-4" onclick="saveNpcConfig()">
+                    <i class="fas fa-save"></i> 保存设置
+                </button>
+            </div>
+            
+            <div class="settings-section">
+                <div class="section-header">
+                    <h3><i class="fas fa-users"></i> 玩家管理</h3>
+                    <button class="btn btn-primary btn-sm" onclick="loadAdminPlayerList()">
+                        <i class="fas fa-refresh"></i> 刷新列表
+                    </button>
+                </div>
+                <div id="adminPlayerList"></div>
+            </div>
+        </div>
+    `;
+    
+    loadAdminPlayerList();
+}
+
+function selectNpcAvatar(avatar) {
+    document.getElementById('npcAvatarInput').value = avatar;
+    document.querySelectorAll('.avatar-option').forEach(opt => opt.classList.remove('selected'));
+    if (event) {
+        event.target.classList.add('selected');
+    }
+}
+
+function handleNpcAvatarUpload(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        const image = new Image();
+        image.onload = function() {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const size = 128;
+            canvas.width = size;
+            canvas.height = size;
+            
+            const minDimension = Math.min(image.width, image.height);
+            const x = (image.width - minDimension) / 2;
+            const y = (image.height - minDimension) / 2;
+            
+            ctx.drawImage(image, x, y, minDimension, minDimension, 0, 0, size, size);
+            
+            const base64 = canvas.toDataURL('image/png');
+            document.getElementById('npcAvatarInput').value = base64;
+            
+            const preview = document.querySelector('.preview-avatar');
+            preview.innerHTML = `<img src="${base64}" class="avatar-img">`;
+            
+            document.querySelectorAll('.avatar-option').forEach(opt => opt.classList.remove('selected'));
+        };
+        image.src = e.target.result;
+    };
+    reader.readAsDataURL(file);
+}
+
+function saveNpcConfig() {
+    const name = document.getElementById('npcNameInput').value.trim() || '富富';
+    const avatar = document.getElementById('npcAvatarInput').value.trim() || '👩‍🏫';
+    
+    fetch('/api/npc_config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, avatar })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            npcName = data.name;
+            npcAvatar = data.avatar;
+            alert('设置已保存！');
+        } else {
+            alert('保存失败：' + data.message);
+        }
+    });
+}
+
+function loadAdminPlayerList() {
+    fetch('/api/leaderboard')
+        .then(response => response.json())
+        .then(data => {
+            const container = document.getElementById('adminPlayerList');
+            
+            if (!data.success || data.leaderboard.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center" style="padding: 20px;">暂无玩家数据</p>';
+                return;
+            }
+            
+            container.innerHTML = `<div class="admin-player-list">${data.leaderboard.map(player => {
+                const isAdmin = player.name === '管理员';
+                let avatarHtml = player.avatar && player.avatar.startsWith('data:image') 
+                    ? `<img src="${player.avatar}" alt="${player.name}">` 
+                    : (player.avatar || '👤');
+                
+                return `
+                    <div class="admin-player-item ${isAdmin ? 'admin' : ''}">
+                        <div class="admin-player-info">
+                            <div class="admin-player-avatar">${avatarHtml}</div>
+                            <div>
+                                <div class="admin-player-name">${player.name}${isAdmin ? ' <span style="color:#FFD700;">(管理员)</span>' : ''}</div>
+                                <div class="admin-player-stats">
+                                    <span>Lv.${player.level}</span>
+                                    <span>${player.gold} 金币</span>
+                                    <span>${player.completed_quests} 题</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="admin-player-actions">
+                            ${isAdmin ? '' : `
+                                <button class="btn btn-success btn-sm mr-2" onclick="addGoldToPlayer('${player.name}')">
+                                    <i class="fas fa-coins"></i> 发放金币
+                                </button>
+                                <button class="btn btn-danger btn-sm" onclick="deletePlayer('${player.name}')">
+                                    <i class="fas fa-trash"></i> 删除
+                                </button>
+                            `}
+                        </div>
+                    </div>
+                `;
+            }).join('')}</div>`;
+        });
+}
+
+function addGoldToPlayer(playerName) {
+    const amount = prompt(`请输入要给玩家 "${playerName}" 发放的金币数量：`, '100');
+    if (amount === null) return;
+    
+    const goldAmount = parseInt(amount);
+    if (isNaN(goldAmount) || goldAmount <= 0) {
+        alert('请输入有效的金币数量（大于0）');
+        return;
+    }
+    
+    if (!confirm(`确定要给玩家 "${playerName}" 发放 ${goldAmount} 金币吗？`)) {
+        return;
+    }
+    
+    fetch('/api/admin/add_gold', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ player_name: playerName, gold_amount: goldAmount })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.success) {
+            alert(data.message);
+            loadAdminPlayerList();
+        } else {
+            alert('操作失败：' + data.message);
+        }
+    })
+    .catch(error => {
+        alert('操作失败：' + error.message);
+    });
+}
+
+function deletePlayer(playerName) {
+    if (!confirm(`确定要删除玩家 "${playerName}" 的账号吗？此操作无法撤销！`)) {
+        return;
+    }
+    
+    fetch('/api/admin/delete_player', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ player_name: playerName })
+    })
+    .then(response => response.json())
+    .then(data => {
+        showNotification(data.message, data.success ? 'success' : 'error');
+        if (data.success) {
+            loadAdminPlayerList();
+        }
+    });
+}
+
 function loadLevel(regionId, levelId) {
     currentRegionId = regionId;
     currentLevelId = levelId;
     
-    fetch(`/api/level/${regionId}/${levelId}`)
-        .then(response => response.json())
-        .then(level => {
-            const container = document.getElementById('levelContent');
-            const revealCost = level.gold_reward + 5;
+    Promise.all([
+        fetch(`/api/level/${regionId}/${levelId}`),
+        fetch('/api/player')
+    ])
+    .then(([levelRes, playerRes]) => Promise.all([levelRes.json(), playerRes.json()]))
+    .then(([level, player]) => {
+        const container = document.getElementById('levelContent');
+        const revealCost = level.gold_reward + 5;
+        
+        const isImageAvatar = npcAvatar.startsWith('data:image');
+        const avatarHtml = isImageAvatar ? `<img src="${npcAvatar}" class="avatar-img">` : npcAvatar;
+        
+        const playerAvatar = player.avatar || '👤';
+        const isPlayerImageAvatar = playerAvatar.startsWith('data:image');
+        const playerAvatarHtml = isPlayerImageAvatar ? `<img src="${playerAvatar}" class="avatar-img">` : playerAvatar;
+            
+            let answerText = level.answer;
+            if (level.type === 'choice' && level.options) {
+                const correctOption = level.options.find(opt => {
+                    const match = opt.match(/^([A-E])\.\s*/);
+                    return match && match[1] === level.answer;
+                });
+                
+                if (correctOption) {
+                    const optionContent = correctOption.replace(/^[A-E]\.\s*/, '');
+                    if (optionContent.includes('以上') || optionContent.includes('全部') || optionContent.includes('所有')) {
+                        answerText = level.options.map(opt => opt.replace(/^[A-E]\.\s*/, '')).join('；');
+                    } else {
+                        answerText = optionContent;
+                    }
+                } else {
+                    const letters = ['A', 'B', 'C', 'D', 'E'];
+                    const answerIndex = letters.indexOf(level.answer);
+                    if (answerIndex >= 0 && answerIndex < level.options.length) {
+                        const optionContent = level.options[answerIndex].replace(/^[A-E]\.\s*/, '');
+                        if (optionContent.includes('以上') || optionContent.includes('全部') || optionContent.includes('所有')) {
+                            answerText = level.options.map(opt => opt.replace(/^[A-E]\.\s*/, '')).join('；');
+                        } else {
+                            answerText = optionContent;
+                        }
+                    }
+                }
+            }
             
             if (level.type === 'choice') {
                 container.innerHTML = `
-                    <h2>${level.name}</h2>
-                    ${level.is_completed ? `
-                        <div class="alert alert-success mt-4">
-                            <i class="fas fa-check-circle"></i> 已完成 | 正确答案: ${level.answer}
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h2>${level.name}</h2>
+                            <span class="level-difficulty difficulty-${level.difficulty === '简单' ? 'easy' : level.difficulty === '中等' ? 'medium' : level.difficulty === '困难' ? 'hard' : 'extreme'}">
+                                ${level.difficulty}
+                            </span>
                         </div>
-                    ` : ''}
-                    <div class="mt-4">
-                        <p class="question-text">${level.question}</p>
-                    </div>
-                    <div class="mt-4 options-list">
-                        ${level.options.map((opt, index) => {
-                            const letters = ['A', 'B', 'C', 'D', 'E'];
-                            const match = opt.match(/^([A-E])\.\s*/);
-                            const letter = match ? match[1] : letters[index];
-                            const text = match ? opt.replace(/^[A-E]\.\s*/, '') : opt;
-                            const isCorrect = level.is_completed && letter === level.answer;
-                            return `
-                                <div class="option-card ${isCorrect ? 'correct' : ''}" ${level.is_completed ? '' : `onclick="submitChoice('${letter}')"`}>
-                                    <span class="option-letter">${letter}</span>
-                                    <span class="option-text">${text}</span>
+                        
+                        <div class="chat-messages">
+                            <div class="chat-message npc">
+                                <div class="chat-avatar">${avatarHtml}</div>
+                                <div class="chat-bubble">
+                                    <div class="chat-name">${npcName}</div>
+                                    <div class="chat-text">${level.question}</div>
                                 </div>
-                            `;
-                        }).join('')}
-                    </div>
-                    ${!level.is_completed ? `
-                        <div class="mt-4">
-                            <button class="btn btn-warning" onclick="revealAnswer('${regionId}', '${levelId}', ${revealCost})">
-                                <i class="fas fa-eye"></i> 花费 ${revealCost} 金币查看答案
-                            </button>
+                            </div>
+                            
+                            ${level.is_completed ? `
+                                <div class="chat-message player">
+                                    <div class="chat-bubble correct">
+                                        <div class="chat-name">你</div>
+                                        <div class="chat-text">${answerText}</div>
+                                    </div>
+                                    <div class="chat-avatar">${playerAvatarHtml}</div>
+                                </div>
+                                <div class="chat-message npc">
+                                    <div class="chat-avatar">${avatarHtml}</div>
+                                    <div class="chat-bubble success">
+                                        <div class="chat-name">${npcName}</div>
+                                        <div class="chat-text">✨ 回答正确！太棒了！</div>
+                                    </div>
+                                </div>
+                            ` : ''}
                         </div>
-                    ` : ''}
+                        
+                        ${!level.is_completed ? `
+                            <div class="chat-options">
+                                ${level.options.map((opt, index) => {
+                                    const letters = ['A', 'B', 'C', 'D', 'E'];
+                                    const match = opt.match(/^([A-E])\.\s*/);
+                                    const letter = match ? match[1] : letters[index];
+                                    const text = match ? opt.replace(/^[A-E]\.\s*/, '') : opt;
+                                    return `
+                                        <div class="chat-option" onclick="submitChoice('${letter}')">
+                                            <span class="option-letter">${letter}</span>
+                                            <span class="option-text">${text}</span>
+                                        </div>
+                                    `;
+                                }).join('')}
+                            </div>
+                        ` : ''}
+                        
+                        ${!level.is_completed ? `
+                            <div class="chat-actions">
+                                <button class="btn btn-warning" onclick="revealAnswer('${regionId}', '${levelId}')">
+                                    <i class="fas fa-scroll"></i> 使用提示卷轴查看答案
+                                </button>
+                            </div>
+                        ` : ''}
+                    </div>
                     <div id="levelFeedback"></div>
                 `;
             } else {
                 container.innerHTML = `
-                    <h2>${level.name}</h2>
-                    <div class="level-info">
-                        <span class="level-difficulty difficulty-${level.difficulty === '简单' ? 'easy' : level.difficulty === '中等' ? 'medium' : level.difficulty === '困难' ? 'hard' : 'extreme'}">
-                            ${level.difficulty}
-                        </span>
-                        <span class="text-yellow">经验: ${level.exp_reward} | 金币: ${level.gold_reward}</span>
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h2>${level.name}</h2>
+                            <span class="level-difficulty difficulty-${level.difficulty === '简单' ? 'easy' : level.difficulty === '中等' ? 'medium' : level.difficulty === '困难' ? 'hard' : 'extreme'}">
+                                ${level.difficulty}
+                            </span>
+                        </div>
+                        
+                        <div class="chat-messages">
+                            <div class="chat-message npc">
+                                <div class="chat-avatar">${avatarHtml}</div>
+                                <div class="chat-bubble">
+                                    <div class="chat-name">${npcName}</div>
+                                    <div class="chat-text">${level.question}</div>
+                                </div>
+                            </div>
+                            
+                            ${level.is_completed ? `
+                                <div class="chat-message player">
+                                    <div class="chat-bubble correct">
+                                        <div class="chat-name">你</div>
+                                        <div class="chat-code">${level.answer}</div>
+                                    </div>
+                                    <div class="chat-avatar">${playerAvatarHtml}</div>
+                                </div>
+                                <div class="chat-message npc">
+                                    <div class="chat-avatar">${avatarHtml}</div>
+                                    <div class="chat-bubble success">
+                                        <div class="chat-name">${npcName}</div>
+                                        <div class="chat-text">✨ 代码运行成功！太棒了！</div>
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        ${!level.is_completed && level.code_template ? `
+                            <div class="code-hint">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>提示：可以参考下面的模板</span>
+                                <div class="code-template">${level.code_template.replace(/\n/g, '<br>')}</div>
+                            </div>
+                        ` : ''}
+                        
+                        ${!level.is_completed ? `
+                            <div class="chat-input-area">
+                                <textarea class="code-input" id="answerInput" placeholder="在此输入你的代码..."></textarea>
+                                <button class="btn btn-success" onclick="submitAnswer()">
+                                    <i class="fas fa-paper-plane"></i> 发送代码
+                                </button>
+                            </div>
+                        ` : ''}
+                        
+                        ${!level.is_completed ? `
+                            <div class="chat-actions">
+                                <button class="btn btn-warning" onclick="revealAnswer('${regionId}', '${levelId}')">
+                                    <i class="fas fa-scroll"></i> 使用提示卷轴查看答案
+                                </button>
+                            </div>
+                        ` : ''}
                     </div>
-                    <div class="mt-4">
-                        <h4>问题</h4>
-                        <p>${level.question}</p>
-                    </div>
-                    ${level.is_completed ? `
-                        <div class="mt-4 alert alert-success">
-                            <i class="fas fa-check-circle"></i> 已完成 | 正确答案:
-                            <pre class="mt-2">${level.answer}</pre>
-                        </div>
-                    ` : ''}
-                    ${!level.is_completed && level.code_template ? `
-                        <div class="mt-4">
-                            <h4>代码模板</h4>
-                            <div class="code-template">${level.code_template.replace(/\n/g, '<br>')}</div>
-                        </div>
-                    ` : ''}
-                    ${!level.is_completed ? `
-                        <div class="mt-4 level-form">
-                            <textarea class="code-input" id="answerInput" placeholder="在此输入你的代码..."></textarea>
-                            <button class="btn btn-success mt-3" onclick="submitAnswer()">
-                                <i class="fas fa-check"></i> 提交答案
-                            </button>
-                        </div>
-                    ` : ''}
-                    ${!level.is_completed ? `
-                        <div class="mt-4">
-                            <button class="btn btn-warning" onclick="revealAnswer('${regionId}', '${levelId}', ${revealCost})">
-                                <i class="fas fa-eye"></i> 花费 ${revealCost} 金币查看答案
-                            </button>
-                        </div>
-                    ` : ''}
                     <div id="levelFeedback"></div>
                 `;
             }
@@ -259,35 +847,80 @@ function loadLevel(regionId, levelId) {
         });
 }
 
-function revealAnswer(regionId, levelId, cost) {
-    if (!confirm(`确定要花费 ${cost} 金币查看答案吗？`)) {
-        return;
+let modalCallback = null;
+
+function showModal(title, message, callback) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalMessage').textContent = message;
+    document.getElementById('customModal').classList.add('show');
+    modalCallback = callback;
+}
+
+function showAnswerModal(title, answer) {
+    document.getElementById('modalTitle').textContent = title;
+    document.getElementById('modalMessage').innerHTML = '<div class="answer-content">' + answer + '</div>';
+    document.getElementById('customModal').classList.add('show');
+    modalCallback = null;
+}
+
+function closeModal() {
+    document.getElementById('customModal').classList.remove('show');
+    modalCallback = null;
+}
+
+function confirmModal() {
+    if (modalCallback) {
+        modalCallback();
     }
-    
-    fetch('/api/reveal_answer', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-            region_id: regionId,
-            level_id: levelId
+    closeModal();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const customModal = document.getElementById('customModal');
+    if (customModal) {
+        customModal.addEventListener('click', function(e) {
+            if (e.target === customModal) {
+                closeModal();
+            }
+        });
+    }
+});
+
+function revealAnswer(regionId, levelId) {
+    showModal('提示', '确定要使用提示卷轴查看答案吗？', function() {
+        fetch('/api/reveal_answer', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                region_id: regionId,
+                level_id: levelId
+            })
         })
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) {
-            showNotification(data.message);
-            updatePlayer(data.player);
-            
-            const feedback = document.getElementById('levelFeedback');
-            feedback.innerHTML = `
-                <div class="alert alert-info mt-4">
-                    <i class="fas fa-lightbulb"></i> 正确答案:
-                    <pre class="mt-2">${data.answer}</pre>
-                </div>
-            `;
-        } else {
-            showNotification(data.message, 'error');
-        }
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                showNotification(data.message);
+                updatePlayer(data.player);
+                
+                const feedback = document.getElementById('levelFeedback');
+                if (feedback) {
+                    feedback.innerHTML = `
+                        <div class="answer-reveal">
+                            <div class="answer-header">
+                                <i class="fas fa-lightbulb"></i>
+                                <span>正确答案</span>
+                            </div>
+                            <div class="answer-code">${data.answer}</div>
+                        </div>
+                    `;
+                }
+            } else {
+                showNotification(data.message, 'error');
+            }
+        })
+        .catch(error => {
+            showNotification('查看答案失败：' + error.message, 'error');
+        });
     });
 }
 
@@ -356,20 +989,30 @@ function submitChoice(answer) {
             
             updatePlayer(data.player);
             
+            if (data.newly_unlocked && data.newly_unlocked.length > 0) {
+                setTimeout(() => {
+                    showAchievementModal(data.newly_unlocked);
+                }, 1000);
+            }
+            
             setTimeout(() => {
-                fetch(`/api/region/${currentRegionId}`)
-                    .then(r => r.json())
-                    .then(regionData => {
-                        const levels = regionData.levels;
-                        const currentIndex = levels.findIndex(l => l.id === currentLevelId);
-                        
-                        if (currentIndex < levels.length - 1) {
-                            loadLevel(currentRegionId, levels[currentIndex + 1].id);
-                        } else {
-                            loadRegion(currentRegionId);
-                        }
-                    });
-            }, 2000);
+                if (data.all_completed && data.next_region) {
+                    switchSection('world-map');
+                } else {
+                    fetch(`/api/region/${currentRegionId}`)
+                        .then(r => r.json())
+                        .then(regionData => {
+                            const levels = regionData.levels;
+                            const currentIndex = levels.findIndex(l => l.id === currentLevelId);
+                            
+                            if (currentIndex < levels.length - 1) {
+                                loadLevel(currentRegionId, levels[currentIndex + 1].id);
+                            } else {
+                                loadRegion(currentRegionId);
+                            }
+                        });
+                }
+            }, 1500);
         } else {
             let damageHtml = '';
             const playerData = data.player;
@@ -536,8 +1179,23 @@ function submitAnswer() {
             updatePlayer(data.player);
             
             setTimeout(() => {
-                loadRegion(currentRegionId);
-            }, 3000);
+                if (data.all_completed && data.next_region) {
+                    switchSection('world-map');
+                } else {
+                    fetch(`/api/region/${currentRegionId}`)
+                        .then(r => r.json())
+                        .then(regionData => {
+                            const levels = regionData.levels;
+                            const currentIndex = levels.findIndex(l => l.id === currentLevelId);
+                            
+                            if (currentIndex < levels.length - 1) {
+                                loadLevel(currentRegionId, levels[currentIndex + 1].id);
+                            } else {
+                                loadRegion(currentRegionId);
+                            }
+                        });
+                }
+            }, 1500);
         } else {
             // 显示答错反馈和HP变化
             let damageHtml = '';
@@ -597,6 +1255,12 @@ function updatePlayer(playerData) {
     
     document.getElementById('playerGold').textContent = playerData.gold;
     
+    const scrollCount = playerData.inventory ? playerData.inventory.filter(item => item.id === 'hint_scroll').length : 0;
+    const scrollEl = document.getElementById('playerScrolls');
+    if (scrollEl) {
+        scrollEl.textContent = scrollCount;
+    }
+    
     const levelBar = document.querySelector('.progress-bar');
     const expPercent = (playerData.exp / getExpNeeded(playerData.level)) * 100;
     levelBar.style.width = `${expPercent}%`;
@@ -608,7 +1272,58 @@ function updatePlayer(playerData) {
     document.querySelectorAll('.stat-value')[1].textContent = playerData.attack;
     document.querySelectorAll('.stat-value')[2].textContent = playerData.defense;
     
+    const equipmentSlots = document.querySelector('.equipment-slots');
+    if (equipmentSlots && playerData.equipment) {
+        const items = Object.values(playerData.equipment);
+        if (items.length > 0) {
+            const iconMap = {
+                'wisdom_hat': 'fa-graduation-cap',
+                'gold_ring': 'fa-ring',
+                'iron_armor': 'fa-shield-alt'
+            };
+            equipmentSlots.innerHTML = items.map(item => {
+                const icon = iconMap[item.id] || 'fa-question';
+                return `
+                    <div class="slot has-tooltip" title="${item.name}: ${item.description}">
+                        <i class="fas ${icon}"></i>
+                    </div>
+                `;
+            }).join('');
+        } else {
+            equipmentSlots.innerHTML = '';
+        }
+    }
+    
+    let consumablesArea = document.querySelector('.consumables');
+    if (!consumablesArea) {
+        const equipmentDiv = document.querySelector('.equipment');
+        if (equipmentDiv) {
+            consumablesArea = document.createElement('div');
+            consumablesArea.className = 'consumables mt-4';
+            equipmentDiv.appendChild(consumablesArea);
+        }
+    }
+    if (consumablesArea) {
+        if (scrollCount > 0) {
+            consumablesArea.innerHTML = `
+                <h4><i class="fas fa-scroll"></i> 消耗品</h4>
+                <div class="consumable-slots">
+                    <div class="slot has-tooltip" title="提示卷轴: 查看答案时消耗一个，剩余 ${scrollCount} 个">
+                        <i class="fas fa-scroll"></i>
+                        <span class="slot-count">×${scrollCount}</span>
+                    </div>
+                </div>
+            `;
+        } else {
+            consumablesArea.innerHTML = '';
+        }
+    }
+    
     isAdmin = playerData.is_admin || false;
+    
+    if (playerData.avatar) {
+        updateAvatarDisplay(playerData.avatar);
+    }
 }
 
 function getExpNeeded(level) {
@@ -769,84 +1484,45 @@ function loadAchievements() {
         });
 }
 
-function loadInventory() {
-    fetch('/api/inventory')
+function loadLeaderboard() {
+    fetch('/api/leaderboard')
         .then(response => response.json())
         .then(data => {
-            const container = document.getElementById('inventoryContainer');
+            const container = document.getElementById('leaderboardContainer');
             
-            if (data.inventory.length === 0) {
-                container.innerHTML = '<p class="text-muted">背包是空的</p>';
-            } else {
-                container.innerHTML = data.inventory.map(item => `
-                    <div class="inventory-item">
-                        <div>
-                            <span class="inventory-item-name">${item.name}</span>
-                            <p class="text-muted" style="font-size: 0.85rem;">${item.description}</p>
-                        </div>
-                        <div class="inventory-item-actions">
-                            ${item.type === 'equipment' ? `
-                                <button class="btn btn-warning btn-sm" onclick="equipItem('${item.id}')">
-                                    <i class="fas fa-shield"></i> 装备
-                                </button>
-                            ` : `
-                                <button class="btn btn-success btn-sm" onclick="useItem('${item.id}')">
-                                    <i class="fas fa-flask"></i> 使用
-                                </button>
-                            `}
-                        </div>
-                    </div>
-                `).join('');
+            if (!data.success || data.leaderboard.length === 0) {
+                container.innerHTML = '<p class="text-muted text-center" style="padding: 40px;">暂无玩家数据</p>';
+                return;
             }
             
-            if (Object.keys(data.equipment).length > 0) {
-                container.innerHTML += `
-                    <h4 class="mt-6">已装备</h4>
-                    ${Object.entries(data.equipment).map(([slot, item]) => `
-                        <div class="inventory-item">
-                            <div>
-                                <span class="text-muted">${slot}</span>
-                                <span class="inventory-item-name">${item.name}</span>
+            container.innerHTML = `<div class="leaderboard-container">${data.leaderboard.map((player, index) => {
+                const rankClass = index === 0 ? 'top-1' : (index === 1 ? 'top-2' : (index === 2 ? 'top-3' : 'other'));
+                const rankNum = index + 1;
+                
+                let avatarHtml = player.avatar && player.avatar.startsWith('data:image') 
+                    ? `<img src="${player.avatar}" alt="${player.name}">` 
+                    : (player.avatar || '👤');
+                
+                return `
+                    <div class="leaderboard-item ${rankClass}">
+                        <div class="leaderboard-rank ${rankClass}">${rankNum}</div>
+                        <div class="leaderboard-avatar">${avatarHtml}</div>
+                        <div class="leaderboard-info">
+                            <div class="leaderboard-name">${player.name}</div>
+                            <div class="leaderboard-stats">
+                                <span><i class="fas fa-coins"></i> ${player.gold}</span>
+                                <span><i class="fas fa-check-circle"></i> ${player.completed_quests} 题</span>
+                                <span><i class="fas fa-map"></i> ${player.unlocked_regions} 区域</span>
                             </div>
                         </div>
-                    `).join('')}
+                        <div class="leaderboard-level">
+                            <div class="leaderboard-level-number">Lv.${player.level}</div>
+                            <div class="leaderboard-level-label">经验 ${player.exp}</div>
+                        </div>
+                    </div>
                 `;
-            }
+            }).join('')}</div>`;
         });
-}
-
-function equipItem(itemId) {
-    fetch('/api/equip_item', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ item_id: itemId })
-    })
-    .then(response => response.json())
-    .then(data => {
-        showNotification(data.message);
-        
-        if (data.success) {
-            updatePlayer(data.player);
-            loadInventory();
-        }
-    });
-}
-
-function useItem(itemId) {
-    fetch('/api/use_item', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ item_id: itemId })
-    })
-    .then(response => response.json())
-    .then(data => {
-        showNotification(data.message);
-        
-        if (data.success) {
-            updatePlayer(data.player);
-            loadInventory();
-        }
-    });
 }
 
 function backToWorldMap() {
@@ -868,6 +1544,22 @@ function saveGame() {
             showNotification(data.message);
         });
 }
+
+function autoSaveGame() {
+    fetch('/api/save_game')
+        .then(response => response.json())
+        .then(data => {
+            console.log('自动保存:', data.message);
+        });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('beforeunload', function() {
+        autoSaveGame();
+    });
+    
+    setInterval(autoSaveGame, 30000);
+});
 
 function confirmReset() {
     if (confirm('确定要返回主菜单吗？当前进度将自动保存。')) {

@@ -1,0 +1,879 @@
+[
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 1,
+    "question": "Python是一种什么类型的语言？",
+    "options": [
+      "A. 编译型语言",
+      "B. 解释型语言",
+      "C. 标记语言",
+      "D. 前端语言"
+    ],
+    "answer": "B",
+    "total_order": 1
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 2,
+    "question": "PyCharm是什么？",
+    "options": [
+      "A. 一种编程语言",
+      "B. 一种操作系统",
+      "C. 一款Python集成开发环境（IDE）",
+      "D. 一种数据库管理系统"
+    ],
+    "answer": "C",
+    "total_order": 2
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 3,
+    "question": "在PyCharm中，如何创建一个新的Python项目？",
+    "options": [
+      "A. 通过菜单选择“文件” -> “新建项目”",
+      "B. 通过命令行创建",
+      "C. 直接打开一个Python文件",
+      "D. 无法在PyCharm中创建新项目"
+    ],
+    "answer": "A",
+    "total_order": 3
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 4,
+    "question": "Python的主要特点之一是什么？",
+    "options": [
+      "A. 语法复杂",
+      "B. 简单易学，适合初学者",
+      "C. 仅适用于Web开发",
+      "D. 运行速度极快"
+    ],
+    "answer": "B",
+    "total_order": 4
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 5,
+    "question": "下列哪个领域不是Python的典型应用？",
+    "options": [
+      "A. Web开发",
+      "B. 数据分析",
+      "C. 高性能实时游戏引擎开发",
+      "D. 人工智能与机器学习"
+    ],
+    "answer": "C",
+    "total_order": 5
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 6,
+    "question": "以下哪个是python语法的特点:",
+    "options": [
+      "A. 解释性语言",
+      "B. 面向对象",
+      "C. 跨平台",
+      "D. 以上全是"
+    ],
+    "answer": "D",
+    "total_order": 6
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 7,
+    "question": "在PyCharm中，如何运行一个Python脚本？",
+    "options": [
+      "A. 右键点击文件并选择“运行”",
+      "B. 通过命令行运行",
+      "C. 直接在编辑器中输入代码",
+      "D. 无法在PyCharm中运行脚本"
+    ],
+    "answer": "A",
+    "total_order": 7
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 8,
+    "question": "Python中用来输出内容的函数是什么？",
+    "options": [
+      "A. output()",
+      "B. print()",
+      "C. echo()",
+      "D. display()"
+    ],
+    "answer": "B",
+    "total_order": 8
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 9,
+    "question": "在PyCharm中，如何查看代码的错误信息？",
+    "options": [
+      "A. 通过控制台",
+      "B. 通过错误提示窗口",
+      "C. 代码下方会显示红色波浪线",
+      "D. 以上都是"
+    ],
+    "answer": "D",
+    "total_order": 9
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 10,
+    "question": "Python的文件扩展名是什么？",
+    "options": [
+      "A. .txt",
+      "B. .py",
+      "C. .doc",
+      "D. .java"
+    ],
+    "answer": "B",
+    "total_order": 10
+  },
+  {
+    "type": "code",
+    "day": 1,
+    "number": 11,
+    "question": "使用print函数输出'你好，富富！'",
+    "options": [],
+    "answer": "print('你好，富富！')",
+    "code_template": "print()",
+    "total_order": 11
+  },
+  {
+    "type": "code",
+    "day": 1,
+    "number": 12,
+    "question": "使用print函数输出两行内容：第一行'欢迎来到Python世界'，第二行'开始你的编程之旅吧'",
+    "options": [],
+    "answer": "print('欢迎来到Python世界')\nprint('开始你的编程之旅吧')",
+    "code_template": "print()\nprint()",
+    "total_order": 12
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 1,
+    "question": "下面选项中，哪个是Python中的整数字面量？",
+    "options": [
+      "'123'",
+      "3.14",
+      "1101",
+      "\"hello\""
+    ],
+    "answer": "C",
+    "total_order": 14
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 2,
+    "question": "下面选项中，哪个是符合Python变量命名规则的正确赋值语句？",
+    "options": [
+      "1num = 10",
+      "int = 10",
+      "int_01 = 10",
+      "$money = 100"
+    ],
+    "answer": "C",
+    "total_order": 15
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 3,
+    "question": "下面关于python变量类型的说法，正确的是？",
+    "options": [
+      "变量类型必须在定义时指定",
+      "变量类型在赋值时确定",
+      "变量类型一旦确定就不能改变",
+      "变量类型与赋值无关"
+    ],
+    "answer": "B",
+    "total_order": 16
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 4,
+    "question": "下面变量x的类型是什么？x = 123_456_789",
+    "options": [
+      "float",
+      "int",
+      "str",
+      "bool"
+    ],
+    "answer": "B",
+    "total_order": 17
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 5,
+    "question": "在Python中，使用input()函数接收用户输入时，输入的值默认是什么类型？",
+    "options": [
+      "输入什么类型就是什么类型。",
+      "字符串类型。",
+      "整数类型。",
+      "浮点数类型。"
+    ],
+    "answer": "B",
+    "total_order": 18
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 6,
+    "question": "在Python中，print函数的主要用途是什么？",
+    "options": [
+      "从用户那里接收输入",
+      "将数据写入文件",
+      "在控制台输出内容",
+      "执行数学计算"
+    ],
+    "answer": "C",
+    "total_order": 19
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 7,
+    "question": "在Python中，下面哪个函数用于创建浮点数？",
+    "options": [
+      "double()",
+      "Number()",
+      "float()",
+      "float32()"
+    ],
+    "answer": "C",
+    "total_order": 20
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 8,
+    "question": "在Python中，有变量x = -5和y = -3.14，以下哪个代码片段可以正确地将x和y转换为它们的绝对值？",
+    "options": [
+      "x = abs(x) 和 y = abs(y)",
+      "x = |x| 和 y = |y|",
+      "x = fabs(x) 和 y = fabs(y)",
+      "x = absolute(x) 和 y = absolute(y)"
+    ],
+    "answer": "A",
+    "total_order": 21
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 9,
+    "question": "字符串与数字类型（int、float）之间的转换：将字符串'123'转换为整数，将字符串'3.14'转换为浮点数",
+    "options": [],
+    "answer": "num1 = int('123')\nnum2 = float('3.14')\nprint(num1)\nprint(num2)",
+    "code_hint": "",
+    "total_order": 22
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 10,
+    "question": "从控制台接收用户输入的一个浮点数，打印输入值的类型，再将其转换为整数并打印转换后的值及其类型",
+    "options": [],
+    "answer": "num = float(input())\nprint(type(num))\nnum_int = int(num)\nprint(num_int)\nprint(type(num_int))",
+    "code_hint": "",
+    "total_order": 23
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 11,
+    "question": "转换为绝对值：计算数字-5和-3.14的绝对值",
+    "options": [],
+    "answer": "x = -5\ny = -3.14\nprint(abs(x))\nprint(abs(y))",
+    "code_hint": "",
+    "total_order": 24
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 12,
+    "question": "将整数100转换为字符串，将浮点数3.14转换为字符串",
+    "options": [],
+    "answer": "str1 = str(100)\nstr2 = str(3.14)\nprint(str1)\nprint(str2)",
+    "code_hint": "",
+    "total_order": 25
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 13,
+    "question": "编写一个Python程序：提示用户输入一个负整数，使用abs函数计算其绝对值，输出格式为“其绝对值是 [绝对值]”",
+    "options": [],
+    "answer": "num = int(input())\nresult = abs(num)\nprint(f\"其绝对值是 {result}\")",
+    "code_hint": "",
+    "total_order": 26
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 1,
+    "question": "变量名命名规则中，以下哪个是非法的变量名？",
+    "options": [
+      "A. lala111",
+      "B. 222baby",
+      "C. Zhou",
+      "D. _zhou"
+    ],
+    "answer": "B",
+    "total_order": 27
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 2,
+    "question": "python3中，如何打印变量message的值，其中message的值为Hello, World!？",
+    "options": [
+      "A. print 'Hello, World!'",
+      "B. print \"message\"",
+      "C. print message",
+      "D. print(message)"
+    ],
+    "answer": "D",
+    "total_order": 28
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 3,
+    "question": "以下哪个是Python中的布尔值？",
+    "options": [
+      "A. 只有True",
+      "B. false",
+      "C. 1",
+      "D. True 和 False"
+    ],
+    "answer": "D",
+    "total_order": 29
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 4,
+    "question": "如何将整数10转换为字符串？",
+    "options": [
+      "A. str(10)",
+      "B. int(\"10\")",
+      "C. float(10)",
+      "D. bool(10)"
+    ],
+    "answer": "A",
+    "total_order": 30
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 5,
+    "question": "以下哪个函数用于获取对象的内存地址？",
+    "options": [
+      "A. type()",
+      "B. id()",
+      "C. len()",
+      "D. bool()"
+    ],
+    "answer": "B",
+    "total_order": 31
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 6,
+    "question": "在Python中，如何注释掉一行代码？",
+    "options": [
+      "A. 使用//在行首",
+      "B. 使用#在行首",
+      "C. 使用/* */包围代码",
+      "D. 使用<!-- -->包围代码"
+    ],
+    "answer": "B",
+    "total_order": 32
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 7,
+    "question": "注释在Python中有什么作用？",
+    "options": [
+      "A. 修改代码的执行逻辑。",
+      "B. 使代码运行更快。",
+      "C. 对代码进行解释说明，且不被执行。",
+      "D. 存储临时不用的代码。"
+    ],
+    "answer": "C",
+    "total_order": 33
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 8,
+    "question": "Python中用来输出内容的函数是什么？",
+    "options": [
+      "A. output()",
+      "B. print()",
+      "C. echo()",
+      "D. display()"
+    ],
+    "answer": "B",
+    "total_order": 34
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 9,
+    "question": "以下哪个选项正确描述了变量名的大小写敏感性？",
+    "options": [
+      "A. Zhou和zhou是同一个变量名。",
+      "B. Zhou和zhou是两个不同的变量名。",
+      "C. Python不区分大小写。",
+      "D. 大小写敏感性取决于操作系统。"
+    ],
+    "answer": "B",
+    "total_order": 35
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 10,
+    "question": "字面量的定义是什么？",
+    "options": [
+      "A. 代码中直接写出的固定值，如数字和文本。",
+      "B. 代码中可变的值，如变量。",
+      "C. 代码中的注释。",
+      "D. 代码中的函数。"
+    ],
+    "answer": "A",
+    "total_order": 36
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 11,
+    "question": "如何打印字面量？",
+    "options": [
+      "A. 使用input()函数。",
+      "B. 使用print()函数。",
+      "C. 直接在代码中显示。",
+      "D. 无法打印字面量。"
+    ],
+    "answer": "B",
+    "total_order": 37
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 12,
+    "question": "在python中，字符串类型使用哪种引号包围？",
+    "options": [
+      "A. 只能使用单引号。",
+      "B. 只能使用双引号。",
+      "C. 可以使用单引号、双引号或三引号，但必须配对。",
+      "D. 不需要引号。"
+    ],
+    "answer": "C",
+    "total_order": 38
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 13,
+    "question": "input()函数的作用是什么？",
+    "options": [
+      "A. 打印输出结果。",
+      "B. 接收用户输入的数据。",
+      "C. 计算输入数据的绝对值。",
+      "D. 获取数据的内存地址。"
+    ],
+    "answer": "B",
+    "total_order": 39
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 14,
+    "question": "如何将整数转换为字符串？",
+    "options": [
+      "A. 使用int()函数。",
+      "B. 使用str()函数。",
+      "C. 使用float()函数。",
+      "D. 使用bool()函数。"
+    ],
+    "answer": "B",
+    "total_order": 40
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 15,
+    "question": "以下哪个是Python中的转义字符？",
+    "options": [
+      "A. /n",
+      "B. \\n",
+      "C. //n",
+      "D. |n"
+    ],
+    "answer": "B",
+    "total_order": 41
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 16,
+    "question": "在Python中，\\t表示什么？",
+    "options": [
+      "A. 换行符",
+      "B. 制表符",
+      "C. 回车符",
+      "D. 退格符"
+    ],
+    "answer": "B",
+    "total_order": 42
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 17,
+    "question": "以下哪个表达式的结果是True？",
+    "options": [
+      "A. 3 > 5",
+      "B. 10 == 10",
+      "C. 5 != 5",
+      "D. 2 < 1"
+    ],
+    "answer": "B",
+    "total_order": 43
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 18,
+    "question": "以下哪个表达式的结果是False？",
+    "options": [
+      "A. True and True",
+      "B. True or False",
+      "C. not True",
+      "D. False or True"
+    ],
+    "answer": "C",
+    "total_order": 44
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 19,
+    "question": "None在Python中表示什么？",
+    "options": [
+      "A. 0",
+      "B. 空字符串",
+      "C. 空值",
+      "D. 错误"
+    ],
+    "answer": "C",
+    "total_order": 45
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 20,
+    "question": "以下哪个是Python中的正确编码格式？",
+    "options": [
+      "A. ASCII",
+      "B. UTF-8",
+      "C. GBK",
+      "D. Unicode"
+    ],
+    "answer": "B",
+    "total_order": 46
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 21,
+    "question": "以下哪个操作符用于比较两个对象的身份？",
+    "options": [
+      "A. ==",
+      "B. is",
+      "C. >",
+      "D. <"
+    ],
+    "answer": "B",
+    "total_order": 47
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 22,
+    "question": "编写一个程序，将字符串'123'转换为整数，将字符串'3.14'转换为浮点数。",
+    "options": [],
+    "answer": "num1 = int('123')\nnum2 = float('3.14')\nprint(num1)\nprint(num2)",
+    "total_order": 48
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 23,
+    "question": "从控制台接收用户输入的一个浮点数，打印输入值的类型，再将其转换为整数并打印转换后的值及其类型。",
+    "options": [],
+    "answer": "num = float(input())\nprint(type(num))\nnum_int = int(num)\nprint(num_int)\nprint(type(num_int))",
+    "total_order": 49
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 24,
+    "question": "编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串，包含单引号、双引号、反斜杠、换行符和制表符。",
+    "options": [],
+    "answer": "print('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")",
+    "total_order": 50
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 25,
+    "question": "编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。",
+    "options": [],
+    "answer": "num1 = float(input(\"请输入第一个数字：\"))\nnum2 = float(input(\"请输入第二个数字：\"))\nprint(num1 + num2)\nprint(num1 - num2)\nprint(num1 * num2)\nprint(num1 / num2)",
+    "total_order": 51
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 26,
+    "question": "编写一个程序，让用户输入文件名和扩展名，然后构造并打印出带有正确转义字符的完整文件路径，假定文件位于D:\\Documents\\Projects目录下。",
+    "options": [],
+    "answer": "filename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名：\")\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\nprint(path)",
+    "total_order": 52
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 27,
+    "question": "编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。",
+    "options": [],
+    "answer": "value = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\nvalue = user_input\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))",
+    "total_order": 53
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 28,
+    "question": "编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。",
+    "options": [],
+    "answer": "bool_true = True\nbool_false = False\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))",
+    "total_order": 54
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 29,
+    "question": "编写代码，比较列表a=[1,2,3]和b=[1,2,3]以及c=a的内存地址，使用==和is进行比较。",
+    "options": [],
+    "answer": "a = [1, 2, 3]\nb = [1, 2, 3]\nc = a\nprint('a的内存地址：', id(a))\nprint('b的内存地址：', id(b))\nprint('c的内存地址：', id(c))\nprint('a == b', a == b)\nprint('a is b', a is b)\nprint('a == c', a == c)\nprint('a is c', a is c)",
+    "total_order": 55
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 30,
+    "question": "编写逻辑表达式来判断变量x是否不等于y并且x小于15；判断age是否在18到65岁之间；判断name是否既不是Alice也不是Bob；判断score是否大于90并且小于100或者等于80。",
+    "options": [],
+    "answer": "x = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：', r)\nage = 10\nprint('18 <= age <= 65判断结果', 18 <= age <= 65)\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\", rel)",
+    "total_order": 56
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 1,
+    "question": "第 01 题：判断一个数的正负\n题目要求：从键盘上输入一个浮点数，使用if-else语句来判断这个数是正数、负数还是零，并输出相应的结果。",
+    "options": [],
+    "answer": "number = float(input('请输入一个浮点数：'))\nif number > 0:\n    print(number, '是正数。')\nelif number < 0:\n    print(number, '是负数。')\nelse:\n    print(number, '是零。')",
+    "code_hint": "1.定义一个变量number，用来接收用户输入的数值。并转换为float。\n2.使用 if-elif-else 语句判断正负：\nnumber > 0 ; 输出：number, \"是正数。\"\nnumber < 0 ; 输出：number, \"是负数。\"\nnumber = 0 ; 输出：number, \"是零。\"",
+    "total_order": 57
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 2,
+    "question": "第 02 题：判断是否水仙花数\n题目描述：从键盘上输入一个三位数的数，判断这个数字是否是三位数的数字，再判断是否是水仙花数。\n(什么是水仙花数：一个n位数（n≥3），它的每个位上的数字的n次幂之和等于它本身。本题只需要输入3位数，也就是：该数的每个位上的数字的立方和等于该数本身。)\n(数学示例：153>>>:1³=1 ; 5³=125 ; 3³=27 ; 他们的和等于153，所以这个数是水仙花数，不符合要求的就不是。)",
+    "options": [],
+    "answer": "number = int(input('请输入一个三位数：'))\nif number < 100 or number > 999:\n    print('无效的输入')\nelse:\n    hundreds = number // 100\n    tens = (number // 10) % 10\n    ones = number % 10\n    cube_sum = hundreds ** 3 + tens ** 3 + ones ** 3\n    if cube_sum == number:\n        print(number, '是水仙花数')\n    else:\n        print(number, '不是水仙花数')",
+    "code_hint": "定义一个变量number，使用 input() 函数提示用户输入一个三位数。并转换为int\n初步判断：判断number是否是三位数的数字。\n是-则进行是否水仙花数的处理；\n否-输出提示：无效的输入\n分解数字：使用算术运算符，分别提取百位，十位，个位上的数字。\n将取出来的数字，计算立方和。\n立方和与原数字相等-输出：number 是水仙花数\n不等-则输出：number 不是水仙花数",
+    "total_order": 58
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 3,
+    "question": "第 03 题：计算商品购物折扣\n题目要求：编写一个计算商品购物折扣的程序，折扣规则如下：\n如果购物金额小于100元，则不享受折扣。\n如果购物金额在100元（含）至300元之间，则享受9折优惠。\n如果购物金额超过300元，则享受85折优惠。",
+    "options": [],
+    "answer": "shopping_amount = float(input('请输入购物金额：'))\nif shopping_amount < 100:\n    print('您没有享受折扣,需支付:', str(shopping_amount), '元')\nelif shopping_amount >= 100 and shopping_amount < 300:\n    discount = shopping_amount * 0.9\n    print('您可享受9折优惠,需支付:', str(discount), '元')\nelse:\n    discount = shopping_amount * 0.85\n    print('您可享受85折优惠,需支付:', str(discount), '元')",
+    "code_hint": "1.定义一个变量(shopping_amount)，用户输入购物金额。\n2.使用if_elif_else进行折扣规则判断：\n如果购物金额小于100元(不含)，则不享受折扣。\n如果购物金额在100元（含）至300元之间，则享受9折优惠。\n如果购物金额超过300元（含），则享受85折优惠。",
+    "total_order": 59
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 4,
+    "question": "第 04 题：简单的交通信号灯判断\n题目要求：编写一段代码，模拟交通信号灯的工作。要求用户输入颜色（红、黄、绿），根据颜色输出相应的指示信息。\n输入红色(red),输出:请停车\n输入黄色(yellow),输出:准备停车/尽快通行\n输入绿色(green),输出:允许通行\n输入其它错误字符,输出:\"无效的颜色，请输入红色(red)、黄色(yellow)或绿色(green)\"",
+    "options": [],
+    "answer": "color = input('请输入颜色（红、黄、绿）：')\nif color == 'red' or color == '红色':\n    print('请停车')\nelif color == 'yellow' or color == '黄色':\n    print('准备停车/尽快通行')\nelif color == 'green' or color == '绿色':\n    print('允许通行')\nelse:\n    print('无效的颜色，请输入红色(red)、黄色(yellow)或绿色(green)')",
+    "code_hint": "让用户输入颜色（红、黄、绿），根据颜色输出相应的指示信息。",
+    "total_order": 60
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 5,
+    "question": "第 05 题：判断三角形类型\n题目要求：编写一个程序，让用户输入三角形的三条边长，判断并输出三角形的类型：\n等边三角形：三条边相等\n等腰三角形：至少有两条边相等\n直角三角形：满足勾股定理\n不是三角形：不符合三角形的边长关系",
+    "options": [],
+    "answer": "side1 = float(input('请输入第一条边：'))\nside2 = float(input('请输入第二条边：'))\nside3 = float(input('请输入第三条边：'))\n\nif side1 + side2 > side3 and side1 + side3 > side2 and side2 + side3 > side1:\n    if side1 == side2 == side3:\n        print('这是一个等边三角形')\n    elif side1 == side2 or side1 == side3 or side2 == side3:\n        print('这是一个等腰三角形')\n    elif side1**2 + side2**2 == side3**2 or side1**2 + side3**2 == side2**2 or side2**2 + side3**2 == side1**2:\n        print('这是一个直角三角形')\n    else:\n        print('这是一个普通三角形')\nelse:\n    print('不是三角形')",
+    "code_hint": "提示用户输入三条边长，使用 input() 函数提示用户依次输入三条边的长度。将输入的字符串转换为浮点数（float）。\n使用条件语句判断是否构成三角形：任意两边之和大于第三边\n再嵌套判断是否符合三角形类型的要求。",
+    "total_order": 61
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 1,
+    "question": "第 01 题：用户登陆\n题目要求：编写一个Python程序，需要用户输入用户名（admin）和密码（password）后重复三次后登录成功。\n密码用户名每正确1次提示1次，记录3次输入中正确的次数。\n3次均符合要求：提示登录成功，反之提示失败，并给出失败次数。",
+    "options": [],
+    "answer": "success_count = 0\nfor i in range(3):\n    username = input('请输入用户名：')\n    password = input('请输入密码：')\n    if username == 'admin' and password == 'password':\n        success_count += 1\n        print('第{}次输入正确'.format(i+1))\n    else:\n        print('第{}次输入错误'.format(i+1))\nif success_count == 3:\n    print('登录成功')\nelse:\n    print('登录失败，失败次数：', 3 - success_count)",
+    "code_hint": "使用for循环控制3次输入，记录正确次数，最后判断是否登录成功。",
+    "total_order": 99
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 2,
+    "question": "第 02 题：用符号*打印正方形图案\n题目要求：打印一个5行5列的正方形图案。\n图形规律：5行5列，每行打印5个*。",
+    "options": [],
+    "answer": "for i in range(5):\n    for j in range(5):\n        print('*', end='  ')\n    print()",
+    "code_hint": "使用嵌套for循环，外层循环控制行数，内层循环控制列数。",
+    "total_order": 100
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 3,
+    "question": "第 03 题：用符号*打印一个正直角三角形\n题目要求：打印一个正直角三角形图案。\n图形规律：观察图形，图形有5行，每一行的*是逐行增加的，直到第五行有5个星号。",
+    "options": [],
+    "answer": "for i in range(5):\n    for j in range(i + 1):\n        print('*', end='  ')\n    print()",
+    "code_hint": "外层循环控制行数，内层循环根据行数决定每行打印的星号数量。",
+    "total_order": 101
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 4,
+    "question": "第 04 题：用符号*打印一个倒直角三角形\n题目要求：打印一个倒直角三角形图案。\n图形规律：总共有5行。第1行有5个星号，第2行有4个星号，依此类推，直到第5行只有1个星号。",
+    "options": [],
+    "answer": "for i in range(5, 0, -1):\n    for j in range(i):\n        print('*', end='  ')\n    print()",
+    "code_hint": "外层循环从5递减到1，内层循环根据当前行数决定打印的星号数量。",
+    "total_order": 102
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 5,
+    "question": "第 05 题：for循环实现99乘法表\n题目要求：使用for循环实现99乘法表。\n规律说明：99乘法表是对称的，是一个9x9的表格。每一行和每一列的数字从1递增到9。\n假设行数是i、列数是j，行由外层循环变量i控制，表示当前是第几行，也决定了该行的第一个乘数。\n列由内层循环变量j控制，表示当前行中的第几个乘法表达式。",
+    "options": [],
+    "answer": "for i in range(1, 10):\n    for j in range(1, i + 1):\n        print('{}x{}={}'.format(j, i, i * j), end='\\t')\n    print()",
+    "code_hint": "使用嵌套for循环，外层循环控制行数，内层循环控制列数，每行的列数等于行数。",
+    "total_order": 103
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 6,
+    "question": "第 06 题：存钱罐\n题目要求：你有一个存钱罐，每天存入相同数量的硬币。\n编写一个Python程序，通过用户输入每天存入的硬币数量和总天数，使用for循环计算并输出从第1天到指定天数，你总共存入了多少硬币。\n1. 在 Python 中，列表的索引是从哪个数字开始的？\n2. 以下哪项是 Python 列表的一个特性？\n3. 以下哪个方法用于向列表末尾添加一个元素？\n4.以下哪个方法用于从列表中移除指定位置的元素？\n填空题：\n实操题：\n1. Python 集合中的元素是有序的吗？\n2.以下哪种定义方式，不是元组：\n3. 元组和列表的主要区别是什么？\n4. 假设有一个元组 t = (5, 'a', 3, 'b', 1)，那么 t[2:4] 的结果是什么？\n5. 以下哪个操作是元组支持的？（多选）\n6. 以下哪个操作是集合支持的？（多选）\n将规定字符串转为列表后去重：将字符串string = \"abcabcefgg\"转成列表后，去重，并打印排序后的列表。\n查找元组中最大值及其索引：找出元组tuple_01 = (10, 50, 30, 20, 70, 40)的最大值及其对应的第一个索引并打印。\n管理动物园的动物特征：定义动物列表，打印每种动物的特征，使用集合找出所有动物最喜欢的不同食物，更新列表增加活力值。\n填空题：\n填写正确的格式化代码来完成以下句子：\n请填写正确的格式化代码来完成以下句子：\n题目要求：用户输入一连串数值，使用空格等分割不同的分值。完成以下任务：\n【拓展】简述split()用法：\n题目要求：\n具体要求：\n题目描述：\n要求说明：\n要求说明：",
+    "options": [],
+    "answer": "coins_per_day = int(input('请输入每天存入的硬币数量：'))\ntotal_days = int(input('请输入总天数：'))\ntotal_coins = 0\nfor day in range(1, total_days + 1):\n    total_coins += coins_per_day\n    print('第{}天：累计存入{}枚硬币'.format(day, total_coins))\nprint('总共存入{}枚硬币'.format(total_coins))",
+    "code_hint": "使用for循环累加每天存入的硬币数量，计算总存款。\n内置函数sorted()和sum()\nsorted() 和 list.sort() 哪个是作用于原列表进行排序              。\n当使用sorted()时，若要实现降序排序，需要设置参数reverse为              。\nsum()函数可以传递多少个参数，答            。\nsum()函数的第一个参数必须为什么类型的数据，答                                                 。\n使用sum()计算总和时，如果不指定起始值，则默认从                  开始累加。\n内置函数max()和min()\nmax() 函数用于从给定的可迭代对象中返回                 元素。\nmin() 函数用于从给定的可迭代对象中返回                 元素。\n关于字符串格式化\n使用百分号 % 格式化\n请填写正确的格式化代码来完成以下句子：（请将name和age塞入到sentence）\nname = \"六一\"\nage = 26\nsentence = \"我叫 __ ，我 __ 岁了.\"\nformatted_sentence = sentence % (_____, _____)\nprint(formatted_sentence)\n正确使用str.format()\ncity = \"哈尔滨\"\ntemperature = -15.5\nreport = \"当前城市 __ 温度为 __ 摄氏度。\"\nformatted_report = report.format(___, ___)\n使用 f-string（格式化字符串字面量）\ncity = \"哈尔滨\"\ntemperature = -15.5\nreport = __\"当前城市 ____ 温度为____摄氏度。\"\nprint(report)\n【计算方式一】先计算折扣金额，在用总价扣除折扣金额得出折后价格，即： 折后价 = 原件 - (原件 * 折扣)\n【计算方式二】先计算折扣后剩余的价格比例，再用总结乘以剩余的价格比例，即为折扣价格：折后价 = 原件 * (1 - 折扣)\n【四舍五入方式一】使用字符串输出格式化方式（%.2f）\n【四舍五入方式二】使用round()函数实现\n【拓展】简述round()函数用法：<了解即可>\nprint(round(3.7))  # 输出: 4\nprint(round(3.2))  # 输出: 3\nprint(round(3.14159, 2))  # 输出: 3.14\nprint(round(3.14159, 3))    # 输出: 3.142\nprint(round(1234.5678, -1))  # 输出: 1230.0 (四舍五入到十位)\nprint(round(1234.5678, -2))  # 输出: 1200.0 (四舍五入到百位)\n# 当数值恰好在两个整数中间时（例如 2.5），round() 会四舍五入到最接近的偶数。这是为了减少舍入偏差，称为“银行家舍入法”。\nprint(round(2.5))  # 输出: 2    <如果 .5 前面的数字是偶数，则向下舍入到当前整数。>\nprint(round(3.5))  # 输出: 4    <如果 .5 前面的数字是奇数，则向上舍入到下一个整数。>\n\"\"\" 上述注意项的精度问题还可以看以下例子：\"\"\"\n# 【正常的】四舍五入到指定的小数位数\nprint(round(10.675, 2))  # 输出: 10.68\n# 【意料之外的】由于浮点数表示的不精确性，结果可能是意料之外的\nprint(round(2.675, 2))  # 输出: 2.67，而不是2.68\n'''如果需要round()达到我们预想中的精度，我们使用Decimal进行更精确的舍入'''\n'''这个在后面的《算法课程》中会讲到，此处了解round()函数可能造成的精度问题'''\n计算最高分、最低分、平均分\n'''简述split()用法：'''\n语法：str.split(separator, maxsplit)\nseparator（可选）：指定分隔符，默认为任何空白字符（如空格、制表符、换行符等）。\nmaxsplit（可选）：指定最大分割次数。如果省略或为负数，则没有限制。\n示例1: 不使用 maxsplit\ntext = \"apple,banana,orange,grape\"\nresult = text.split(',')\nprint(result)    # 输出：['apple', 'banana', 'orange', 'grape']\n示例 2: 使用 maxsplit\ntext = \"apple,banana,orange,grape\"\nresult = text.split(',', 2)  # 最多分割两次\nprint(result)    # 输出：['apple', 'banana', 'orange,grape']\n示例 3: maxsplit 为 0 或负数\ntext = \"apple,banana,orange,grape\"\nresult_0 = text.split(',', 0)  # maxsplit 为 0 等同于不进行分割\nresult_neg = text.split(',', -1)  # maxsplit 为负数，表示无限制分割\nprint(\"maxsplit=0:\", result_0)    # 输出：maxsplit=0: ['apple,banana,orange,grape']\nprint(\"maxsplit=-1:\", result_neg)    # 输出：maxsplit=-1: ['apple', 'banana', 'orange', 'grape']\nwhile循环实战1--用户登录\nwhile循环实战2--吃十个苹果\n题目描述：桌子上有10个苹果，小明正在吃桌上的苹果，吃到第4个的时候吃到了虫子，因此停止吃第4个苹果，剩下的苹果继续吃。\nwhile循环实战3--实现九九乘法表\n题目要求：按图示要求输出\n综合训练1（while循环）\n综合训练2（for循环）\n题目描述：接收用户输入的一系列数据，转换为int类型，再使用for循环一个个取出，取出后将数值排序，并计算取出来的数值总和。\n使用for循环，取出用户输入的数据。\n使用try语句，完成对取出值能否转换为int类型的判定。\n循环结束后，对列表进行排序、合计的操作。\n必须输出排序后的列表、合计值。",
+    "total_order": 104
+  },
+  {
+    "type": "code",
+    "day": 9,
+    "number": 2,
+    "question": "第 01 题：\n作业具体要求：",
+    "options": [],
+    "answer": "def add(a, b):\n    return a + b\nresult = add(3, 5)\nprint(result)",
+    "code_hint": "使用 enumerate() 获取列表元素及其索引，并结合 zip() 函数将两个列表中的元素配对",
+    "total_order": 154
+  },
+  {
+    "type": "code",
+    "day": 9,
+    "number": 5,
+    "question": "第 02 题：\n具体要求：",
+    "options": [],
+    "answer": "",
+    "code_hint": "求三个列表中对应元素的最小值和最大值",
+    "total_order": 157
+  },
+  {
+    "type": "code",
+    "day": 9,
+    "number": 8,
+    "question": "第 03 题：iter()和next()的应用\n具体要求：\n对场景二举例：",
+    "options": [],
+    "answer": "",
+    "code_hint": "获取用户输入的一组数据（列表包元组），将数据转换为对应的数据类型，再将数据类型转换为迭代器，使用next()函数一一打印。\n【拓展】eval()函数-<实际编程中少用！>",
+    "total_order": 160
+  },
+  {
+    "type": "code",
+    "day": 9,
+    "number": 12,
+    "question": "第 04 题：使用eval()计算简单的数学表达式\n具体任务：\n填空题：\n已知一字典包含了一名学生信息，见下面例子所示:\n我想取出学生姓名，如何操作?\n我要修改性别（gender）为“武装直升飞机”可以这样操作：\n列表推导式是一种快速生成列表的方法，例如生成一个包含0到9的列表可以写作：\n字典推导式可以用于快速颠倒字典的键值对，例如将字典{'a': 70, 'b': 105}颠倒为{70: 'a', 105: 'b'}的表达式是：\n题目要求：\n题目要求：\n题目要求：\n题目要求：\n题目要求：\n题目要求：\n题目要求：",
+    "options": [],
+    "answer": "",
+    "code_hint": "(第4题增强版)\na = {}定义了一个             。\n字典是一种以             存储数据的数据结构\nstu_info = {\"stu_id\":\"001\", \"stu_name\":\"张三\", \"age\":18, \"gender\":\"female\"}\n。\n。\n如果我们想要完全独立于原对象的拷贝，即修改拷贝对象不会影响原对象，我们应该使用              函数，这会创建一个             拷贝，即使原对象中包含嵌套的可变元素，拷贝对象也会完全独立。\n[i for i in              ]。\n{v: k for k, v in                 .             }。\n使用dict.fromkeys() 创建字典框架，并遍历字典。\n深拷贝和浅拷贝\n列表推导式和字典推导式的基础使用\n使用列表推导式完成0到100之间所有偶数的和，以及所有被3除余1的数字的和\n题目要求：（day5的1，2题使用列表推导式完成）\n个人健康记录\n电影评分统计\n购物清单调整",
+    "total_order": 164
+  },
+  {
+    "type": "code",
+    "day": 11,
+    "number": 1,
+    "question": "第 01 题：计算三角形面积（基本参数传递与返回值理解）\n作业要求：",
+    "options": [],
+    "answer": "def greet(name, message='Hello'):\n    print(message + ', ' + name + '!')\ngreet('World')\ngreet('World', 'Hi')",
+    "code_hint": "题目内容：编写一个函数calculate_triangle_area，该函数接受三角形的底（base）和高（height），并返回该三角函数的面积。面积计算公式为 1/2×底×高。\n函数需要能够接受底和高作为参数。\n函数需要返回计算得到的三角形面积。",
+    "total_order": 188
+  },
+  {
+    "type": "code",
+    "day": 11,
+    "number": 3,
+    "question": "第 02 题：计算统计数据(多个位置参数与返回值)\n功能要求：\n创建问候语：编写一个名为create_greeting的函数，接受name（字符串）、event（字符串，默认为'Hello'）、is_upper（布尔值，默认为False），返回问候语，当is_upper为True时返回大写形式。\n模拟航班预定：编写一个名为book_flight的函数，接受destination（字符串）、date（字符串）、flight_class（默认为'Economy(经济舱)'）、meal（默认为'No preference(无特殊要求)'）、insurance（默认为False），返回包含所有预订信息的字典。\n计算任意数量参数的总和：编写一个名为calculate_sum的函数，使用可变位置参数*args，计算所有传入参数的总和并返回。\n创建活动信息：编写一个名为create_event的函数，接受必需参数name和date，以及可变关键字参数**kwargs，返回包含所有活动信息的字典。\n计算购物车折扣后的总价：编写一个名为calculate_discounted_price的函数，接受可变位置参数*prices和关键字参数discount（默认为0），计算所有价格的总和并应用折扣。\n使用回调函数进行用户问候：定义greet_user函数，接受name和callback参数，调用callback(name)；定义say_hello回调函数，打印问候语；调用greet_user函数。\n使用回调函数实现基本算术运算：定义calculate函数，接受a、b和operation回调函数，返回operation(a, b)的结果；定义add、subtract、multiply回调函数；调用calculate函数。\n使用回调函数获取天气预报：定义get_weather_forecast函数，接受location和callback参数，模拟获取天气数据并调用callback；定义display_weather回调函数，打印天气信息。\n编写文本加密器：包含三种加密方式——简单文本加密（替换字符）、数字位移加密（每个字符ASCII码加n）、反向文本加密（反转字符串），编写主函数调用这些加密方式。\n创建带默认参数的函数：编写一个名为create_profile的函数，接受name、age、gender（默认为'未知'）、city（默认为'未指定'），返回个人资料字典。\n使用关键字参数：编写一个名为print_student_info的函数，接受name、age、grade、major参数，使用关键字参数调用该函数。\n混合参数练习：编写一个名为process_data的函数，接受必需参数data、可变位置参数*args、可变关键字参数**kwargs，打印所有参数。\n匿名函数练习：使用lambda表达式创建一个加法函数，一个平方函数，一个判断是否为偶数的函数。\n使用map和lambda：使用map函数和lambda表达式将列表中的每个数字乘以2。\n使用filter和lambda：使用filter函数和lambda表达式过滤出列表中的偶数。\n使用reduce和lambda：使用reduce函数和lambda表达式计算列表中所有数字的乘积。\n闭包练习：创建一个计数器闭包，每次调用返回递增的数字。\n闭包练习：创建一个乘法器闭包，接受一个因子，返回一个函数，该函数将输入值乘以这个因子。\n递归函数：编写一个递归函数计算阶乘。\n递归函数：编写一个递归函数计算斐波那契数列的第n项。\n递归函数：编写一个递归函数计算列表中所有数字的总和。\n递归函数：编写一个递归函数反转字符串。\n装饰器：创建一个装饰器，记录函数的调用次数。\n装饰器：创建一个装饰器，计算函数的执行时间。\n装饰器：创建一个装饰器，验证函数参数是否为正数。\n偏函数：使用functools.partial创建一个固定底数为2的幂函数。\n函数参数总结：编写一个函数，综合使用必需参数、默认参数、可变位置参数和可变关键字参数。\n回调函数总结：定义一个通用处理函数，接受数据和处理函数作为回调，对数据进行处理。\n综合练习：创建一个计算器类，包含加法、减法、乘法、除法方法，并使用lambda表达式作为回调函数。\n综合练习：使用闭包创建一个带有记忆功能的斐波那契函数。\ndef outer(number1):\ndef inner(number2):\ndouble = outer(2):\nresult = double(5):\n总结闭包的工作原理：\ndef countdown(start):\nif start == 0:\nelse:\n概念：递归函数就是自己调用自己。递归函数需要有两个主要部分：\n调用过程countdown(10)：\n第一次调用 countdown(10)：\n第二次调用 countdown(9)：\n第十一次调用 countdown(0)：\n总结递归函数的工作原理：\n语法讲解：\n案例答案：\n案例解析：\n题目内容：\n作业要求：\n题目内容：\n作业要求：\n题目内容：\n规则如下：\n作业要求：\n题目内容：\n作业要求：\n题目内容：\n题目要求：\n题目内容：\n作业要求：\n题目内容：\ndef add():\nfor i in range(1,101):\n作业要求：\n题目内容：\n作业要求：\n题目要求：\n示例数据：\n作业要求：\n题目要求：\n作业要求：\n模拟手洗衣物的过程，按照线性步骤逐一完成每个任务：浸泡衣物、擦洗污渍、漂洗泡沫、拧干水分。根据这一描述，这个程序最符合下列哪种编程范式？\n关于Python对面向对象编程，在打车的情景中，下面哪一个选项最能说明乘客和司机之间的\"对象间交流\"？\n在 Car 类中，make 和 model 是什么类型的属性？\n在 Car 类中，display_info属于什么方法？\n在 MathUtils 类中，add() 方法是什么类型的方法？\n静态方法适合用于哪种情况？\n如果在定义类时没有显式地定义 __init__ 方法，会发生什么？\n示例代码中，哪个选项正确指出了代码中存在的问题？\n为了使代码能够正常运行，以下哪些修改是有效的？（多选）\n以下哪项是错误的创建 Animal 类实例的方式？（多选）\n关于类的初始化方法 __init__，以下哪些描述是正确的？（多选）\n关于使用 对象 = 类名(参数) 创建对象的动作，以下哪些描述是正确的？（多选）\n定义一个Bicycle类，需要使用什么关键字？\n在类的构造器中，self参数代表什么？\n如果要在类的方法中访问类的实例属性，可以使用什么方式？\n定义静态方法使用什么装饰器？\n完善Bicycle类：定义类属性color（红色）和total_cars（初始为0），定义实例属性brand和size，每创建一个实例时total_cars加1，定义静态方法count_cars（返回车的数量）和print_color（打印颜色），完成类的实例化并调用静态方法。\n拓展Person类：增加实例属性gender、height、weight，增加类属性total_persons（记录Person对象总数），添加calculate_bmi()方法计算BMI，添加静态方法get_total_persons()返回总人数，更新show_info()方法显示新增属性，创建多个对象并调用方法。\nVehicle类中__init__方法的作用是什么？\n创建ElectricCar对象my_car后，调用drive方法会打印什么？\n在提供的代码示例中，Bicycle类显式地继承了哪个类？\n什么是类的继承？\n关于Python类的继承正确的说法是？\n在Python中，如何正确地在子类中重写父类的方法？\n在Python中，当你创建了一个从多个类继承的子类时，Python使用什么规则来决定应该首先检查哪个父类的方法或属性？\n什么是多继承？\n以下哪一项描述了实例方法和实例属性之间的正确关系？\n关于Python中的实例方法和实例属性，以下哪项陈述是正确的？\nclass AdvancedWasher(SpinDryer, SteamCleaner)表示什么？\n在子类的__init__方法中，如何调用父类的__init__方法？\n当子类重写父类方法时，如何在子类方法中调用父类的同名方法？\n以下关于super()函数的说法，哪个是正确的？\n什么是方法重写？\n在多继承中，当多个父类有同名方法时，Python会按照什么顺序查找方法？\n设计一个简单烤箱系统：创建Kaohongshu类，包含level属性（初始为0），cook方法根据时间增加level并判断烤制状态，info方法打印烤制状态。\n创建一个Vehicle父类，包含drive方法；创建Car子类继承Vehicle并重写drive方法；创建ElectricCar子类继承Car并重写drive方法；创建实例并调用drive方法验证继承关系。\n创建Base类，创建Derived类继承Base，在Derived的__init__中调用super().__init__()，并添加额外属性。\n题目描述：\n实现要求：\n题目描述：\n实现要求：\n题目描述：\n实现要求：\n题目描述：\n实现要求：\n题目描述：\n具体要求：\n题目描述：\n具体要求：\n讲解：\n题目描述：\n具体要求：\n讲解：\n题目描述：\n具体要求：\n题目描述：\n具体要求：\n创建一个商品类Product，包含name、price、quantity属性，在__init__中进行输入验证（价格和数量必须大于0），添加get_total_value方法计算商品总价值，添加discount方法计算折扣后价格。\n实现单例模式：创建一个Singleton类，确保只有一个实例存在。\n创建一个数学工具包math_tools，包含basic_operations模块（add, subtract, multiply, divide函数）和geometry模块（area_circle, area_rectangle函数），在主程序中导入并使用。\n创建一个包目录结构，包含导入整个模块、从模块导入特定函数、使用别名三种导入方式的示例。",
+    "options": [],
+    "answer": "",
+    "code_hint": "编写一个名为 calculate_stats 的函数，该函数接受五个单独的位置参数（num1, num2, num3, num4, num5），每个参数代表一个数字。函数应计算并返回这五个数字的最大值、最小值和平均值。\n函数必须明确接收五个位置参数。\n如果提供的不是有效的数字（例如字符串或其他不可转换为数字的类型），函数应该返回 (None, None, None) 表示无效输入。\n如果所有输入都有效，函数将返回一个包含最大值、最小值和平均值的元组。\nreturn number1 * number2\nreturn inner\n# 调用外层函数，创建闭包\ndouble = outer(2)\n# 调用内部函数\nresult = double(5)\nprint(result)  # 输出: 10\nouter(2) 被调用，传入参数 2。\nouter 函数内部定义了一个内部函数 inner。\ninner 函数记住了外部作用域 outer 中的 number1 变量，其值为 2。\nouter 函数返回 inner 函数。\ndouble 变量现在引用的是 inner 函数，这个 inner 函数记住了 number1 的值为 2。\ndouble(5) 被调用，传入参数 5。\ndouble 实际上是 inner 函数，所以 inner 函数被调用。\ninner 函数内部，number2 的值为 5，number1 的值为 2（这是在 outer 函数调用时记住的）。\ninner 函数计算 5 * 2，返回结果 10。\nresult 变量现在存储的是 10。\n外部函数outer 定义了一个内部函数 inner，并返回这个内部函数。\n内部函数inner 记住了外部函数 outer 的局部变量 number1。\n调用闭包 时，内部函数 inner 可以访问并使用外部函数 outer 的局部变量 number1。\n递归函数-讲解\n示例：编写一个函数countdown，该函数接受一个数字（start），并打印从这个数字到0的倒计时。\nprint(\"结束!\")\nprint(start)\ncountdown(start - 1)\n# 调用countdown函数，并打印从10到0的倒计时。\ncountdown(10)\n基准情况（Base Case）：这是递归终止的条件，用于防止无限递归。\n递归情况（Recursive Case）：这是函数调用自身的情况，用于逐步解决问题。\nstart 为 10，不等于 0。\n打印 10。\n调用 countdown(9)。\nstart 为 9，不等于 0。\n打印 9。\n调用 countdown(8)。\n............中间的过程省略..........\nstart 为 0，等于 0。\n打印 \"结束!\"。\n递归终止。\n基准情况：递归终止的条件，防止无限递归。\n递归情况：函数调用自身，逐步解决问题。\n调用栈：每次递归调用都会创建一个新的函数调用栈帧，直到达到基准情况。\n匿名函数\n匿名函数是指没有名字的函数，适用于那些只需要临时使用一次的场景，避免了为这些一次性使用的函数命名的麻烦。\n基本语法：lambda 参数1,参数2,... : 表达式\nlambda：这是定义匿名函数的关键字。\n参数1, 参数2, ...：这些是传递给lambda函数的输入参数，多个参数之间用逗号分隔。\n:：冒号用来分隔参数列表和表达式。\n表达式：这是一个单一的表达式，它的结果会被作为lambda函数的返回值。\n案例讲解1：简短的一次性函数\n定义一个函数，接受两个参数并返回它们的和；并使用匿名函数的方式重写。\n案例讲解2：匿名函数通常还可以结合内置函数使用\n示例：使用 lambda 表达式在 sorted() 函数中指定排序关键字\n根据下面示例数据中的年龄（age）进行排序。\ndata = [\n{\"name\": \"ZhouZhou\", \"age\": 30},\n{\"name\": \"肖肖\", \"age\": 25},\n{\"name\": \"六一\", \"age\": 27}\n]\n# 定义待排序的数据列表\ndata = [\n{\"name\": \"ZhouZhou\", \"age\": 30},\n{\"name\": \"肖肖\", \"age\": 25},\n{\"name\": \"六一\", \"age\": 27}\n]\n# 使用 sorted() 函数和 lambda 表达式按年龄排序\nsorted_data = sorted(data, key=lambda x: x[\"age\"])\n# 打印排序后的结果\nprint(sorted_data)\n# 输出结果\n[{'name': '肖肖', 'age': 25}, {'name': '六一', 'age': 27}, {'name': 'ZhouZhou', 'age': 30}]\n二、习题\n习题1：模拟工厂自动化生产线\n编写一个函数create_line，该函数模拟一个工厂的自动化流程。\n该函数接受一个数字line_id作为参数，代表工厂的生产线编号。\ncreate_line函数返回另一个一个函数produce，该函数接受一个参数quantity，表示要生产的项目数量。\nproduce函数将返回一个字符串，表示在生产线line_id上生产的quantity个项目的信息。\n习题 2：使用闭包实现一个问候生成器\n设计一个函数 greeting_generator，它返回一个闭包函数 greet。该闭包函数根据当前时间（小时）生成个性化的问候语。通过传递不同的名字和时间，可以得到适合不同时段的问候信息。\n习题3：密码生成器\n设计一个函数 password_generator，它返回一个闭包函数 generate_password。该闭包函数根据用户名和特定规则生成密码。\n最终生成为>用户名+随机生成的4个数字+固定特殊字符“!”+当前年份。\n例如传入用户名-ZhouZhou，生成密码为：ZhouZhouXXXX!2024（XXXX是随机生成的数）\n习题 4：简易计数器\n设计一个函数counter_factory，返回闭包函数increment，闭包函数每次被调用时，内部计数器就递增一次。\n习题 5：闭包实现加法、减法、乘法、除法运算\n使用闭包的工作机制，来实现一个简易的计算器（包含加减乘除）。\n编写一个名为 is_huiwen 的函数，该函数接受一个字符串 s 作为参数，并返回一个布尔值，表示该字符串是否是回文（即正读和反读都一样）。函数需要使用递归来检查字符串是否是回文。\n函数需要使用递归来检查字符串是否是回文。\n如果字符串长度小于等于1，返回True。\n如果字符串的第一个和最后一个字符不相等，返回False。\n递归调用is_huiwen时，应该使用去掉第一个和最后一个字符的子字符串。\n<使用递归方法来逐步缩小检查范围，直到满足基本情况或发现不匹配的情况。>\n习题 7：递归实现1~100的累加和\n将下面函数改成递归方式实现。\nsums = 0\nsums += i\nprint(sums)\nadd()\n习题 8 ：使用 map() 和 lambda 表达式进行字符串格式化\n给定一个包含问候语模板的列表 greetings 和一个名字列表 names，请编写代码，使用 map() 函数和 lambda 表达式来创建一个新的列表，该列表包含格式化后的问候语，例如 \"Hello, 六一!\"。\n习题9：计算购物车中每个商品的总价及购物车总金额\n# 定义商品数据\nproducts = [\n{'name': '苹果', 'price': 3.0, 'quantity': 5},\n{'name': '香蕉', 'price': 2.5, 'quantity': 10},\n{'name': '橙子', 'price': 4.0, 'quantity': 3}\n]\n习题 10：使用匿名函数（lambda）和递归方法完成加法的算术运算实现\n作业 02：用户登录和数据访问系统\n作业 03：员工薪酬管理系统\n作业 04：魔法学校\n家庭预算管理\n实现并测试倒计时迭代器类",
+    "total_order": 190
+  },
+  {
+    "type": "code",
+    "day": 19,
+    "number": 18,
+    "question": "第二~三题的：\n具体说明：\n检查并创建文件夹：\n定义文件路径：\n获取并遍历原文件夹中的所有文件和目录：\n详解说明中提到的：\nos.path.exists()的作用：\n比如，文件夹【day_18homework】存在一个文件叫homework1.txt，那么就可以使用os.path.exists()检查其是否存在：\nif os.path.exists(file_path):\nelse:\nif os.path.exists(folder_path):\nelse:\nos.path.join(os.getcwd(), file)作用：\n分解说明：\n所以，os.path.join(os.getcwd(), file) 就是把当前工作目录和文件名拼接在一起，形成一个完整的文件路径。下面是一个示例：\n移动文件的基本步骤：\n结合上面所有说得内容，以下为示例：\n假设存在一个test_move.txt文件。需要将文件移动到day_18homework文件夹中，操作如下：\nif not os.path.exists(target_folder):\ntry:\nexcept OSError as e:\n正则表达式语法总结：\n字符类：\n量词：\n分组和捕获：\n断言：\n给定网址如下：\n要求：\n要求：\n讲解：\n示例代码：\n在示例代码中“不使用 re.MULTILINE”：\n在示例代码中“使用 re.MULTILINE”：\n在示例代码中“使用内联标志 (?m)”：\n总结内联标志 (?m)和 re.MULTILINE：\n(?m) 是正则表达式中的一个内联标志，等价于re.MULTILINE，区别：\n句子为：\n要求：\n包含多种格式电话号码的字符串，你的任务是从字符串中提取所有电话号码，电话号码格式包括但不限于以下几种：\n提取结果要求为下面所示即可：\n打印返回的列表。获取结果如下即可：\n讲解：\nre.compile()语法：\nflags：可选标志位，用于修改正则表达式的行为。比如：\n示例：\nif rel.group():\nelse:\n非贪婪模式语法：\n在量词后面加上 ? 可以启用非贪婪模式。常见的量词有：\n贪婪模式语法：\n反之。则是贪婪模式。常见量词有：\n这个也是非贪婪模式--解释：\n([^<]*)：\n文本内容为：\n更改结果要求为：\n要求：\n使用sub方法：\n最终返回结果要求如下即可：\n示例代码：\ndef outter1(func1):\ndef wrapper1(*args, **kwargs):\ndef outter2(func2):\ndef wrapper2(*args, **kwargs):\ndef outter3(func3):\ndef wrapper3(*args, **kwargs):\ndef index():\n代码讲解：\n运行原理：\n代码片段：\ndef index():\n相当于执行了以下操作：\n执行顺序：\n应用场景：\n题目描述：\n请使用多层装饰器实现以下功能：\n权限验证装饰器 (auth_required)：\n然后在decorator(func)下定义一个 包装函数：wrapper(*args, **kwargs) ：\n处理逻辑：\n日志记录装饰器 (log_execution(func))：\n定义一个内部函数 wrapper(*args, **kwargs)：\n定义函数测试代码功能：\ndef delete_user(user_id):\n提示：\n使用func.__name__的方式回函数对象的名称。使用示例如下：\ndef greet(name):\n参考答案：\ndef auth_required(required_permission):\ndef decorator(func):\ndef wrapper(*args, **kwargs):\nif required_permission in user_permissions:\nelse:\ndef log_execution(func):\ndef wrapper(*args, **kwargs):\ndef delete_user(user_id):\ndef update_user(user_id, new_data):\n题目描述：\n在内部定义一个函数wrapper：\ndef say_hello(name):\n参考答案：\ndef count_calls(func):\ndef wrapper(*args, **kwargs):\ndef say_hello(name):\ndef say_goodbye(name):\n题目描述：\n参考答案：\ndef readonly_property(func):\ndef wrapper(self):\nclass Test:\ndef __init__(self):\ndef text(self):\nif __name__ == \"__main__\":\ntry:\nexcept AttributeError as e:\ntry:\nexcept AttributeError as e:\n题目描述：\n参考答案：\ndef squares(n):\nfor i in range(1, n + 1):\nfor square in squares(5):\n题目描述：\n参考答案：\ndef fibonacci(n):\nfor _ in range(n):\nfor num in fibonacci(10):\n题目描述：\n参考答案：\ndef random_numbers(n, upper_limit):\nfor _ in range(n):\nfor num in random_numbers(5, 100):",
+    "options": [],
+    "answer": "",
+    "code_hint": "xueqiu.log日志源文件\n变量log_activity_path对应的新日志文件。\n变量error_info对应的新日志文件。\n变量event_count_path对应的txt文件。\n导入os模块。\n使用 os.path.exists() 函数检查目标文件夹是否存在。\n不存在，则用 os.makedirs() 创建，创建一个名为 day_18homework 的文件夹（其它名称也可以。）\n如果该文件夹已经存在，则不需要再次创建。\na. 获取当前工作目录路径，作为原文件夹路径。\nb. 定义新文件夹路径为 'day_18homework'。\nc. 定义需要移动的文件名称列表，包含所有要移动的文件名。\na. 对于每个需要移动的文件，使用os.path.join(os.getcwd(), file)的方式构建其完整的源路径和目标路径。\nb. 使用 os.rename() 函数将文件从原位置移动到新文件夹中。\nc. 在移动前，确保检查文件是否存在且是文件类型（而不是目录），以避免尝试移动不存在的文件或目录。\nd. 对于每个成功移动的文件，打印一条消息表示文件已成功移动；如果文件不存在或无法移动，也打印相应的消息。\n这个的作用是用来检查路径是否存在的函数，返回一个bool值（True 或 False），表示是否存在。\n路径存在：返回True\n路径不存在：返回False\n\"\"\"示例代码如下，可以自己尝试一下：\"\"\"\nimport os\n# 检查文件是否存在\nfile_path = 'homework1.txt'\nprint(f\"文件 {file_path} 存在\")\nprint(f\"文件 {file_path} 不存在\")\n# 检查文件夹是否存在\nfolder_path = 'day_18homework'\nprint(f\"文件夹 {folder_path} 存在\")\nprint(f\"文件夹 {folder_path} 不存在\")\n主要作用：在尝试打开、读取、写入或删除文件之前，先检查文件是否存在，可以避免程序出错。\n用来构建一个完整的文件路径的。\nos.getcwd()：获取当前工作目录的路径（也就是程序运行所在的文件夹）。\n等同于：D:\\Projects\\my_project这样的形式。\nos.path.join()：将多个路径片段组合成一个完整的路径，并根据操作系统的不同自动使用正确的路径分隔符（如 Windows 使用 \\，而 Linux 和 macOS 使用 /）。\n\"\"\"示例代码如下，可以自己尝试一下：\"\"\"\nimport os\n# 获取当前工作目录\ncurrent_directory = os.getcwd()\nprint(f\"当前工作目录是: {current_directory}\")\n# 文件名\nfile_name = 'homework1.txt'\n# 构建完整路径\nfull_path = os.path.join(current_directory, file_name)\nprint(f\"完整路径是: {full_path}\")\n用途总结：用于构建文件的完整路径。它确保了路径格式正确，避免了手动拼接路径时可能出现的错误，并且在不同操作系统之间保持兼容性。\nos.rename()作用\n作用1：重命名文件或目录\n作用2：在同一文件系统内移动文件。注意-只能在同一个。就是需要原路径，和新路径是在同一个文件里的。\n获取源文件路径\n获取目标文件夹路径\n然后才能使用os.rename() 移动文件\n\"\"\"示例代码\"\"\"\nimport os\n# 获取当前工作目录\nsource_path = os.getcwd()\nprint(f\"当前工作目录是: {source_path}\")\n# 源文件路径\nold_path = os.path.join(source_path, 'test_move.txt')\nprint(f\"源文件路径: {old_path}\")\n# 目标文件夹路径（不包含文件名）\ntarget_folder = os.path.join(source_path, 'day_18homework')\nprint(f\"目标文件夹路径: {target_folder}\")\n# 确保目标文件夹存在\nos.makedirs(target_folder)\nprint(f\"文件夹 {target_folder} 已创建\")\n# 构建目标文件路径（包括文件名）\nnew_path = os.path.join(target_folder, 'test_move.txt')\nprint(f\"目标文件路径: {new_path}\")\n# 移动文件\nos.rename(old_path, new_path)\nprint(f\"文件 {old_path} 已成功移动到 {new_path}\")\nprint(f\"移动文件时出错: {e}\")\n匹配网址\n题目：请根据给定网址，使用正则表达式匹配成功。\nhttps://www.baidu.com/\nhttps://www.bilibili.com/\nhttps://www.hao123.com/\n要求正则表达式，可以匹配到上述三个地址。\n要求一：写一个正则表达式，只允许匹配上面三个的正则表达式。\n要求二：写一个通用正则表达式（通用规则要求为：以 \"https://www.\" 开头，以 \".com/\" 结尾；中间域名包含大小写字母、数字）。除了匹配上面3个，还可以匹配其它类似的。\n均使用re.match()语句匹配。\n边界匹配\n题目：使用正则表达式找出字符串中所有以 \"Python\" 开头的行。\ntext = \"\"\"Python is fun.\nI love Python.\nPython is great.\nI love coding.\n\"\"\"\n写一个正则表达式。匹配以Python开头的正则表达式。\n使用re.findall()语句匹配。\n传递re.MULTILINE标志位参数，使得 ^ 锚点不仅匹配整个字符串的开始位置，还能匹配每一行的开始位置。\n返回匹配结果。\nimport re\ntext = \"\"\"第一行文本\n第二行文本\n第三行文本\"\"\"\n# 不使用 re.MULTILINE\npattern = r'^第'\nmatches = re.findall(pattern, text)\nprint(\"不使用 MULTILINE:\", matches)\n# 使用 re.MULTILINE\npattern = r'^第'\nmatches = re.findall(pattern, text, re.MULTILINE)\nprint(\"使用 MULTILINE:\", matches)  # 输出匹配到每一行的开头\n# 或者使用内联标志 (?m)\npattern = r'(?m)^第'\nmatches = re.findall(pattern, text)\nprint(\"使用内联标志 (?m):\", matches)  # 输出同样匹配到每一行的开头\nre.findall() 语法\n主要作用：用于在字符串中查找所有与正则表达式模式匹配的非重叠匹配项，并返回这些匹配项的列表。\n基本语法：re.findall(pattern, string, flags=0)\npattern:要搜索的正则表达式模式。\nstring:要搜索的字符串。\nflags:这是个可选字段。用来放置标志位的，标志位的作用是用于修改正则表达式的匹配行为。多个标志可以用按位或运算符 | 组合。比如re.IGNORECASE | re.MULTILINE【本题讲解仅讲解re.MULTILINE的使用--有兴趣，可以去官网了解更多。】。\nfindall() 返回的是一个列表，其中包含所有匹配的子串。如果模式中有分组（即圆括号），那么返回的将是每个匹配项中各组的内容；如果没有分组，则返回整个匹配的子串。\n使用 re.MULTILINE【这是一个标志位参数】\n使用 re.MULTILINE 标志时，^ 和 $ 将会匹配每一行的开始和结束，而不仅仅是整个字符串的开始和结束。这在处理多行文本时特别有用。【其它标志位参数，可自行了解】\n模式 r'^第'匹配整个字符串的最开始位置。如果多行字符串的第一行是以“第”字开头的，匹配成功，并返回包含该字符的列表，即 ['第']\n当添加 re.MULTILINE 标志后，^ 匹配每一行的开始位置。因此，对于每一行以“第”字开头的地方，它都会匹配并返回对应的字符，结果是 ['第', '第', '第']。\n内联标志 (?)m 同样启用了 MULTILINE 模式，使得 ^ 匹配每一行的开始位置，从而得到与使用 re.MULTILINE 标志相同的结果。\n(?m)嵌入到正则表达式模式中使用的。re.MULTILINE则是通过调用正则表达式函数作为参数传递\n查找日期\n题目：使用正则表达式匹配日期格式 \"YYYY-MM-DD\" 并捕获年、月、日，同时处理 \"YYYY年MM/DD\" 格式的日期。\ntext = \"今天是2025-01-14，明天是2025-01-15，记得2024年06/12/2024有个重要的会议。\"\n写一个正则表达式。用来匹配\"YYYY-MM-DD\" 格式的日期，使用分组分别捕获年、月和日。\n同理写一个正则表达式。处理\"YYYY年MM/DD\" 格式的日期。并同样使用分组分别捕获年、月和日。\n合并结果。可以按照自己想法合并结果。\n输出结果。可以按照自己想法输出结果。比如最后输出日期的格式为2025-01-14。\n提取字符串中的电话号码\n题目：提取下面文本中的电话号码\n+国家代码-区号-电话号码（例如：+86-10-12345678）\n国家代码 区号 电话号码（例如：86 10 12345678）\n区号-电话号码（例如：010-12345678）\n手机号码（例如：13812345678）\n['+86-10-12345678', '86 10 12345678', '010-12345678', '13812345678']\n要求：【最上面有语法总结，下面有讲解】\n使用re.compile()方法预编译一个正则表达式，用于匹配上述所有电话号码格式。\n正则表达式需要能够处理不同的分隔符（-、空格）和可选的国家代码。并使用贪婪与非贪婪量词的组合，确保正确每个电话号码，而不包括其他非电话号码内容。\n使用findall()方法查找匹配项。\n['+86-10-12345678', '86 10 12345678', '010-12345678', '13812345678']\n主要作用：将一个正则表达式模式预编译为一个正则表达式对象（主要就是为了重复使用）\n基本语法：re.compile(pattern, flags=0)\npattern：要编译的正则表达式字符串。\nre.IGNORECASE 或 re.I：忽略大小写。\nre.MULTILINE 或 re.M：使 ^ 和 $ 匹配每一行的开始和结束位置。\nre.DOTALL 或 re.S：使 . 匹配所有字符，包括换行符。\n......\n其返回的结果需要使用match()、findall()、search()、sub()...方法匹配。\nimport re\n\"\"\"预编译一个简单的正则表达式，比如需要匹配字符abc\"\"\"\ncompiled_pattern = re.compile('r'abc'')\n# 预编译后，使用match()方法检查字符串是否以指定模式开始\ntest = 'abc123'\nrel = compiled_pattern.match(test)\nprint(\"是\", rel.group())\nprint(\"不是\")\n# 又比如，使用sub()方法替换匹配项，把abc改成edf\ntest = 'abc123'\nrel = compiled_pattern.sub('DEF', test)\nprint(rel)\n# 再比如，使用search()方法在整个字符串中查找模式\ntest = 'abc123'\nrel = compiled_pattern.search(test)\nprint(rel.group())\n......\n也就是使用预编译的方式替换了用re调用方法。\n.*?：尽可能少地匹配任意字符（除了换行符）。\n.+?：尽可能少地匹配一个或多个任意字符（除了换行符）。\n??：尽可能少地匹配零个或一个任意字符。\n.*：尽可能多地匹配任意字符（除了换行符），零次或多次。\n.+：尽可能多地匹配任意字符（除了换行符），一次或多次。\n?：尽可能多地匹配零个或一个任意字符。\n{m,n}：尽可能多地匹配 m 到 n 次前面的元素。\n{m,}：尽可能多地匹配至少 m 次前面的元素。\n示例：提取下面html标签中的文本\n\"\"\"html\"\"\"\ntext = \"<p>这是一个段落</p><div>这是另一个<div>嵌套的</div>内容</div>\"\n# 使用贪婪模式 .* 匹配标签内的文本\ngreedy_pattern = re.compile(r'<.*>')\ngreedy_matches = greedy_pattern.findall(text)\nprint(\"贪婪模式匹配结果:\", greedy_matches)\n\"\"\"\n正则表达式解释：【贪婪模式】\n.* 尽可能多地匹配字符，直到遇到最后一个 >。\n因此，<.*> 匹配了从第一个 < 到最后一个 > 的所有内容，包括中间的所有标签和文本，导致整个HTML片段被作为一个整体匹配。\n\"\"\"\n# 非贪婪模式 .*? 匹配标签内的文本\nnon_greedy_pattern = re.compile(r'>(.*?)<')\nnon_greedy_matches = non_greedy_pattern.findall(text)\nprint(\"非贪婪模式匹配结果:\", non_greedy_matches)    # 这个会包含空格，可以筛选去除或者表达式里面去除空格\n\"\"\"\n正则表达式解释解释：【非贪婪模式】\n.*? 尽可能少地匹配字符，直到遇到下一个 <。\n因此，>(.*?)< 逐个匹配每个标签内的文本内容，而不包括标签本身，从而得到更精确的结果。\n当然这个表达是还可以这样：r'>([^<]*)<'、r'>\\s*([^<]+?)\\s*<'---可以尝试。\n>：匹配标签的结束符号。\n( 和 )：定义一个捕获组。\n[^<]：匹配任何不是 < 的字符。\n*：匹配前面的元素零次或多次（这里是任意数量的非 < 字符）。\n<：匹配标签的开始符号。\n[^<]* ：尽管 * 是贪婪量词，\n但因为 [^<] 限制了只能匹配非 < 字符，所以它不会越过标签边界，\n从而达到了逐个匹配每个标签内文本的效果，类似于非贪婪模式。\n\"\"\"\n使用sub替换匹配项\n题目：将下面文本中水果的价格信息替换。\n本店今日优惠，苹果价格￥5.50，香蕉价格￥3.20，橙子价格￥2.8，特价商品￥100.00。\n本店今日优惠，苹果￥6.0每斤，香蕉￥3.0每斤，橙子￥2.0每斤，特价商品￥100.00。\n定义一个正则表达式，用于匹配到价格信息。\n定义一个回调函数【函数那个章节讲过】。\n函数名称replace_price\nreplace_price(match)：match当作一个匹配对象。这个对象包含了与正则表达式模式匹配部分的所有信息，包括完整的匹配文本、各个捕获组的内容以及匹配在原始字符串中的位置。\nif '苹果' in match.group():：如果匹配到的是“苹果价格”，则返回“苹果￥6.0每斤”。\nelif '香蕉' in match.group():：如果匹配到的是“香蕉价格”，则返回“香蕉￥3.0每斤”。\nelif '橙子' in match.group():：如果匹配到的是“橙子价格”，则返回“橙子￥2.0每斤”。\nelse:：如果匹配到的不是上述任何一种，返回原匹配内容。\n将文本中所有符合正则表达式模式的子字符串替换为回调函数 replace_price 生成的内容。\n本店今日优惠，苹果￥6.0每斤，香蕉￥3.0每斤，橙子￥2.0每斤，特价商品￥100.00。\n# 多层装饰器\nprint('加载了outter1')\nprint('执行了wrapper1')\nres1 = func1(*args, **kwargs)\nreturn res1\nreturn wrapper1\nprint('加载了outter2')\nprint('执行了wrapper2')\nres2 = func2(*args, **kwargs)\nreturn res2\nreturn wrapper2\nprint('加载了outter3')\nprint('执行了wrapper3')\nres3 = func3(*args, **kwargs)\nreturn res3\nreturn wrapper3\n\"\"\"\n饰器函数 outter1、outter2 和 outter3 在装饰目标函数\nindex 时被立即执行。，\n即使你没有调用 index 函数。\n这是因为装饰器在装饰阶段（定义函数时）就已经执行，\n而不是在调用装饰过的函数时才执行\n\"\"\"\n@outter1\n@outter2\n@outter3\nprint('这是原来的函数')\n#     print('这是原来的函数')\n# index = outter1(outter2(outter3(index)))\n# index()\n在上面的代码中，定义了三个装饰器函数outter1、outter2 和 outter3。他们都接收一个函数作为参数，并返回一个新的函数wrapper1、wrapper2、wrapper3。然后这三个装饰器被依次应用于 index 函数。\n在Python中，使用装饰器来装饰一个函数时，这些装饰器会按照它们被列出的顺序从下到上、从内到外地应用到目标函数上。也就是@outter3>@outter3>@outter1。\n@outter1\n@outter2\n@outter3\nprint('这是原来的函数')\nindex = outter1(outter2(outter3(index)))\n权限验证和日志记录：一个装饰器用于验证用户权限，另一个装饰器用于记录函数调用的日志。通过多层装饰器，可以在不影响原有函数逻辑的情况下，同时实现这两个功能。\n性能测试和事务管理：一个装饰器用于测试函数的执行时间，另一个装饰器用于管理数据库事务。这样可以方便地对函数进行性能监控和事务控制。\n（这个就不详述了，可自行了解）\n练习 01：权限验证与日志记录\n权限验证装饰器：创建一个名为 auth_required 的装饰器，用于验证用户是否有权限执行某个函数。如果用户有权限，函数正常执行；如果没有权限，打印“权限不足，无法执行”并返回 None。假设用户权限通过一个全局变量 user_permissions 列表来表示，列表中包含用户拥有的权限字符串。\n日志记录装饰器：创建一个名为 log_execution 的装饰器，用于记录函数的调用情况。当函数被调用时，打印“函数 [函数名] 被调用，参数为 [参数列表]”。\n全局变量 user_permissions = ['admin', 'user'] 模拟用户的权限。\n定义一个全局变量user_permissions = ['admin', 'user']。用于模拟用户权限。\n定义一个接收参数的装饰器工厂函数 auth_required(required_permission)。\n参数 (required_permission)：接收一个权限字符串作为参数。\n在内部定义一个普通的装饰器 decorator(func)，\n参数 (func)：用来接收一个函数。\n参数 (*args, **kwargs)：接收任意数量的位置参数和关键字参数，以便能够传递给原始函数。\n如果传入的参数required_permission是在全局变量内的。返回func(*args, **kwargs)\n否则，打印一条消息表明权限不足，并返回 None。\n参数 (func)：接收一个函数作为参数。\n参数 (*args, **kwargs)：接收任意数量的位置参数和关键字参数，以便能够传递给原始函数。\n处理逻辑：使用 func(*args, **kwargs) 调用原始函数，并返回其结果。\n应用装饰器：注意调用顺序！\n先检查用户是否有权限执行特定的功能。@auth_required\n然后在执行日志记录装饰器@log_execution\n比如，定义一个delete_user(user_id)函数,在传入全局变量正确时，提示：删除用户{user_id}！\n又比如，定义一个update_user(user_id, new_date)函数，在传入全局变量正确时，提示：更新用户 {user_id} 的信息为 {new_data}\n# 应用装饰器\n@log_execution\n@auth_required('admin')     # 传入非全局变量参数，会提示“权限不足，无法执行”\nprint(f\"删除用户 {user_id}\")\n\"\"\"输出结果应为如下所示：\"\"\"\n函数 wrapper 被调用，参数为 (123,) {}\n删除用户 123\nprint(f\"Hello, {name}\")\nprint(greet.__name__)  # 输出: greet\nuser_permissions = ['admin', 'user']\n# 权限验证装饰器\nreturn func(*args, **kwargs)\nprint(\"权限不足，无法执行\")\nreturn None\nreturn wrapper\nreturn decorator\n# 日志记录装饰器\nprint(f\"函数 {func.__name__} 被调用，参数为 {args} {kwargs}\")\nreturn func(*args, **kwargs)\nreturn wrapper\n# 应用装饰器\n@log_execution\n@auth_required('admin')     # 传入非全局变量参数，会提示“权限不足，无法执行”\nprint(f\"删除用户 {user_id}\")\n@log_execution\n@auth_required('user')\nprint(f\"更新用户 {user_id} 的信息为 {new_data}\")\n# 测试\ndelete_user(123)\nupdate_user(456, {'name': 'Alice'})\n练习 02 ：计数器装饰器\n定义一个装饰器函数count_calls。\n参数(func)：参数func用来接收函数做参数。\n再函数内部定义一个call_counts的字典。\n用来记录每个函数的调用次数。\n参数 (*args, **kwargs)：接收任意数量的位置参数和关键字参数，以便能够传递给原始函数。\n在内部函数内-获取并更新调用次数。\n使用 func.__name__ 获取函数名。\n更新 call_counts 字典中对应函数名的调用次数，默认值为0，首次调用时加1。\n在内部函数内--打印调用信息\n打印函数名及当前的调用次数。\n使用 func(*args, **kwargs) 调用原始函数，并返回其结果。\n函数count_calls返回包装函数 wrapper。\n然后将这个定义好这个装饰器函数，定义到需要跟踪调用次数的函数上。\n\"\"\"比如：\"\"\"\n@count_calls\nprint(f\"Hello, {name}!\")\nsay_hello(\"六一\")\n\"\"\"输出结果应为：\"\"\"\n函数 say_hello 被调用了 1 次\nHello, 六一!\n# 使用一个字典来存储每个函数的调用次数\ncall_counts = {}\n# 获取函数的名称\nfunc_name = func.__name__\n# 更新调用次数\ncall_counts[func_name] = call_counts.get(func_name, 0) + 1\n# 打印调用次数\nprint(f\"函数 {func_name} 被调用了 {call_counts[func_name]} 次\")\n# 调用原函数\nreturn func(*args, **kwargs)\nreturn wrapper\n# 应用装饰器\n@count_calls\nprint(f\"Hello, {name}!\")\n@count_calls\nprint(f\"Goodbye, {name}!\")\n# 测试\nsay_hello(\"六一\")\nsay_hello(\"Alice\")\nsay_goodbye(\"Lily\")\nsay_hello(\"Xiao\")\n练习 03：只读属性装饰器\n定义装饰器函数 readonly_property。\n参数 (func)：接收一个方法作为参数。\n定义内部函数 getter。\n参数 (self)：接收实例对象作为参数。\n作用：这个函数实际上就是原方法的代理，它调用原始方法并返回结果。\n返回 property 对象。\n使用 property(getter) 将包装函数转换为属性。\n应用装饰器到类的方法。\n使用 @readonly_property 语法将装饰器应用于需要转换为只读属性的方法上。\n测试功能。\n编写一些测试代码来验证只读属性的行为，比如修改是否成功、删除是否成功。\nreturn func(self)\nreturn property(wrapper)\nself._text = '这是只读属性'\n@readonly_property\nreturn self._text\n# 测试\na = Test()\nprint(a.text)  # 正确调用，输出: 这是只读属性\na.text = '尝试修改'  # 抛出 AttributeError\nprint(e)\ndel a.text  # 抛出 AttributeError\nprint(e)\n练习 04：生成器生成平方数\n定义生成器函数 squares。\n参数 (n)：接收一个整数作为参数，表示生成平方数的上限。\n使用 for 循环遍历从 1 到 n 的范围。\n使用 range(1, n + 1) 来生成从 1 到 n 的整数序列。\n在循环中使用 yield 语句。\n对于每个整数 i，计算其平方 i * i。\n使用 yield 语句将每个平方数逐个返回，而不是一次性返回所有结果。这使得函数成为一个生成器，可以按需生成和返回值，节省内存。\n测试生成器函数。\n使用 for 循环迭代生成器对象，打印出生成的平方数，验证生成器的行为是否符合预期。\nyield i * i\n# 测试\nprint(square)\n练习 05：生成器生成斐波那契数列\n定义生成器函数 fibonacci。\n参数 (n)：接收一个整数作为参数，表示生成斐波那契数列的前 n 个数。\n初始化斐波那契数列的前两个值。\n使用两个变量 a 和 b 分别初始化为 0 和 1，它们代表斐波那契数列的前两个数。\n使用 for 循环遍历从 0 到 n-1 的范围。\n使用 range(n) 来生成从 0 到 n-1 的整数序列，确保循环次数为 n 次。\n在循环中使用 yield 语句。\n对于每次迭代，首先使用 yield a 返回当前的斐波那契数。\n然后更新 a 和 b 的值，使得 a 变为下一个斐波那契数，b 变为再下一个斐波那契数。\n测试生成器函数。\n使用 for 循环迭代生成器对象，打印出生成的斐波那契数列中的前 n 个数，验证生成器的行为是否符合预期。\na, b = 0, 1\nyield a\na, b = b, a + b\n# 测试\nprint(num)\n练习 06：生成器生成随机数\n定义生成器函数 random_numbers。\n参数 (n, upper_limit)：接收两个整数作为参数，分别表示生成随机数的数量和每个随机数的最大值（包含）。\n导入必要的模块。\n使用 random 模块中的 randint(a, b) 函数来生成一个在 a 和 b 之间的随机整数（包括 a 和 b）。\n使用 for 循环遍历从 0 到 n-1 的范围。\n使用 range(n) 来生成从 0 到 n-1 的整数序列，确保循环次数为 n 次。\n在循环中使用 yield 语句。\n对于每次迭代，使用 random.randint(1, upper_limit) 生成一个随机数，并通过 yield 返回该随机数。\n测试生成器函数。\n使用 for 循环迭代生成器对象，打印出生成的随机数，验证生成器的行为是否符合预期。\nimport random\nyield random.randint(1, upper_limit)\n# 测试\nprint(num)",
+    "total_order": 341
+  }
+]

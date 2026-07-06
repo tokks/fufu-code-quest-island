@@ -3,6 +3,7 @@ from config import MAX_LEVEL, BASE_EXP_PER_LEVEL, EXP_MULTIPLIER, INITIAL_HP, IN
 class Player:
     def __init__(self, name, is_admin=False):
         self.name = name
+        self.avatar = '👤'
         self.level = 1
         self.exp = 0
         self.gold = 0
@@ -191,6 +192,7 @@ class Player:
     def to_dict(self):
         return {
             'name': self.name,
+            'avatar': self.avatar,
             'level': self.level,
             'exp': self.exp,
             'gold': self.gold,
@@ -208,6 +210,7 @@ class Player:
     @classmethod
     def from_dict(cls, data):
         player = cls(data['name'], data.get('is_admin', False))
+        player.avatar = data.get('avatar', '👤')
         player.level = data.get('level', 1)
         player.exp = data.get('exp', 0)
         player.gold = data.get('gold', 0)
