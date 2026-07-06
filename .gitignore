@@ -23,3 +23,4 @@ part*.json
 admin_setup.py
 saves/
 .DS_Store
+game.db

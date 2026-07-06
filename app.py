@@ -3,6 +3,7 @@ import json
 import os
 
 from config import SAVE_DIR
+from database import save_player, load_player
 
 app = Flask(__name__)
 app.secret_key = 'code_quest_island_secret_key'
@@ -582,19 +583,15 @@ def admin_add_gold():
     if gold_amount <= 0:
         return jsonify({'success': False, 'message': '金币数量必须大于0'})
     
-    save_file = os.path.join(SAVE_DIR, f"save_{player_name}.json")
-    if not os.path.exists(save_file):
+    save_data = load_player(player_name)
+    if save_data is None:
         return jsonify({'success': False, 'message': '玩家不存在'})
     
     try:
-        with open(save_file, 'r', encoding='utf-8') as f:
-            save_data = json.load(f)
-        
         if 'player' in save_data:
             save_data['player']['gold'] = save_data['player'].get('gold', 0) + gold_amount
         
-        with open(save_file, 'w', encoding='utf-8') as f:
-            json.dump(save_data, f, ensure_ascii=False, indent=2)
+        save_player(player_name, save_data)
         
         return jsonify({'success': True, 'message': f'成功给玩家 {player_name} 发放 {gold_amount} 金币'})
     except Exception as e:

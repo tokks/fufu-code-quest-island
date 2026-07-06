@@ -1,13 +1,13 @@
 import json
 import os
 from datetime import datetime
-from config import SAVE_DIR
+from database import save_player, load_player, player_exists as db_player_exists, delete_player as db_delete_player, get_all_players as db_get_all_players
 
 class GameState:
     def __init__(self):
         self.player = None
-        self.current_region = 'day1'
-        self.unlocked_regions = ['day1']
+        self.current_region = 'region_1'
+        self.unlocked_regions = ['region_1']
         self.completed_quests = []
         self.unlocked_achievements = []
         self.total_gold_earned = 0
@@ -17,11 +17,6 @@ class GameState:
         self.completed_quests_count = {}
 
     def save_game(self, player_name=None):
-        if player_name:
-            filename = f"save_{player_name}.json"
-        else:
-            filename = f"save_{self.player.name}.json" if self.player else "save.json"
-        
         save_data = {
             'player': self.player.to_dict() if self.player else None,
             'current_region': self.current_region,
@@ -35,35 +30,30 @@ class GameState:
             'completed_quests_count': self.completed_quests_count
         }
         
-        save_path = os.path.join(SAVE_DIR, filename)
-        with open(save_path, 'w', encoding='utf-8') as f:
-            json.dump(save_data, f, ensure_ascii=False, indent=2)
+        player_name_to_save = player_name or (self.player.name if self.player else None)
+        if player_name_to_save:
+            save_player(player_name_to_save, save_data)
         
         self.last_save_time = save_data['last_save_time']
-        return save_path
+        return True
 
     @classmethod
     def load_game(cls, player_name=None):
-        if player_name:
-            filename = f"save_{player_name}.json"
-        else:
-            filename = "save.json"
-        
-        save_path = os.path.join(SAVE_DIR, filename)
-        
-        if not os.path.exists(save_path):
+        if not player_name:
             return None
         
-        with open(save_path, 'r', encoding='utf-8') as f:
-            save_data = json.load(f)
+        save_data = load_player(player_name)
+        
+        if save_data is None:
+            return None
         
         state = cls()
-        state.current_region = save_data['current_region']
-        state.unlocked_regions = save_data['unlocked_regions']
-        state.completed_quests = save_data['completed_quests']
-        state.unlocked_achievements = save_data['unlocked_achievements']
-        state.total_gold_earned = save_data['total_gold_earned']
-        state.game_start_time = save_data['game_start_time']
+        state.current_region = save_data.get('current_region', 'region_1')
+        state.unlocked_regions = save_data.get('unlocked_regions', ['region_1'])
+        state.completed_quests = save_data.get('completed_quests', [])
+        state.unlocked_achievements = save_data.get('unlocked_achievements', [])
+        state.total_gold_earned = save_data.get('total_gold_earned', 0)
+        state.game_start_time = save_data.get('game_start_time', datetime.now().isoformat())
         state.last_save_time = save_data.get('last_save_time')
         state.revealed_quests = save_data.get('revealed_quests', [])
         state.completed_quests_count = save_data.get('completed_quests_count', {})
@@ -76,32 +66,15 @@ class GameState:
     
     @classmethod
     def player_exists(cls, player_name):
-        filename = f"save_{player_name}.json"
-        save_path = os.path.join(SAVE_DIR, filename)
-        return os.path.exists(save_path)
+        return db_player_exists(player_name)
     
     @classmethod
     def get_all_players(cls):
-        players = []
-        if not os.path.exists(SAVE_DIR):
-            return players
-        
-        for filename in os.listdir(SAVE_DIR):
-            if filename.startswith('save_') and filename.endswith('.json'):
-                player_name = filename[5:-5]
-                players.append(player_name)
-        
-        return players
+        return db_get_all_players()
     
     @classmethod
     def delete_player(cls, player_name):
-        filename = f"save_{player_name}.json"
-        save_path = os.path.join(SAVE_DIR, filename)
-        
-        if os.path.exists(save_path):
-            os.remove(save_path)
-            return True
-        return False
+        return db_delete_player(player_name)
 
     def unlock_region(self, region_id):
         if region_id not in self.unlocked_regions:
