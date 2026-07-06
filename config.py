@@ -3,7 +3,7 @@ import os
 GAME_VERSION = "1.0.0"
 GAME_TITLE = "编程闯关岛"
 
-SAVE_DIR = os.path.join(os.path.dirname(__file__), "saves")
+SAVE_DIR = os.environ.get('SAVE_DIR', os.path.join(os.path.dirname(__file__), "saves"))
 ASSETS_DIR = os.path.join(os.path.dirname(__file__), "assets")
 
 os.makedirs(SAVE_DIR, exist_ok=True)

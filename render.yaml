@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: code-quest-island
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT --workers=4 --timeout=120 app:app
+    envVars:
+      - key: SAVE_DIR
+        value: /var/data/saves
+      - key: SECRET_KEY
+        value: code_quest_island_production_key
+    disks:
+      - name: saves
+        mountPath: /var/data
+        sizeGB: 1
