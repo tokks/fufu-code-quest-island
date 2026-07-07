@@ -52,13 +52,49 @@ def get_connection():
             
             dsn_params['sslmode'] = 'require'
             
+            resolved_host = original_host
             try:
-                ipv4_addr = socket.getaddrinfo(original_host, None, socket.AF_INET)[0][4][0]
-                dsn_params['host'] = ipv4_addr
-                print(f"强制使用 IPv4 地址: {ipv4_addr}", file=sys.stderr)
+                import socket
+                results = socket.getaddrinfo(original_host, 5432, socket.AF_INET, socket.SOCK_STREAM)
+                if results:
+                    resolved_host = results[0][4][0]
+                    print(f"使用 IPv4 地址: {resolved_host}", file=sys.stderr)
             except Exception as e:
-                dsn_params['host'] = original_host
-                print(f"无法解析 IPv4 地址，使用原始主机名: {original_host}", file=sys.stderr)
+                print(f"socket.getaddrinfo 失败: {e}", file=sys.stderr)
+            
+            if resolved_host == original_host:
+                try:
+                    import socket as sock_module
+                    host_ip = sock_module.gethostbyname(original_host)
+                    if ':' not in host_ip:
+                        resolved_host = host_ip
+                        print(f"使用 gethostbyname 获取的 IPv4 地址: {resolved_host}", file=sys.stderr)
+                except Exception as e:
+                    print(f"gethostbyname 失败: {e}", file=sys.stderr)
+            
+            if ':' in resolved_host:
+                print(f"警告: 解析到的地址包含冒号，可能是 IPv6: {resolved_host}", file=sys.stderr)
+                print("尝试使用备用方法解析...", file=sys.stderr)
+                
+                try:
+                    import subprocess
+                    result = subprocess.run(
+                        ['getent', 'hosts', original_host],
+                        capture_output=True,
+                        text=True,
+                        timeout=5
+                    )
+                    if result.returncode == 0:
+                        for line in result.stdout.strip().split('\n'):
+                            parts = line.split()
+                            if parts and ':' not in parts[0]:
+                                resolved_host = parts[0]
+                                print(f"通过 getent 获取 IPv4 地址: {resolved_host}", file=sys.stderr)
+                                break
+                except Exception as e:
+                    print(f"getent 失败: {e}", file=sys.stderr)
+            
+            dsn_params['host'] = resolved_host
             
             print(f"PostgreSQL 连接参数: host={dsn_params.get('host')}, port={dsn_params.get('port')}, dbname={dsn_params.get('dbname')}", file=sys.stderr)
             
