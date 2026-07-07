@@ -25,7 +25,44 @@ def get_connection():
     if DATABASE_URL and HAS_PSYCOPG2:
         try:
             print("尝试连接 PostgreSQL 数据库...", file=sys.stderr)
-            conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+            
+            import socket
+            socket.setdefaulttimeout(10)
+            
+            dsn_params = {}
+            if DATABASE_URL.startswith('postgresql://'):
+                url = DATABASE_URL[len('postgresql://'):]
+                parts = url.split('@')
+                if len(parts) == 2:
+                    user_pass, host_port_db = parts
+                    up_parts = user_pass.split(':')
+                    dsn_params['user'] = up_parts[0]
+                    if len(up_parts) > 1:
+                        dsn_params['password'] = up_parts[1]
+                    
+                    host_port_db_parts = host_port_db.split('/')
+                    host_port = host_port_db_parts[0]
+                    if len(host_port_db_parts) > 1:
+                        dsn_params['dbname'] = host_port_db_parts[1]
+                    
+                    hp_parts = host_port.split(':')
+                    original_host = hp_parts[0]
+                    if len(hp_parts) > 1:
+                        dsn_params['port'] = hp_parts[1]
+            
+            dsn_params['sslmode'] = 'require'
+            
+            try:
+                ipv4_addr = socket.getaddrinfo(original_host, None, socket.AF_INET)[0][4][0]
+                dsn_params['host'] = ipv4_addr
+                print(f"强制使用 IPv4 地址: {ipv4_addr}", file=sys.stderr)
+            except Exception as e:
+                dsn_params['host'] = original_host
+                print(f"无法解析 IPv4 地址，使用原始主机名: {original_host}", file=sys.stderr)
+            
+            print(f"PostgreSQL 连接参数: host={dsn_params.get('host')}, port={dsn_params.get('port')}, dbname={dsn_params.get('dbname')}", file=sys.stderr)
+            
+            conn = psycopg2.connect(**dsn_params)
             print("成功连接到 PostgreSQL 数据库", file=sys.stderr)
             return conn, True
         except psycopg2.OperationalError as e:
