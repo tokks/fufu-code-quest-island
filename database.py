@@ -6,27 +6,39 @@ try:
     import psycopg2
     from psycopg2 import extras
     HAS_PSYCOPG2 = True
+    print("psycopg2-binary 已成功安装", file=sys.stderr)
 except ImportError:
     HAS_PSYCOPG2 = False
+    print("警告: psycopg2-binary 未安装，将使用 SQLite", file=sys.stderr)
 
 import sqlite3
 
 DATABASE_URL = os.environ.get('DATABASE_URL')
 
+print(f"DATABASE_URL 环境变量: {'已设置 (长度: ' + str(len(DATABASE_URL)) + ')' if DATABASE_URL else '未设置'}", file=sys.stderr)
+
+def is_using_postgresql():
+    return DATABASE_URL and HAS_PSYCOPG2
+
 def get_connection():
-    if DATABASE_URL:
-        if not HAS_PSYCOPG2:
-            raise ImportError("需要安装 psycopg2-binary 来连接 PostgreSQL")
-        return psycopg2.connect(DATABASE_URL, sslmode='require')
-    else:
-        db_path = os.environ.get('DATABASE_PATH', os.path.join(os.path.dirname(__file__), 'game.db'))
-        return sqlite3.connect(db_path)
+    if is_using_postgresql():
+        try:
+            conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+            print("成功连接到 PostgreSQL 数据库", file=sys.stderr)
+            return conn
+        except Exception as e:
+            print(f"PostgreSQL 连接失败: {e}", file=sys.stderr)
+            print("回退到 SQLite", file=sys.stderr)
+    
+    db_path = os.environ.get('DATABASE_PATH', os.path.join(os.path.dirname(__file__), 'game.db'))
+    print(f"使用 SQLite 数据库: {db_path}", file=sys.stderr)
+    return sqlite3.connect(db_path)
 
 def init_db():
     try:
         conn = get_connection()
         
-        if DATABASE_URL:
+        if is_using_postgresql():
             cur = conn.cursor()
             cur.execute('''
                 CREATE TABLE IF NOT EXISTS players (
@@ -54,6 +66,7 @@ def init_db():
             c.close()
         
         conn.close()
+        print(f"数据库初始化成功 (PostgreSQL: {is_using_postgresql()})", file=sys.stderr)
         return True
     except Exception as e:
         print(f"数据库初始化失败: {e}", file=sys.stderr)
@@ -64,7 +77,7 @@ def save_player(name, data):
     
     data_json = json.dumps(data, ensure_ascii=False)
     
-    if DATABASE_URL:
+    if is_using_postgresql():
         cur = conn.cursor()
         cur.execute('''
             INSERT INTO players (name, data, updated_at)
@@ -87,7 +100,7 @@ def save_player(name, data):
 def load_player(name):
     conn = get_connection()
     
-    if DATABASE_URL:
+    if is_using_postgresql():
         cur = conn.cursor()
         cur.execute('SELECT data FROM players WHERE name = %s', (name,))
         row = cur.fetchone()
@@ -107,7 +120,7 @@ def load_player(name):
 def delete_player(name):
     conn = get_connection()
     
-    if DATABASE_URL:
+    if is_using_postgresql():
         cur = conn.cursor()
         cur.execute('DELETE FROM players WHERE name = %s', (name,))
         affected = cur.rowcount
@@ -127,7 +140,7 @@ def delete_player(name):
 def player_exists(name):
     conn = get_connection()
     
-    if DATABASE_URL:
+    if is_using_postgresql():
         cur = conn.cursor()
         cur.execute('SELECT 1 FROM players WHERE name = %s', (name,))
         exists = cur.fetchone() is not None
@@ -145,7 +158,7 @@ def player_exists(name):
 def get_all_players():
     conn = get_connection()
     
-    if DATABASE_URL:
+    if is_using_postgresql():
         cur = conn.cursor()
         cur.execute('SELECT name, data FROM players ORDER BY updated_at DESC')
         rows = cur.fetchall()

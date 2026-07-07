@@ -22,6 +22,48 @@ level_manager = LevelManager()
 def api_reload_data():
     level_manager.reload()
     return jsonify({'success': True, 'message': '数据已重新加载'})
+
+@app.route('/api/db_test')
+def api_db_test():
+    import os
+    db_url = os.environ.get('DATABASE_URL', '未配置')
+    
+    result = {
+        'success': False,
+        'database_url': '已配置 (长度: ' + str(len(db_url)) + ')' if db_url else '未配置',
+        'is_postgresql': 'postgresql' in db_url.lower() if db_url else False,
+        'test_save_load': False,
+        'total_players': 0,
+        'database_type': 'SQLite',
+        'errors': []
+    }
+    
+    try:
+        from database import player_exists, save_player, load_player, get_all_players, is_using_postgresql
+        
+        result['database_type'] = 'PostgreSQL' if is_using_postgresql() else 'SQLite'
+        
+        test_data = {
+            'test': 'data',
+            'timestamp': str(os.urandom(8).hex())
+        }
+        save_player('_test_user', test_data)
+        loaded = load_player('_test_user')
+        
+        if loaded and loaded.get('test') == 'data':
+            result['test_save_load'] = True
+        else:
+            result['errors'].append(f'数据加载不匹配: 期望 test=data, 实际: {loaded}')
+        
+        players = get_all_players()
+        result['total_players'] = len(players)
+        result['success'] = True
+        
+        return jsonify(result)
+    except Exception as e:
+        result['errors'].append(str(e))
+        return jsonify(result)
+
 quest_manager = QuestManager()
 shop = Shop()
 achievement_manager = AchievementManager()
