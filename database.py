@@ -72,9 +72,11 @@ def get_connection():
                 except Exception as e:
                     print(f"gethostbyname 失败: {e}", file=sys.stderr)
             
-            if ':' in resolved_host:
-                print(f"警告: 解析到的地址包含冒号，可能是 IPv6: {resolved_host}", file=sys.stderr)
-                print("尝试使用备用方法解析...", file=sys.stderr)
+            if resolved_host == original_host or ':' in resolved_host:
+                if ':' in resolved_host:
+                    print(f"警告: 解析到的地址包含冒号，可能是 IPv6: {resolved_host}", file=sys.stderr)
+                else:
+                    print("标准DNS解析失败，尝试备用方法...", file=sys.stderr)
                 
                 try:
                     import subprocess
@@ -94,7 +96,7 @@ def get_connection():
                 except Exception as e:
                     print(f"getent 失败: {e}", file=sys.stderr)
                 
-                if ':' in resolved_host:
+                if resolved_host == original_host or ':' in resolved_host:
                     try:
                         import dns.resolver
                         answers = dns.resolver.resolve(original_host, 'A')
@@ -105,21 +107,7 @@ def get_connection():
                     except Exception as e:
                         print(f"dnspython 失败: {e}", file=sys.stderr)
                 
-                if ':' in resolved_host:
-                    try:
-                        import socket
-                        import struct
-                        resolver = socket.getaddrinfo(original_host, 5432, 0, socket.SOCK_STREAM)
-                        for info in resolver:
-                            ip = info[4][0]
-                            if ':' not in ip:
-                                resolved_host = ip
-                                print(f"遍历 getaddrinfo 结果找到 IPv4: {resolved_host}", file=sys.stderr)
-                                break
-                    except Exception as e:
-                        print(f"遍历 getaddrinfo 失败: {e}", file=sys.stderr)
-                
-                if ':' in resolved_host:
+                if resolved_host == original_host or ':' in resolved_host:
                     try:
                         import urllib.request
                         import json
@@ -136,6 +124,19 @@ def get_connection():
                                         break
                     except Exception as e:
                         print(f"Cloudflare DNS 查询失败: {e}", file=sys.stderr)
+                
+                if resolved_host == original_host or ':' in resolved_host:
+                    try:
+                        import socket
+                        resolver = socket.getaddrinfo(original_host, 5432, 0, socket.SOCK_STREAM)
+                        for info in resolver:
+                            ip = info[4][0]
+                            if ':' not in ip:
+                                resolved_host = ip
+                                print(f"遍历 getaddrinfo 结果找到 IPv4: {resolved_host}", file=sys.stderr)
+                                break
+                    except Exception as e:
+                        print(f"遍历 getaddrinfo 失败: {e}", file=sys.stderr)
             
             dsn_params['host'] = resolved_host
             
