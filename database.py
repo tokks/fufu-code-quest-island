@@ -93,6 +93,49 @@ def get_connection():
                                 break
                 except Exception as e:
                     print(f"getent 失败: {e}", file=sys.stderr)
+                
+                if ':' in resolved_host:
+                    try:
+                        import dns.resolver
+                        answers = dns.resolver.resolve(original_host, 'A')
+                        for rdata in answers:
+                            resolved_host = str(rdata)
+                            print(f"通过 dnspython 获取 IPv4 地址: {resolved_host}", file=sys.stderr)
+                            break
+                    except Exception as e:
+                        print(f"dnspython 失败: {e}", file=sys.stderr)
+                
+                if ':' in resolved_host:
+                    try:
+                        import socket
+                        import struct
+                        resolver = socket.getaddrinfo(original_host, 5432, 0, socket.SOCK_STREAM)
+                        for info in resolver:
+                            ip = info[4][0]
+                            if ':' not in ip:
+                                resolved_host = ip
+                                print(f"遍历 getaddrinfo 结果找到 IPv4: {resolved_host}", file=sys.stderr)
+                                break
+                    except Exception as e:
+                        print(f"遍历 getaddrinfo 失败: {e}", file=sys.stderr)
+                
+                if ':' in resolved_host:
+                    try:
+                        import urllib.request
+                        import json
+                        url = f"https://cloudflare-dns.com/dns-query?name={original_host}&type=A"
+                        headers = {'accept': 'application/dns-json'}
+                        req = urllib.request.Request(url, headers=headers)
+                        with urllib.request.urlopen(req, timeout=5) as response:
+                            data = json.loads(response.read().decode())
+                            if 'Answer' in data:
+                                for answer in data['Answer']:
+                                    if answer['type'] == 1:
+                                        resolved_host = answer['data']
+                                        print(f"通过 Cloudflare DNS 获取 IPv4 地址: {resolved_host}", file=sys.stderr)
+                                        break
+                    except Exception as e:
+                        print(f"Cloudflare DNS 查询失败: {e}", file=sys.stderr)
             
             dsn_params['host'] = resolved_host
             
