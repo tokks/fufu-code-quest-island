@@ -5,8 +5,3 @@ services:
     plan: starter
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn --bind 0.0.0.0:$PORT --workers=4 --timeout=120 app:app
-    envVars:
-      - key: DATABASE_URL
-        value: YOUR_SUPABASE_DATABASE_URL
-      - key: SECRET_KEY
-        value: code_quest_island_production_key
