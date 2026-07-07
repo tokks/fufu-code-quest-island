@@ -39,9 +39,11 @@ def api_db_test():
     }
     
     try:
-        from database import player_exists, save_player, load_player, get_all_players, is_using_postgresql
+        from database import player_exists, save_player, load_player, get_all_players, get_connection
         
-        result['database_type'] = 'PostgreSQL' if is_using_postgresql() else 'SQLite'
+        conn, is_postgresql = get_connection()
+        conn.close()
+        result['database_type'] = 'PostgreSQL' if is_postgresql else 'SQLite'
         
         test_data = {
             'test': 'data',
