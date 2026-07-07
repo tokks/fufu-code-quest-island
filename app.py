@@ -66,6 +66,41 @@ def api_db_test():
         result['errors'].append(str(e))
         return jsonify(result)
 
+@app.route('/api/players')
+def api_players():
+    try:
+        from database import get_all_players, load_player, get_connection
+        
+        conn, is_postgresql = get_connection()
+        conn.close()
+        
+        players_summary = get_all_players()
+        
+        detailed_players = []
+        for p in players_summary:
+            if p['name'] != '_test_user':
+                full_data = load_player(p['name'])
+                if full_data:
+                    detailed_players.append({
+                        'name': p['name'],
+                        'level': p['level'],
+                        'region': p['region'],
+                        'gold': p['gold'],
+                        'full_data': full_data
+                    })
+        
+        return jsonify({
+            'success': True,
+            'database_type': 'PostgreSQL' if is_postgresql else 'SQLite',
+            'total_players': len(detailed_players),
+            'players': detailed_players
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        })
+
 quest_manager = QuestManager()
 shop = Shop()
 achievement_manager = AchievementManager()
