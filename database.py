@@ -1,46 +1,102 @@
-import sqlite3
 import os
 import json
+import sys
 
-DB_PATH = os.environ.get('DATABASE_PATH', os.path.join(os.path.dirname(__file__), 'game.db'))
+try:
+    import psycopg2
+    from psycopg2 import extras
+    HAS_PSYCOPG2 = True
+except ImportError:
+    HAS_PSYCOPG2 = False
+
+import sqlite3
+
+DATABASE_URL = os.environ.get('DATABASE_URL')
+
+def get_connection():
+    if DATABASE_URL:
+        if not HAS_PSYCOPG2:
+            raise ImportError("需要安装 psycopg2-binary 来连接 PostgreSQL")
+        return psycopg2.connect(DATABASE_URL, sslmode='require')
+    else:
+        db_path = os.environ.get('DATABASE_PATH', os.path.join(os.path.dirname(__file__), 'game.db'))
+        return sqlite3.connect(db_path)
 
 def init_db():
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    
-    c.execute('''
-        CREATE TABLE IF NOT EXISTS players (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            name TEXT UNIQUE NOT NULL,
-            data TEXT NOT NULL,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-            updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-        )
-    ''')
-    
-    conn.commit()
-    conn.close()
+    try:
+        conn = get_connection()
+        
+        if DATABASE_URL:
+            cur = conn.cursor()
+            cur.execute('''
+                CREATE TABLE IF NOT EXISTS players (
+                    id SERIAL PRIMARY KEY,
+                    name TEXT UNIQUE NOT NULL,
+                    data TEXT NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            conn.commit()
+            cur.close()
+        else:
+            c = conn.cursor()
+            c.execute('''
+                CREATE TABLE IF NOT EXISTS players (
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    name TEXT UNIQUE NOT NULL,
+                    data TEXT NOT NULL,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                )
+            ''')
+            conn.commit()
+            c.close()
+        
+        conn.close()
+        return True
+    except Exception as e:
+        print(f"数据库初始化失败: {e}", file=sys.stderr)
+        return False
 
 def save_player(name, data):
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
+    conn = get_connection()
     
     data_json = json.dumps(data, ensure_ascii=False)
     
-    c.execute('''
-        INSERT OR REPLACE INTO players (name, data, updated_at)
-        VALUES (?, ?, CURRENT_TIMESTAMP)
-    ''', (name, data_json))
+    if DATABASE_URL:
+        cur = conn.cursor()
+        cur.execute('''
+            INSERT INTO players (name, data, updated_at)
+            VALUES (%s, %s, CURRENT_TIMESTAMP)
+            ON CONFLICT (name) DO UPDATE SET data = %s, updated_at = CURRENT_TIMESTAMP
+        ''', (name, data_json, data_json))
+        conn.commit()
+        cur.close()
+    else:
+        c = conn.cursor()
+        c.execute('''
+            INSERT OR REPLACE INTO players (name, data, updated_at)
+            VALUES (?, ?, CURRENT_TIMESTAMP)
+        ''', (name, data_json))
+        conn.commit()
+        c.close()
     
-    conn.commit()
     conn.close()
 
 def load_player(name):
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
+    conn = get_connection()
     
-    c.execute('SELECT data FROM players WHERE name = ?', (name,))
-    row = c.fetchone()
+    if DATABASE_URL:
+        cur = conn.cursor()
+        cur.execute('SELECT data FROM players WHERE name = %s', (name,))
+        row = cur.fetchone()
+        cur.close()
+    else:
+        c = conn.cursor()
+        c.execute('SELECT data FROM players WHERE name = ?', (name,))
+        row = c.fetchone()
+        c.close()
     
     conn.close()
     
@@ -49,34 +105,56 @@ def load_player(name):
     return None
 
 def delete_player(name):
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
+    conn = get_connection()
     
-    c.execute('DELETE FROM players WHERE name = ?', (name,))
-    affected = c.rowcount
+    if DATABASE_URL:
+        cur = conn.cursor()
+        cur.execute('DELETE FROM players WHERE name = %s', (name,))
+        affected = cur.rowcount
+        conn.commit()
+        cur.close()
+    else:
+        c = conn.cursor()
+        c.execute('DELETE FROM players WHERE name = ?', (name,))
+        affected = c.rowcount
+        conn.commit()
+        c.close()
     
-    conn.commit()
     conn.close()
     
     return affected > 0
 
 def player_exists(name):
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
+    conn = get_connection()
     
-    c.execute('SELECT 1 FROM players WHERE name = ?', (name,))
-    exists = c.fetchone() is not None
+    if DATABASE_URL:
+        cur = conn.cursor()
+        cur.execute('SELECT 1 FROM players WHERE name = %s', (name,))
+        exists = cur.fetchone() is not None
+        cur.close()
+    else:
+        c = conn.cursor()
+        c.execute('SELECT 1 FROM players WHERE name = ?', (name,))
+        exists = c.fetchone() is not None
+        c.close()
     
     conn.close()
     
     return exists
 
 def get_all_players():
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
+    conn = get_connection()
     
-    c.execute('SELECT name, data FROM players ORDER BY updated_at DESC')
-    rows = c.fetchall()
+    if DATABASE_URL:
+        cur = conn.cursor()
+        cur.execute('SELECT name, data FROM players ORDER BY updated_at DESC')
+        rows = cur.fetchall()
+        cur.close()
+    else:
+        c = conn.cursor()
+        c.execute('SELECT name, data FROM players ORDER BY updated_at DESC')
+        rows = c.fetchall()
+        c.close()
     
     conn.close()
     
@@ -86,9 +164,9 @@ def get_all_players():
             data = json.loads(row[1])
             players.append({
                 'name': row[0],
-                'level': data.get('level', 1),
-                'region': data.get('region', 'day1'),
-                'gold': data.get('gold', 0)
+                'level': data.get('player', {}).get('level', 1),
+                'region': data.get('current_region', 'region_1'),
+                'gold': data.get('player', {}).get('gold', 0)
             })
         except:
             pass
