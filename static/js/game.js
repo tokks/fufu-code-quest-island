@@ -5,6 +5,7 @@ let isAdmin = false;
 const AVATARS = ['👤', '👨‍💻', '👩‍💻', '🧑‍💻', '🤖', '🦸', '🦸‍♀️', '🧙', '🧙‍♀️', '🐱', '🐶', '🦊', '🐼', '🐨', '🐯', '🦁', '🐸', '🦄', '👾', '🤪', '😎', '🤓', '🧐', '😺'];
 let npcAvatar = '👩‍🏫';
 let npcName = '富富';
+let currentPlayerAvatar = null;
 
 document.addEventListener('DOMContentLoaded', function() {
     Promise.all([
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     .then(([playerRes, npcRes]) => Promise.all([playerRes.json(), npcRes.json()]))
     .then(([playerData, npcConfig]) => {
         isAdmin = playerData.is_admin || false;
+        currentPlayerAvatar = playerData.avatar || '👤';
         npcAvatar = npcConfig.avatar || '👩‍🏫';
         npcName = npcConfig.name || '富富';
         console.log('Player loaded, isAdmin:', isAdmin);
@@ -431,6 +433,8 @@ function handleAvatarUpload(event) {
 }
 
 function updateAvatarDisplay(avatar) {
+    currentPlayerAvatar = avatar;
+    
     const avatarElements = document.querySelectorAll('.player-avatar, .player-avatar-sidebar, .chat-message.player .chat-avatar');
     avatarElements.forEach(el => {
         if (avatar.startsWith('data:image')) {
@@ -439,6 +443,18 @@ function updateAvatarDisplay(avatar) {
             el.innerHTML = avatar;
         }
     });
+    
+    const chatContainer = document.getElementById('levelContent');
+    if (chatContainer) {
+        const playerChatAvatars = chatContainer.querySelectorAll('.chat-message.player .chat-avatar');
+        playerChatAvatars.forEach(el => {
+            if (avatar.startsWith('data:image')) {
+                el.innerHTML = `<img src="${avatar}" class="avatar-img" alt="头像">`;
+            } else {
+                el.innerHTML = avatar;
+            }
+        });
+    }
 }
 
 function loadAdminSettings() {
@@ -675,7 +691,7 @@ function loadLevel(regionId, levelId) {
         const isImageAvatar = npcAvatar.startsWith('data:image');
         const avatarHtml = isImageAvatar ? `<img src="${npcAvatar}" class="avatar-img">` : npcAvatar;
         
-        const playerAvatar = player.avatar || '👤';
+        const playerAvatar = currentPlayerAvatar || player.avatar || '👤';
         const isPlayerImageAvatar = playerAvatar.startsWith('data:image');
         const playerAvatarHtml = isPlayerImageAvatar ? `<img src="${playerAvatar}" class="avatar-img">` : playerAvatar;
             

@@ -626,9 +626,10 @@ def api_leaderboard():
     players = GameState.get_all_players()
     leaderboard = []
     
-    for player_name in players:
+    for player_data in players:
+        player_name = player_data['name']
         state = GameState.load_game(player_name)
-        if state and state.player and not state.player.is_admin:
+        if state and state.player and not getattr(state.player, 'is_admin', False):
             player = state.player
             leaderboard.append({
                 'name': player.name,
