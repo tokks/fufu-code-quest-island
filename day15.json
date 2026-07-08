@@ -1,0 +1,290 @@
+[
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 1,
+    "question": "Vehicle类中__init__方法的作用是什么？",
+    "options": [
+      "启动车辆",
+      "打印车辆",
+      "初始化车辆的品牌和型号",
+      "充电",
+      "Car类继承自哪个类？",
+      "Bicycle",
+      "ElectricCar",
+      "Vehicle",
+      "不继承任何类",
+      "ElectricCar类可以访问哪些方法？（多选）",
+      "start",
+      "drive",
+      "charge",
+      "只有charge"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 2,
+    "question": "创建ElectricCar对象my_car后，调用drive方法会打印什么？",
+    "options": [
+      "\"特斯拉 Model S 启动了。\"",
+      "\"特斯拉 Model S 在路上行驶。\"",
+      "\"特斯拉 Model S 正在充电。\"",
+      "\"自行车正在骑行中。\""
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 3,
+    "question": "在提供的代码示例中，Bicycle类显式地继承了哪个类？",
+    "options": [
+      "Object类",
+      "Vehicle类",
+      "没有显示的继承任何类",
+      "它自己"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 4,
+    "question": "什么是类的继承？",
+    "options": [
+      "类的继承是指一个类（称为子类）可以继承另一个类（称为父类）的属性和方法。",
+      "类的继承是指一个类可以从多个类继承属性和方法，但只能有一个主要父类。",
+      "类的继承是指一个类可以完全替换另一个类的所有属性和方法。",
+      "类的继承是指一个类可以复制另一个类的属性和方法，但不能修改它们。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 5,
+    "question": "关于Python类的继承正确的说法是？",
+    "options": [
+      "Python类无法继承其他类",
+      "子类继承父类后，无法调用父类的构造函数",
+      "可以有多个父类",
+      "不能有多个父类"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 6,
+    "question": "在Python中，如何正确地在子类中重写父类的方法？？",
+    "options": [
+      "使用override关键字定义一个与父类中相同名称的方法",
+      "在子类中定义一个与父类中相同名称的方法即可",
+      "使用super()函数直接修改父类的方法定义",
+      "在子类的方法中使用@overload装饰器来指定要重写的方法"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 7,
+    "question": "在Python中，当你创建了一个从多个类继承的子类时，Python使用什么规则来决定应该首先检查哪个父类的方法或属性？",
+    "options": [
+      "随机选择一个父类开始查找",
+      "总是从最后一个列出的父类开始查找",
+      "使用一种叫做方法解析顺序（MRO）的特殊规则来决定查找顺序",
+      "只查找第一个父类，忽略其他的父类",
+      "按照字母顺序排列父类名称后进行查找"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 8,
+    "question": "什么是多继承？",
+    "options": [
+      "多继承是指一个类可以从多个父类继承属性和方法",
+      "多继承是指一个类可以在不同程序中被多次定义",
+      "多继承是指多个子类可以共享同一个父类",
+      "多继承是指一个类可以作为多个其他类的父类"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 9,
+    "question": "以下哪一项描述了实例方法和实例属性之间的正确关系？",
+    "options": [
+      "实例方法可以在不使用self的情况下直接访问和修改实例属性。",
+      "实例方法只能修改但不能读取实例属性 。",
+      "实例方法可以通过self参数访问并修改实例属性。",
+      "实例属性定义了实例方法的行为逻辑。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 10,
+    "question": "12.关于Python中的实例方法和实例属性，以下哪项陈述是正确的？",
+    "options": [
+      "A. 实例方法必须通过类名来访问实例属性。",
+      "B. 实例属性只能在__init__方法中定义。",
+      "C. 实例方法可以通过self参数读取和修改其他实例的属性。",
+      "D. 实例方法可以通过self参数读取和修改同一个实例的属性。",
+      "填空题",
+      "洗衣机",
+      "在上述代码中，Washer类是一个                 。",
+      "它有两个实例属性（brand（品牌）和负载量（load）），以及 wash 和 dry 两个方法。",
+      "AdvancedWasher 类继承自 SpinDryer 和 SteamCleaner 类，",
+      "其中 SpinDryer 继承自 Washer 类，",
+      "因此 AdvancedWasher 类具有 Washer 类的             方法和 SteamCleaner 类的             方法。",
+      "已知SpinDryer继承了 Washer 类，因此在 AdvancedWasher 类的__init__函数中，可以通过调用                 方法来初始化品牌属性。",
+      "\"\"\"。。。省略。。。\"\"\""
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 11,
+    "question": "def __init__(self, brand, has_steam=True):",
+    "options": [
+      "第3小题：_________________________",
+      "self.has_steam = has_steam",
+      "\"\"\"。。。省略。。。\"\"\"",
+      "AdvancedWasher 类的 wash 方法中，如果洗衣机具有蒸汽功能，则会调用             方法来启动蒸汽清洁。",
+      "\"\"\"。。。省略。。。\"\"\""
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 12,
+    "question": "def __init__(self, brand, has_steam=True):",
+    "options": [
+      "第3小题：_________________________",
+      "self.has_steam = has_steam"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 13,
+    "question": "def wash(self):",
+    "options": [
+      "print(f\"{self.brand} 高级洗衣机开始洗衣程序。\")"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 15,
+    "number": 14,
+    "question": "if self.has_steam:",
+    "options": [
+      "第4小题：____________",
+      "Washer.wash(self)  # 直接调用Washer类的wash方法",
+      "\"\"\"。。。省略。。。\"\"\"",
+      "当调用 advanced_washer.dry() 时，首先执行的是              类重写的 dry方法，该方法内部调用了 super().dry()，这会执行             类的原始 dry 方法。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 15,
+    "question": "题目内容：设计一个简单烤箱系统，该系统应包含以下功能：",
+    "options": [],
+    "answer": null,
+    "code_hint": "设计一个烤箱系统，该系统包括一个基本的烤箱类 Oven 和一个专门用于烤玉米的子类 Kaoyumi。烤箱应能够跟踪其工作状态（是否正在烤制）以及内部是否有物品，并且不允许在烤箱正在工作时再次放入新的物品。\n\"\"\"示例代码---【来自day14课件】烤红薯。\"\"\"\n# 烤红薯"
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 16,
+    "question": "class Kaohongshu:",
+    "options": [],
+    "answer": null,
+    "code_hint": "\"\"\"烤红薯的类\"\"\"\n# 定义初始化方法"
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 17,
+    "question": "def __init__(self):",
+    "options": [],
+    "answer": null,
+    "code_hint": "self.level = 0  # 烘烤程度\nself.condition = \"生的\"  # 状态\n# 烤红薯方法"
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 18,
+    "question": "def cook(self, time):",
+    "options": [],
+    "answer": null,
+    "code_hint": "self.level += time  # 1. self.level = self.level + time"
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 19,
+    "question": "if self.level > 8:",
+    "options": [],
+    "answer": null,
+    "code_hint": "self.condition = \"烤成灰了\""
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 20,
+    "question": "elif self.level > 5:",
+    "options": [],
+    "answer": null,
+    "code_hint": "self.condition = \"烤好了\""
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 21,
+    "question": "elif self.level > 3:",
+    "options": [],
+    "answer": null,
+    "code_hint": "self.condition = \"半生不熟\""
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 22,
+    "question": "else:",
+    "options": [],
+    "answer": null,
+    "code_hint": "self.condition = \"生的\""
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 23,
+    "question": "def info(self):",
+    "options": [],
+    "answer": null,
+    "code_hint": "print(f'现在这个红薯的烘烤程度是：{self.level}, 烘烤状态是：{self.condition}')"
+  },
+  {
+    "type": "code",
+    "day": 15,
+    "number": 24,
+    "question": "具体要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  }
+]

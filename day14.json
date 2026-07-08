@@ -1,0 +1,299 @@
+[
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 1,
+    "question": "现在写了一个程序，模拟手洗衣物的过程，按照线性步骤逐一完成每个任务：浸泡衣物、擦洗污渍、漂洗泡沫、拧干水分。根据这一描述，这个程序最符合下列哪种编程范式？",
+    "options": [
+      "面向对象编程",
+      "面向过程编程",
+      "声明式编程",
+      "以上都是"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 2,
+    "question": "关于Python对面向对象编程，在打车的情景中，下面哪一个选项最能说明乘客和司机之间的“对象间交流”？",
+    "options": [
+      "乘客自己找到目的地。",
+      "司机决定乘客的目的地。",
+      "乘客告诉司机要去的目的地。",
+      "乘客不与司机交流。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 3,
+    "question": "在上述 Car 类中，make 和 model 是什么类型的属性？",
+    "options": [
+      "类属性",
+      "实例属性",
+      "静态属性",
+      "全局属性"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 4,
+    "question": "在上述 Car 类中，display_info属于什么方法？",
+    "options": [
+      "类方法",
+      "静态方法",
+      "实例方法",
+      "魔法方法"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 5,
+    "question": "在上述 MathUtils 类中，add() 方法是什么类型的方法？",
+    "options": [
+      "类方法",
+      "静态方法",
+      "实例方法",
+      "魔法方法"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 6,
+    "question": "静态方法适合用于哪种情况？",
+    "options": [
+      "当方法需要访问或修改实例属性时",
+      "当方法仅依赖于参数而不涉及实例或类的状态时",
+      "当方法需要访问或修改类属性时",
+      "当方法必须由类的每个实例独立实现时"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 7,
+    "question": "如果在定义类时没有显式地定义 __init__ 方法，会发生什么？",
+    "options": [
+      "类将无法创建对象。",
+      "创建对象时会抛出异常。",
+      "Python 提供一个默认的 __init__ 方法，不接收参数（除了 self）。",
+      "在python中，类方法必须使用 @staticmethod 装饰器定义，否则无法在类中调用。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 8,
+    "question": "示例代码中，哪个选项正确指出了代码中存在的问题？",
+    "options": [
+      "__init__ 方法不需要参数 pet 和 name",
+      "make_sound 方法尝试访问未初始化的实例变量 self.pet",
+      "make_sound 方法应该被声明为静态方法",
+      "没有错误，代码可以正常工作",
+      "为了使上面的代码能够正常运行，以下哪些修改是有效的？（多选）",
+      "在 make_sound 方法中移除 self.pet",
+      "在 __init__ 方法中添加 self.pet = pet",
+      "将 make_sound 改为类方法，并用 @classmethod 装饰",
+      "将 make_sound 改为静态方法，并用 @staticmethod 装饰",
+      "给示例代码创建对象。以下哪项是错误的创建 Animal 类实例的方式？（多选）",
+      "dog = Animal(\"小狗\", \"旺财\")",
+      "cat = Animal(pet=\"小猫\", name=\"招财\")",
+      "bird = Animal(pet=\"小鸟\")",
+      "fish = Animal(\"小鱼\", sound=\"泡泡\")",
+      "关于类的初始化方法 __init__，以下哪些描述是正确的？(多选)",
+      "__init__ 方法在创建类的新实例时自动调用。",
+      "__init__ 方法必须接收一个参数，通常命名为 self，用于引用被创建的实例。",
+      "__init__ 方法可以用来初始化实例属性。",
+      "__init__ 方法不应返回任何值，因为它的主要职责是初始化新对象。",
+      "关于使用 对象 = 类名(参数) 创建对象的动作，以下哪些描述是正确的？(多选)",
+      "类名(参数) 代表的是一个类的实例化过程，而不是类本身。",
+      "当执行 对象 = 类名(参数) 时，对象 是一个引用变量，它将指向新创建的对象。",
+      "类名(参数) 的调用会触发类中定义的 __init__ 方法来初始化新对象。",
+      "在 对象 = 类名(参数) 中传递的参数用于初始化新对象的属性。",
+      "类名(参数) 实际上返回的是一个新的对象，而不是类本身。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 9,
+    "question": "第一大题：",
+    "options": [
+      "定义一个Bicycle 类，需要使用          关键字。",
+      "定义一个属性color，表示所有车都是红色；定义一个属性total_cars，用于记录所有车的数量，初始值为 0。这两个属性需要所有实例共享，应当定义为          。",
+      "对于 Bicycle 类，",
+      "定义实例属性 brand，表示每辆车的品牌；",
+      "定义实例属性 size，表示每辆 Bicycle 的大小。",
+      "每创建一个实例时，total_cars 类属性会增加 1。",
+      "这些实例属性应当在                    中定义 。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 10,
+    "question": "根据第3点，和示例代码。完成下面的填空：",
+    "options": [
+      "brand:                          。",
+      "size:                          。",
+      "total_cars:                          。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 11,
+    "question": "class Bicycle:",
+    "options": [
+      "\"\"\"为了不透题，这里省略对类属性的描述\"\"\"",
+      "\"\"\"。。。。。\"\"\""
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 12,
+    "question": "def __init__(self, brand, size):",
+    "options": [
+      "_______________ # 填写正确的赋值语句",
+      "_______________ # 填写正确的赋值语句",
+      "_______________ # 每创建一个实例，总数量加1"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 13,
+    "question": "5、对于 Bicycle 类，定义两个静态方法：",
+    "options": [
+      "count_cars，表示计算所有车的数量。",
+      "print_color，表示打印 Bicycle 的颜色。",
+      "定义静态方法使用装饰器：@                          。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 14,
+    "question": "第二大题：",
+    "options": [
+      "在类的构造器中，self参数代表类的                          ，它指向创建的对象实例。",
+      "如果要在类的方法中访问类的实例属性，可以使用                加上属性名的方式。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 14,
+    "number": 15,
+    "question": "第三大题：",
+    "options": [
+      "语句person1 = Person(\"六一\", 27)中，Person(\"六一\", 27) 是一个             。用于创建一个             。",
+      "当 Python 执行到 Person(\"六一\", 27) 时，它会调用 Person 类的             方法，传递             来初始化该对象的属性。",
+      "构造函数(也叫初始化方法__init__)执行完毕后，新创建的对象会被返回，并准备赋值给左侧的变量。person1是一个             用于引用通过类 Person 创建的             。",
+      "后续，我需要通过person1访问greet()如何操作：                         。",
+      "我需要设置person1地址如何操作：                         。",
+      "我需要展现对象person1的详细信息，如何操作：                         。",
+      "我想创建一个新的person，如何操作：                         。",
+      "在 Person 类中，set_address、greet 和 show_info，这些是              方法。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 16,
+    "question": "题目内容：",
+    "options": [],
+    "answer": null,
+    "code_hint": "请根据填空题第一大题对Bicycle类的描述。完成Bicycle类的完整编写。"
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 17,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "完成Bicycle类的定义。\n完成类属性的定义。\n完成实例属性brand 和 size的定义。注：每创建一个实例时，total_cars 类属性会增加 1。\n完成静态方法count_cars和print_color的定义。\ncount_cars()：返回所有车的数量。\nprint_color()：打印 Bicycle 的颜色。\n完成类的实例化，并调用定义好的静态方法。"
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 18,
+    "question": "拓展Person类：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 19,
+    "question": "题目内容：",
+    "options": [],
+    "answer": null,
+    "code_hint": "请根据填空题第三大题，拓展Person类。完成作业要求中的任务。"
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 20,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 21,
+    "question": "任务要求如下：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 22,
+    "question": "增加属性：",
+    "options": [],
+    "answer": null,
+    "code_hint": "实例属性：gender（性别）、height（身高）和 weight（体重）。\n类属性：total_persons（用来记录创建的 Person 对象总数。）\n类属性需要在__init__ 方法中更新。"
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 23,
+    "question": "添加一个名为 calculate_bmi() 的新方法：",
+    "options": [],
+    "answer": null,
+    "code_hint": "用于计算并返回身体质量指数（BMI）\n公式：BMI = 体重（kg）/升高（cm）"
+  },
+  {
+    "type": "code",
+    "day": 14,
+    "number": 24,
+    "question": "增加统计功能，添加一个静态方法 get_total_persons()：",
+    "options": [],
+    "answer": null,
+    "code_hint": "用于返回(return)当前创建的 Person 对象总数。\n更新show_info()方法，显示新增的属性（性别、身高、体重）。\n创建多个对象，调用方法。并打印创建对象总数。"
+  }
+]

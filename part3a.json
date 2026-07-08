@@ -1,0 +1,371 @@
+[
+  {
+    "type": "code",
+    "day": 11,
+    "number": 1,
+    "question": "第 01 题：计算三角形面积（基本参数传递与返回值理解）",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目内容：编写一个函数calculate_triangle_area，该函数接受三角形的底（base）和高（height），并返回该三角函数的面积。面积计算公式为 1/2×底×高。"
+  },
+  {
+    "type": "code",
+    "day": 11,
+    "number": 2,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "函数需要能够接受底和高作为参数。\n函数需要返回计算得到的三角形面积。"
+  },
+  {
+    "type": "code",
+    "day": 11,
+    "number": 3,
+    "question": "第 02 题：计算统计数据(多个位置参数与返回值)",
+    "options": [],
+    "answer": null,
+    "code_hint": "编写一个名为 calculate_stats 的函数，该函数接受五个单独的位置参数（num1, num2, num3, num4, num5），每个参数代表一个数字。函数应计算并返回这五个数字的最大值、最小值和平均值。"
+  },
+  {
+    "type": "code",
+    "day": 11,
+    "number": 4,
+    "question": "功能要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "函数必须明确接收五个位置参数。\n如果提供的不是有效的数字（例如字符串或其他不可转换为数字的类型），函数应该返回 (None, None, None) 表示无效输入。\n如果所有输入都有效，函数将返回一个包含最大值、最小值和平均值的元组。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 1,
+    "question": "第 01 题：创建问候语（默认值参数）",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 2,
+    "question": "题目内容：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 3,
+    "question": "编写一个名为 create_greeting 的函数，该函数用于生成个性化的问候语。函数接受三个参数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "name（字符串）：表示要问候的人的名字。\nevent（字符串，默认为 \"Hello\"）：表示问候的事件或场合。\nis_upper（布尔值，默认为 False）：用于确定问候语是否应全部转换为大写(upper()方法)。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 4,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "调用一：只提供 name 参数，使用默认的 event 和 is_upper 值。。\n调用二：提供 name 和 event 参数，使用默认的 is_upper 值\n调用三：提供 name 和 is_upper 参数，使用默认的 event 值。\n调用四：传递所有参数。\n【拓展】：upper()方法简介👇"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 5,
+    "question": "第 02 题：模拟航班预定(关键字参数)",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目内容：编写一个名为 book_flight 的函数，用于模拟预订航班的过程。该函数接受两个必须的参数和多个可选的关键字参数，并返回一个包含所有预订信息的字典。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 6,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 7,
+    "question": "必需参数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "destination（字符串）：表示目的地。这是必填参数。\ndate（字符串）：表示出发日期。这是必填参数。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 8,
+    "question": "可选关键字参数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "flight_class（字符串，默认为 \"Economy(经济舱)\"）：表示舱位等级。\nmeal（字符串，默认为 \"No preference(无特殊要求)\"）：表示餐食偏好。\ninsurance（布尔值，默认为 False）：表示是否购买旅行保险。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 9,
+    "question": "返回值：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 10,
+    "question": "函数需要返回一个包含所有预订信息的字典，字典的键应包括：",
+    "options": [],
+    "answer": null,
+    "code_hint": "\"目的地\"：对应 destination 参数。\n\"时间\"：对应 date 参数。\n\"舱位等级\"：对应 flight_class 参数。\n\"餐食偏好\"：对应 meal 参数。\n\"是否购买旅行保险\"：对应 insurance 参数。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 11,
+    "question": "第 03题：计算任意数量参数的总和（可变位置参数）",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 12,
+    "question": "题目内容：",
+    "options": [],
+    "answer": null,
+    "code_hint": "编写一个名为 sum_of_args 的函数，该函数能够接受任意数量的数字参数，并返回这些参数的总和。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 13,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "函数需要能够接受任意数量的数字参数。\n函数需要返回所有参数的总和。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 14,
+    "question": "第 04 题：创建活动信息-可变关键字参数",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目内容：编写一个名为 create_event 的函数，用于创建一个活动。\n该函数接受两个必须的参数 name（活动名称）和 date（活动日期），以及任意数量的关键字参数，这些关键字参数代表活动的其他属性，如 location（地点）、organizer（组织者）、participants（参与者列表）等。函数返回一个包含所有活动信息的字典。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 15,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 16,
+    "question": "必需参数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "name（字符串）：表示活动名称。这是必填参数。\ndate（字符串）：表示活动日期。这是必填参数。\n可选关键字参数：**kwargs\n函数应能够接收任意数量的关键字参数，以表示活动的其他属性。每个属性都有默认值或为空。\nlocation（字符串，默认为 \"暂无指定\"）：表示活动地点。\norganizer（字符串，默认为 \"暂无指定\"）：表示活动组织者。\nparticipants（列表，默认为包含单个元素 \"没有指定参与者\" 的列表）：表示参与者列表。如果提供了 participants 参数，它应该是一个列表，并且函数需要确保这个列表至少包含一个参与者的名字。如果未提供 participants 或列表为空，则使用默认值 \"没有指定参与者\"。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 17,
+    "question": "返回值：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 18,
+    "question": "函数需要返回一个包含所有活动信息的字典，字典的键应包括：",
+    "options": [],
+    "answer": null,
+    "code_hint": "\"活动名称\"：对应 name 参数。\n\"活动时间\"：对应 date 参数。\n\"活动地点\"：对应 location 参数，默认为 \"暂无指定\"。\n\"组织者\"：对应 organizer 参数，默认为 \"暂无指定\"。\n\"参与者列表\"：对应 participants 参数，默认为包含单个元素 \"没有指定参与者\" 的列表。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 19,
+    "question": "总结要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "必须提供name和date参数。\n其他属性作为关键字可变参数提供，每个属性都有默认值或为空。\n函数需要返回一个包含所有活动信息的字典。\n如果participants被提供，它应该是一个列表，函数应该确保这个列表包含至少一个参与者的名字。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 20,
+    "question": "第 06 题：计算购物车折扣后的总价-混合参数练习",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目内容：编写一个函数calculate_discount，它用于计算购物车中商品的折扣后总价，并接受混合参数：位置参数、关键字参数和可变数量的位置参数。该函数应该能够处理不同类型的商品和顾客的特殊折扣条件。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 21,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 22,
+    "question": "第 07 题：使用回调函数进行用户问候",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 23,
+    "question": "题目内容：",
+    "options": [],
+    "answer": null,
+    "code_hint": "编写一个名为 greet_user 的函数，该函数接受两个参数：一个字符串 name 和一个回调函数 callback。该函数应该使用传入的 callback 函数来向用户 name 发出问候。问候语的格式应该是 \"Hello, [name]!\"。\n在主程序中定义一个回调函数，并将其作为参数传递给 greet_user 函数。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 24,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 25,
+    "question": "定义 greet_user 函数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "接受两个参数：name（字符串类型，表示用户的姓名）和 callback（回调函数）。\n使用传入的 callback 函数来输出问候语，问候语的格式为 \"Hello, [name]!\"。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 26,
+    "question": "定义回调函数 say_hello：",
+    "options": [],
+    "answer": null,
+    "code_hint": "接受一个参数 message。\n打印一条消息，显示接收到的问候语。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 27,
+    "question": "调用 greet_user 函数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "将一个示例用户名（如 \"Alice\"）作为 name 参数传递。\n将 say_hello 函数作为 callback 参数传递。\n确保在 greet_user 函数内部，通过 callback 函数正确输出问候语。"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 28,
+    "question": "第 08 题：使用回调函数实现基本算术运算",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 29,
+    "question": "题目内容：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 30,
+    "question": "作业要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "综合题目1：开发一款天气应用\n根据用户的地理位置提供相应的天气预报信息。为了简化问题，我们假设有三种天气类型：“晴天”、“雨天”和“多云”，并且每个地点都有一个固定的天气类型。\n题目要求"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 31,
+    "question": "编写一个名为 get_weather_forecast 的函数，该函数接受两个参数：",
+    "options": [],
+    "answer": null,
+    "code_hint": "location (字符串)：表示用户所在的地点。\nweather_data (列表嵌套字典)：键为地点名，值为该地点的天气类型。\n函数应该返回一个字符串，格式为 \"当前地点 ：[location] 天气预报：[weather].\"。如果给定的 location 在 weather_data 中不存在，则返回 \"当前地点： [location]没有可用天气数据\"\n提示\n使用条件语句来检查 location 是否存在于 weather_data 列表中。\n注意字符串的格式化输出。\n综合题目2：简单的加密器"
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 32,
+    "question": "题目要求：编写一个简单的文本加密器，该加密器包含3种加密方式：简单文本加密、数字位移加密、反向文本加密。加密器需要满足以下要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 33,
+    "question": "【简单文本加密】：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 34,
+    "question": "【反向文本加密】：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 35,
+    "question": "【数字位移加密】：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 36,
+    "question": "【主函数】调用顺序：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 12,
+    "number": 37,
+    "question": "提示：",
+    "options": [],
+    "answer": null,
+    "code_hint": "islower()：检查字符是否为小写字母；upper()小写字母转大写。\nisupper()：检查字符是否为大写字母\nisdigit()：检查字符是否为数字"
+  }
+]

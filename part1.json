@@ -1,0 +1,1428 @@
+[
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 1,
+    "question": "Python是一种什么类型的语言？",
+    "options": [
+      "A. 编译型语言",
+      "B. 解释型语言",
+      "C. 标记语言",
+      "D. 前端语言"
+    ],
+    "answer": "使用 print() 输出\n作业要求：使用命令交互模式 和 pycharm编写代码输出。\n作业步骤：\n命令交互模式：\nwin+R；在右下角输入框内，输入CMD打开windows命令交互工具。\n在命令交互工具中，输入python或python3后回车。\n再输入print('你好，亿学课堂！')后回车。\n通过exit()退出交互环境。\npycharm编码工具：\n创建新项目\n添加.py文件\n在新建的python文件下输入代码：print('你好，亿学课堂！')\n运行文件。（运行方式任选）"
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 2,
+    "question": "PyCharm是什么？",
+    "options": [
+      "A. 一种编程语言",
+      "B. 一种操作系统",
+      "C. 一款Python集成开发环境（IDE）",
+      "D. 一种数据库管理系统"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 3,
+    "question": "在PyCharm中，如何创建一个新的Python项目？",
+    "options": [
+      "A. 通过菜单选择“文件” -> “新建项目”",
+      "B. 通过命令行创建",
+      "C. 直接打开一个Python文件",
+      "D. 无法在PyCharm中创建新项目"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 4,
+    "question": "Python的主要特点之一是什么？",
+    "options": [
+      "A. 语法复杂",
+      "B. 简单易学，适合初学者",
+      "C. 仅适用于Web开发",
+      "D. 运行速度极快"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 5,
+    "question": "下列哪个领域不是Python的典型应用？",
+    "options": [
+      "A. Web开发",
+      "B. 数据分析",
+      "C. 高性能实时游戏引擎开发",
+      "D. 人工智能与机器学习"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 6,
+    "question": "以下哪个是python语法的特点:",
+    "options": [
+      "A. 解释性语言",
+      "B. 面向对象",
+      "C. 跨平台",
+      "D. 以上全是"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 7,
+    "question": "在PyCharm中，如何运行一个Python脚本？",
+    "options": [
+      "A. 右键点击文件并选择“运行”",
+      "B. 通过命令行运行",
+      "C. 直接在编辑器中输入代码",
+      "D. 无法在PyCharm中运行脚本"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 8,
+    "question": "Python中用来输出内容的函数是什么？",
+    "options": [
+      "A. output()",
+      "B. print()",
+      "C. echo()",
+      "D. display()"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 9,
+    "question": "在PyCharm中，如何查看代码的错误信息？",
+    "options": [
+      "A. 通过控制台",
+      "B. 通过错误提示窗口",
+      "C. 代码下方会显示红色波浪线",
+      "D. 以上都是"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 1,
+    "number": 10,
+    "question": "Python的文件扩展名是什么？",
+    "options": [
+      "A. .txt",
+      "B. .py",
+      "C. .doc",
+      "D. .java"
+    ],
+    "answer": null
+  },
+  {
+    "type": "code",
+    "day": 1,
+    "number": 11,
+    "question": "作业步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 1,
+    "number": 12,
+    "question": "命令交互模式：",
+    "options": [],
+    "answer": null,
+    "code_hint": "win+R；在右下角输入框内，输入CMD打开windows命令交互工具。\n在命令交互工具中，输入python或python3后回车。\n再输入print('你好，亿学课堂！')后回车。\n通过exit()退出交互环境。"
+  },
+  {
+    "type": "code",
+    "day": 1,
+    "number": 13,
+    "question": "pycharm编码工具：",
+    "options": [],
+    "answer": null,
+    "code_hint": "创建新项目\n添加.py文件\n在新建的python文件下输入代码：print('你好，亿学课堂！')\n运行文件。（运行方式任选）"
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 1,
+    "question": "下面选项中，哪个是Python中的整数字面量？",
+    "options": [
+      "'123'",
+      "3.14",
+      "1101"
+    ],
+    "answer": "字符串与数字类型（int、float）之间的转换：\n题目要求：\n从控制台接收用户输入的一个浮点数。\n打印这个输入值的类型。\n将该浮点数转换为整数，并打印转换后的值及其类型。\n参考答案：\nuser_input = input(\"请输入一个浮点数:\")\nprint(type(user_input))\nint_ = int(float(user_input))\nprint(int_,type(int_))\n转换为绝对值：\n题目要求：\n编写一个Python程序，实现以下功能：\n提示用户输入一个负整数。\n使用abs函数计算该整数的绝对值。\n使用print函数输出结果，格式为：“其绝对值是 [绝对值]”\n参考答案：\nuser_input = input(\"请输入一个负整数：\")\nabs_input = abs(int(user_input))\nprint(\"其绝对值是\", abs_input)"
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 2,
+    "question": "下面选项中，哪个是符合Python变量命名规则的正确赋值语句？",
+    "options": [
+      "1num = 10",
+      "int = 10",
+      "int_01 = 10"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 3,
+    "question": "下面关于python变量类型的说法，正确的是？",
+    "options": [
+      "变量类型必须在定义时指定",
+      "变量类型在赋值时确定",
+      "变量类型一旦确定就不能改变",
+      "变量类型与赋值无关"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 4,
+    "question": "下面变量x的类型是什么？",
+    "options": [
+      "x = 123_456_789",
+      "print(x)",
+      "print(type(x))",
+      "float",
+      "int",
+      "str",
+      "bool"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 5,
+    "question": "在Python中，使用input()函数接收用户输入时，输入的值默认是什么类型？",
+    "options": [
+      "输入什么类型就是什么类型。",
+      "字符串类型。",
+      "整数类型。",
+      "浮点数类型。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 6,
+    "question": "在Python中，print函数的主要用途是什么？",
+    "options": [
+      "从用户那里接收输入",
+      "将数据写入文件",
+      "在控制台输出内容",
+      "执行数学计算"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 7,
+    "question": "在Python中，下面哪个函数用于创建浮点数？",
+    "options": [
+      "double()",
+      "Number()",
+      "float()",
+      "float32()"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 2,
+    "number": 8,
+    "question": "在Python中，有变量x = -5和y = -3.14，以下哪个代码片段可以正确地将x和y转换为它们的绝对值？",
+    "options": [
+      "x = abs(x) 和 y = abs(y)",
+      "x = |x| 和 y = |y|",
+      "x = fabs(x) 和 y = fabs(y)",
+      "x = absolute(x) 和 y = absolute(y)",
+      "在PyCharm中，默认用来添加注释、移除注释的快捷键是：（多选）",
+      "Ctrl + /",
+      "Ctrl + D",
+      "Shift+Alt+鼠标从光标位置按住下滑或上滑",
+      "command + /"
+    ],
+    "answer": null
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 9,
+    "question": "字符串与数字类型（int、float）之间的转换：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 10,
+    "question": "题目要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "从控制台接收用户输入的一个浮点数。\n打印这个输入值的类型。\n将该浮点数转换为整数，并打印转换后的值及其类型。"
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 11,
+    "question": "转换为绝对值：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 12,
+    "question": "题目要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 2,
+    "number": 13,
+    "question": "编写一个Python程序，实现以下功能：",
+    "options": [],
+    "answer": null,
+    "code_hint": "提示用户输入一个负整数。\n使用abs函数计算该整数的绝对值。\n使用print函数输出结果，格式为：“其绝对值是 [绝对值]”"
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 1,
+    "question": "变量名命名规则中，以下哪个是非法的变量名？",
+    "options": [
+      "A. lala111",
+      "B. 222baby",
+      "C. Zhou",
+      "D. _zhou"
+    ],
+    "answer": "'''---------------------------第 1 题：输出简单的问候语--------------------------------'''\n# 编写一个程序，让用户在控制台输入他们的名字，然后打印出来。打印示例：\"你好，Alice！欢迎来到Python的世界。\"\n# 详细步骤：\n#       1.定义一个变量名name，使用input()接收用户输入。\n#       2.使用print()打印：\"你好，\" + name + \"！欢迎来到Python的世界。\"\nname = input(\"请输入您的名字：\")\nprint(\"你好，\" + name + \"！欢迎来到Python的世界。\")\n'''---------------------------第 2 题：浮点数之和--------------------------------'''\n# 编写一个程序，让用户输入两个数字，在将数字转换为浮点数（float），然后两个数字相加，显示它们的和。\n# 详细步骤：\n#       1.定义变量num1，使用input()接收用户输入的数字1.\n#       2.定义变量num2，使用input()接收用户输入的数字2.\n#       3.定义变量sums，将上面两个字符串，转成float，再相加。\n#       4.使用print()。输出第3点的sums。\nnum1 = input(\"输入第一个数字：\")\nnum2 = input(\"输入第二个数字：\")\nsums = float(num1) + float(num2)\nprint(\"两数之和：\",sums)\n'''---------------------------第 3 题：字符串与数字的类型转换--------------------------------'''\n# 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。\n# 详细步骤：\n#       1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n#       2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n#       3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n#       4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)\n# 获取用户输入的字符串形式的整数，并转换为整型\nstr_int = input(\"请输入一个字符串形式的整数：\")\nint_value = int(str_int)\nprint(int_value)\nprint(type(int_value))\n# 获取用户输入的字符串形式的小数，并转换为浮点型\nstr_float = input(\"请输入一个字符串形式的小数：\")\nfloat_value = float(str_float)\nprint(float_value)\nprint(type(float_value))\n'''---------------------------第 4 题：使用转义字符打印特殊文本--------------------------------'''\n# 描述: 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n# 字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n# 要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n# 示例语句：\"她说了：'Python是'最'棒的语言！'\"\n# 详细步骤：\n#       1.打印包含单引号和双引号的字符串\n#       2.打印包含换行符和制表符的字符串\n#       3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别\nprint('她说了：\"Python是\\'最\\'棒的语言！\"')\nprint(\"她说了：\\n\\t'Python是\\\"最\\\"棒的语言！'\")\nprint(\"并且原始字符串表示为：\")\nprint(r\"她说了：'Python是'最'棒的语言！'\")  # 原始字符串，不需要转义反斜杠\n'''---------------------------第 5 题：简单的数学运算--------------------------------'''\n# 描述: 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。\n# 详细步骤：\n#       1.分别定义两个变量：num1,num2，让用户输入两个数字。\n#       2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n#       3.分别使用+，-，*，/四个符号，计算n1 和 n2的结果。\nnum1 = input(\"请输入第一个数字：\")\nnum2 = input(\"请输入第二个数字：\")\n# 转换为浮点数进行数学运算\nn1 = float(num1)\nn2 = float(num2)\nprint(n1 + n2)\nprint(n1 - n2)\nprint(n1 * n2)\nprint(n1 / n2)\n'''---------------------------第 6 题：使用转义字符和字符串操作打印格式化路径--------------------------------'''\n# 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n# 然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 详细步骤：\n#       1.定义变量filename，用来接收用户输入的文件名。\n#       2.定义变量extension，用来接收用户输入的文件扩展名。\n#       3.定义变量path，拼接字符串。\n#       4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。\n# 获取用户输入的文件名和扩展名\nfilename = input(\"请输入文件名（不带扩展名）：\")\nextension = input(\"请输入文件扩展名（例如txt, py等）：\")\n# 构造文件路径，注意使用双反斜杠进行转义\npath = 'D:\\\\Documents\\\\Projects\\\\' + filename + '.' + extension\n# 打印构造的文件路径\nprint(path)\n'''---------------------------第 7 题：NoneType 的实际应用场景--------------------------------'''\n# 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。\n# 详细步骤：\n#       1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n#       2.获取用户输入的文本.\n#       3.将变量赋值为用户输入的文本\n#       4.再次打印变量的值和类型\nvalue = None\nprint(\"初始值:\", value)\nprint(\"初始类型:\", type(value))\nuser_input = input(\"请输入一段文本：\")\n# 将变量赋值为用户输入的文本\nvalue = user_input\n# 再次打印变量的值和类型\nprint(\"更新后的值:\", value)\nprint(\"更新后的类型:\", type(value))\n'''---------------------------第 8 题：布尔值的操作和展示--------------------------------'''\n# 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。\n# 详细步骤：\n#       1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n#       2.打印两个布尔变量的值和类型。\n#       3.将两个布尔值转换为整数并打印。\n# 定义两个布尔变量\nbool_true = True\nbool_false = False\n# 打印布尔值及其类型\nprint(\"第一个布尔值:\", bool_true)\nprint(\"第一个布尔值的类型:\", type(bool_true))\nprint(\"第二个布尔值:\", bool_false)\nprint(\"第二个布尔值的类型:\", type(bool_false))\n# 将布尔值转换为整数并打印\nprint(\"True 转换为整数:\", int(bool_true))\nprint(\"False 转换为整数:\", int(bool_false))\n'''---------------------------第 9 题：is和==--------------------------------'''\n# 请根据示例内容，完成任务：\n# 示例：\na = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n# 任务：\n# 1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n# 2. 比较a==b；a is b；a == c；a is c的结果。\n# 3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。\n# 任务1：编写代码，打印出a、b和c的内存地址，即它们各自的id。\nprint('a的内存地址：',id(a))\nprint('b的内存地址：',id(b))\nprint('c的内存地址：',id(c))\n# 任务2：比较a == b；a is b；a == c；a is c的结果。\nprint('a == b',a == b)  # 输出：True\nprint('a is b',a is b)  # 输出：False\nprint('a == c',a == c)  # 输出：True\nprint('a is c',a is c)  # 输出：True\n# 任务3: 修改变量b，使其与a包含不同的元素，然后再次打印出a和b的比较结果(分别使用==和is比对)。\nb = [4, 5, 6]  # 修改b的元素\nprint(\"\\n修改b后的比较结果:\")\nprint(\"a == b:\", a == b)  # 使用==比较a和b的值     // 输出：False\nprint(\"a is b:\", a is b)  # 使用is比较a和b的身份    // 输出：False\n'''---------------------------第 10 题：逻辑表达式的综合运用--------------------------------'''\n# 1.给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n# 2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\nage = 10\nprint('18 <= age <= 65判断结果',18 <= age <= 65)\n# 3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\nname = \"六一\"\nrel = name != \"Alice\" and name != \"Bob\"\nprint(\"name != 'Alice' and name != 'Bob'判断结果：\",rel)\n# 4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\nscore = float(input(\"请输入成绩（分数）：\"))\nrel = (90 < score < 100) or score == 80\nprint('(90 < score < 100) or score == 80判断结果：',rel)\n# 5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n# 分别写出，不构成和构成两种的。\na = int(input(\"请输入第一条边长：\"))\nb = int(input(\"请输入第二条边长：\"))\nc = int(input(\"请输入第三条边长：\"))\n# 构成的\nyes1 = a + b > c\nyes2 = a + c > b\nyes3 = b + c > a\nrel_yes = yes1 and yes2 and yes3\nprint(\"是否构成：\",rel_yes)\n# 不构成的：\nno1 = a + b <= c\nno2 = a + c <= b\nno3 = b + c <= a\nrel_no = no1 or no2 or no3\nprint(\"是否构成：\",rel_no)\n# 6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。\n# 是闰年\nyear = int(input(\"请输入年份：\"))\nis_leap_year = (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)\nprint(\"是否闰年：\", is_leap_year)\n# 不是闰年：\n#     年份不能被4整除；\n#     年份能被100整除但不能被400整除。\nis_not_leap_year1 = not ((year % 4 == 0 and year % 100 != 0) or (year % 400 == 0))\nis_not_leap_year2 = (year % 4 != 0) or (year % 100 == 0 and year % 400 != 0)\nprint(\"是否不是闰年is_not_leap_year1：\",is_not_leap_year1,\"是否不是闰年is_not_leap_year2：\",is_not_leap_year2)"
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 2,
+    "question": "python3中，如何打印变量message的值，其中message的值为Hello, World!？",
+    "options": [
+      "A. print 'Hello, World!'",
+      "B. print \"message\"",
+      "C. print message",
+      "D. print(message)"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 3,
+    "question": "以下哪个是Python中的布尔值？",
+    "options": [
+      "A. 只有True",
+      "B. false",
+      "C. 1",
+      "D. True 和 False"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 4,
+    "question": "如何将整数10转换为字符串？",
+    "options": [
+      "A. str(10)",
+      "B. int(\"10\")",
+      "C. float(10)",
+      "D. bool(10)"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 5,
+    "question": "以下哪个函数用于获取对象的内存地址？",
+    "options": [
+      "A. type()",
+      "B. id()",
+      "C. len()",
+      "D. bool()"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 6,
+    "question": "在Python中，如何注释掉一行代码？",
+    "options": [
+      "A. 使用//在行首",
+      "B. 使用#在行首",
+      "C. 使用/* */包围代码",
+      "D. 使用<!-- -->包围代码"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 7,
+    "question": "注释在Python中有什么作用？",
+    "options": [
+      "A. 修改代码的执行逻辑。",
+      "B. 使代码运行更快。",
+      "C. 对代码进行解释说明，且不被执行。",
+      "D. 存储临时不用的代码。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 8,
+    "question": "Python中用来输出内容的函数是什么？",
+    "options": [
+      "A. output()",
+      "B. print()",
+      "C. echo()",
+      "D. display()"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 9,
+    "question": "以下哪个选项正确描述了变量名的大小写敏感性？",
+    "options": [
+      "A. Zhou和zhou是同一个变量名。",
+      "B. Zhou和zhou是两个不同的变量名。",
+      "C. Python不区分大小写。",
+      "D. 大小写敏感性取决于操作系统。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 10,
+    "question": "字面量的定义是什么？",
+    "options": [
+      "A. 代码中直接写出的固定值，如数字和文本。",
+      "B. 代码中可变的值，如变量。",
+      "C. 代码中的注释。",
+      "D. 代码中的函数。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 11,
+    "question": "如何打印字面量？",
+    "options": [
+      "A. 使用input()函数。",
+      "B. 使用print()函数。",
+      "C. 直接在代码中显示。",
+      "D. 无法打印字面量。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 12,
+    "question": "在python中，字符串类型使用哪种引号包围？",
+    "options": [
+      "A. 只能使用单引号。",
+      "B. 只能使用双引号。",
+      "C. 可以使用单引号、双引号或三引号（'''...''' 或 \"\"\"...\"\"\"），但必须配对。",
+      "D. 不需要引号。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 13,
+    "question": "input()函数的作用是什么？",
+    "options": [
+      "A. 打印输出结果。",
+      "B. 接收用户输入的数据。",
+      "C. 计算输入数据的绝对值。",
+      "D. 获取数据的内存地址。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 14,
+    "question": "如何将整数转换为字符串？",
+    "options": [
+      "A. 使用int()函数。",
+      "B. 使用str()函数。",
+      "C. 使用float()函数。",
+      "D. 整数不能转换为字符串。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 15,
+    "question": "在Python中，哪个符号用于表示转义字符？",
+    "options": [
+      "A. $",
+      "B. @",
+      "C. \\",
+      "D. #"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 16,
+    "question": "以下哪个是换行符的转义字符？",
+    "options": [
+      "A. \\n",
+      "B. \\t",
+      "C. \\b",
+      "D. \\r"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 17,
+    "question": "字符串的加法操作实际上是什么？",
+    "options": [
+      "A. 字符串的复制",
+      "B. 字符串的拼接",
+      "C. 字符串的删除",
+      "D. 字符串的替换"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 18,
+    "question": "布尔类型中，哪个值表示假？",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. 0",
+      "D. None"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 19,
+    "question": "None是哪种数据类型的唯一值？",
+    "options": [
+      "A. str",
+      "B. int",
+      "C. float",
+      "D. NoneType"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 20,
+    "question": "Python中的None类型表示什么？",
+    "options": [
+      "A. 表示数字0",
+      "B. 表示空字符串",
+      "C. 表示没有值或者说空值",
+      "D. 表示布尔值False"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 21,
+    "question": "比较运算符==的作用是什么？",
+    "options": [
+      "A. 判断左边是否小于右边",
+      "B. 判断左右两边是否相等",
+      "C. 判断两个对象的id是否相等",
+      "D. 判断两个对象的id是否不相等"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 22,
+    "question": "逻辑判断中，is not用于比较什么？",
+    "options": [
+      "A. 两个值是否相等",
+      "B. 两个对象的id是否不相等",
+      "C. 两个对象是否是同一个类型",
+      "D. 两个值是否不相等"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 23,
+    "question": "在Python中，如何表示一个字符串是原始字符串，即不处理其中的转义字符？",
+    "options": [
+      "A. 使用单引号",
+      "B. 使用双引号",
+      "C. 在字符串前加上r",
+      "D. 在字符串前加上\\n"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 24,
+    "question": "在Python中，布尔类型True和False的首字母需要大写吗？",
+    "options": [
+      "A. 是，必须大写",
+      "B. 否，可以小写",
+      "C. 首字母大小写无所谓",
+      "D. 只有True需要大写，False不需要"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 25,
+    "question": "在Python中，关于字符串的转义字符和原始字符串的理解，以下哪个选项是不正确？",
+    "options": [
+      "A. 字符串'C:\\Users'和原始字符串r'C:\\Users'在打印时会产生相同的结果。",
+      "B. 转义字符\\n在字符串中用于表示换行，因此'Hello\\nWorld'会打印两行，第一行是Hello，第二行是World。",
+      "C. 原始字符串r'I love \"Python\"'在打印时会将双引号\"视为普通字符，并且输出包括双引号在内的所有字符。",
+      "D. 在字符串'\\tThis is a tab'中，\\t会被解释为一个制表符，而如果使用原始字符串r'\\tThis is a tab'，则\\t会被当作普通字符打印。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 26,
+    "question": "Python3文件的编码格式通常是什么？",
+    "options": [
+      "A. ASCII",
+      "B. GBK",
+      "C. UTF-8",
+      "D. ISO-8859-1"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 27,
+    "question": "Python3中的input()函数返回的数据类型是什么？",
+    "options": [
+      "A. 整数",
+      "B. 浮点数",
+      "C. 字符串",
+      "D. 布尔值"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 28,
+    "question": "如果变量x的值为10，y的值为20，那么表达式x < y的值是什么？",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. None",
+      "D. Error"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 29,
+    "question": "如果变量z的值为0，那么z == 0的值是什么？",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. None",
+      "D. Error"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 30,
+    "question": "如果变量p的值为100，变量q的值为50，那么p > q的值是什么？",
+    "options": [
+      "A. True",
+      "B. False",
+      "C. None",
+      "D. Error"
+    ],
+    "answer": null
+  },
+  {
+    "type": "choice",
+    "day": 3,
+    "number": 31,
+    "question": "如果变量a的值为5，变量b的值为5，那么a == b和a is b有什么不同？",
+    "options": [
+      "A. a == b检查值是否相等，a is b检查数据地址是否相同。",
+      "B. a == b检查数据地址是否相同，a is b检查值是否相等。",
+      "C. 两者都检查值是否相等。",
+      "D. 两者都检查对象是否相同。"
+    ],
+    "answer": null
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 32,
+    "question": "第 1 题：输出简单的问候语'''",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个程序，让用户在控制台输入他们的名字，然后打印出来。打印示例：\"你好，Alice！欢迎来到Python的世界。\""
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 33,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义一个变量名name，使用input()接收用户输入。\n2.使用print()打印：\"你好，\" + name + \"！欢迎来到Python的世界。\""
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 34,
+    "question": "第 2 题：浮点数之和",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个程序，让用户输入两个数字，在将数字转换为浮点数（float），然后两个数字相加，显示它们的和。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 35,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义变量num1，使用input()接收用户输入的数字1.\n2.定义变量num2，使用input()接收用户输入的数字2.\n3.定义变量sums，将上面两个字符串，转成float，再相加。\n4.使用print()。输出第3点的sums。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 36,
+    "question": "第 3 题：字符串与数字的类型转换",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个程序，让用户分别输入一个字符串形式的整数和一个小数（浮点数），然后将它们转换为对应的数值类型并打印出来。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 37,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义一个变量：str_int，使其可以再控制台输入一个整数类型的字符串。\n2.定义一个变量：str_float，使其可以再控制台输入一个浮点类型的字符串。\n3.分别定义两个变量：int_value 和 float_value，分别转换为int和float类型。\n4.分别打印int_value 和 float_value 以及 type(int_value) 和 type(float_value)"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 38,
+    "question": "第 4 题：使用转义字符打印特殊文本",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个Python程序，处理并打印带有多种特殊字符的复杂字符串。\n字符串中应包含不同类型的引号（单引号和双引号）、反斜杠（作为转义字符）、换行符和制表符。\n要求程序能够正确处理这些特殊字符，并按照预期格式输出。\n示例语句：\"她说了：'Python是'最'棒的语言！'\""
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 39,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.打印包含单引号和双引号的字符串\n2.打印包含换行符和制表符的字符串\n3.使用原始字符串打印相同的内容，展示原始字符串和非原始字符串的区别"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 40,
+    "question": "第 5 题：简单的数学运算",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个程序，让用户输入两个数字，然后分别显示这两个数字的和、差、积、商。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 41,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.分别定义两个变量：num1,num2，让用户输入两个数字。\n2.在定义两个变量：n1 和 n2，用来将num1,num2转换为浮点数。\n3.分别使用+，-，*，/四个符合，计算n1 和 n2的结果。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 42,
+    "question": "第 6 题：使用转义字符和字符串操作打印格式化路径",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 【这个题和第4题类似】编写一个程序，让用户输入文件名和扩展名，\n然后构造并打印出带有正确转义字符的完整文件路径。为了简化，假定文件位于 \"D:\\Documents\\Projects\" 目录下。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 43,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义变量filename，用来接收用户输入的文件名。\n2.定义变量extension，用来接收用户输入的文件扩展名。\n3.定义变量path，拼接字符串。\n4.打印拼接后的字符串path。假定文件位于 \"D:\\Documents\\Projects\" 目录下。【拼接可以参照第一题】"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 44,
+    "question": "第 7 题：NoneType 的实际应用场景",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个程序，定义一个变量为None，然后尝试打印它的值和类型。再将该变量赋值为用户输入的一段文本，并再次打印它的值和类型。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 45,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义一个初始值value为 None 的变量.然后分别打印value和type(value).\n2.获取用户输入的文本.\n3.将变量赋值为用户输入的文本\n4.再次打印变量的值和类型"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 46,
+    "question": "第 8 题：布尔值的操作和展示",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目描述： 编写一个程序，定义两个布尔变量，分别设置为True和False。然后打印这两个布尔值及其类型。接下来，尝试将这两个布尔值转换为整数并打印结果。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 47,
+    "question": "详细步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义两个布尔变量：bool_true 和 bool_false，分别赋值True和False。\n2.打印两个布尔变量的值和类型。\n3.将两个布尔值转换为整数并打印。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 48,
+    "question": "第 9 题：is和==",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 49,
+    "question": "题目描述：请根据示例内容，完成任务：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 50,
+    "question": "# 示例：",
+    "options": [],
+    "answer": null,
+    "code_hint": "a = [1, 2, 3]\nb = [1, 2, 3]\nc = a"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 51,
+    "question": "任务：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1. 编写代码，打印出a、b和c的内存地址，即它们各自的id。\n2. 比较a==b；a is b；a == c；a is c的结果。\n3. 修改变量b，使其与a包含不同的元素，例如[4, 5, 6]，然后再次打印出a和b的比较结果（使用==和is）。"
+  },
+  {
+    "type": "code",
+    "day": 3,
+    "number": 52,
+    "question": "第 10 题：逻辑表达式的综合运用",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.【示例】给定两个变量 x 和 y，其中 x 为 10，y 为 20，请编写一个表达式来判断 x 是否不等于 y，并且 x 小于 15。需要输出判断结果。\n# 第1小点示例。\nx = 10\ny = 20\nr = x != y and x < 15\nprint('x != y and x < 15判断结果：',r)\n剩下的题目，按照这个要求解答。不使用if-else等结构的语句。\n2.编写一个Python表达式来判断一个变量 age 是否在 18 到 65 岁之间（包括18岁和65岁）。\n3. 给定一个字符串变量 name，请使用逻辑运算符检查 name 是否既不是 \"Alice\" 也不是 \"Bob\"。\n4. 给定一个数字变量 score，请编写一个逻辑表达式来判断 score 是否大于 90 并且小于 100，或者等于 80\n5. 编写一个Python程序，接受用户输入的三个数字，写出判断这三个数字是否构成一个三角形的边长（任意两边之和大于第三边）的逻辑表达式。\n6.编写一个Python程序，判断一个给定的年份 year 是否为闰年的逻辑表达式。闰年的条件是：能被4整除但不能被100整除，或者能被400整除。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 1,
+    "question": "第 01 题：判断一个数的正负",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：从键盘上输入一个浮点数，使用if-else语句来判断这个数是正数、负数还是零，并输出相应的结果。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 2,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义一个变量number，用来接收用户输入的数值。并转换为float。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 3,
+    "question": "2.使用 if-elif-else 语句判断正负：",
+    "options": [],
+    "answer": null,
+    "code_hint": "number > 0 ; 输出：number, \"是正数。\"\nnumber < 0 ; 输出：number, \"是负数。\"\nnumber = 0 ; 输出：number, \"是零。\""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 4,
+    "question": "第 02 题：判断是否水仙花数",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：从键盘上输入一个三位数的数，判断这个数字是否是三位数的数字，再判断是否是水仙花数。\n(什么是水仙花数：一个n位数（n≥3），它的每个位上的数字的n次幂之和等于它本身。本题只需要输入3位数，也就是：该数的每个位上的数字的立方和等于该数本身。)\n(数学示例：153>>>:1³=1 ; 5³=125 ; 3³=27 ; 他们的和等于153，所以这个数是水仙花数，不符合要求的就不是。)"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 5,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "定义一个变量number，使用 input() 函数提示用户输入一个三位数。并转换为int\n初步判断：判断number是否是三位数的数字。\n是-则进行是否水仙花数的处理；\n否-输出提示：无效的输入\n是否水仙花数的处理\n分解数字：使用算术运算符，分别提取百位，十位，个位上的数字。（如果你会下标取值的方式也可以使用哦）\n将取出来的数字，计算立方和。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 6,
+    "question": "水仙花数判断：",
+    "options": [],
+    "answer": null,
+    "code_hint": "立方和与原数字相等-输出：number 是水仙花数\n不等-则输出：number 不是水仙花数"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 7,
+    "question": "第 03 题：计算商品购物折扣",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 8,
+    "question": "题目要求：编写一个计算商品购物折扣的程序，折扣规则如下：",
+    "options": [],
+    "answer": null,
+    "code_hint": "如果购物金额小于100元，则不享受折扣。\n如果购物金额在100元（含）至300元之间，则享受9折优惠。\n如果购物金额超过300元，则享受85折优惠。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 9,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "1.定义一个变量(shopping_amount)，用户输入购物金额。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 10,
+    "question": "2.使用if_elif_else进行折扣规则判断，如下：",
+    "options": [],
+    "answer": null,
+    "code_hint": "如果购物金额，小于100元(不含)，则不享受折扣。\n如果购物金额在100元（含）至300元之间，则享受9折优惠。\n输出：\"您可享受9折优惠,需支付:\" + XXX + \"元\"\n如果购物金额超过300元（含），则享受85折优惠。\n输出：\"您可享受85折优惠,需支付:\" + XXX + \"元\"\n注意：input 控制台输入的值为str类型，计算需要转换为float类型。输出时，如果是字符串连接形势，应当转换为str类型。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 11,
+    "question": "第 04 题：简单的交通信号灯判断",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 12,
+    "question": "题目要求：编写一段代码，模拟交通信号灯的工作。要求用户输入颜色（红、黄、绿），根据颜色输出相应的指示信息即可。要求如下:",
+    "options": [],
+    "answer": null,
+    "code_hint": "让用户输入颜色（红、黄、绿），根据颜色输出相应的指示信息。\n输入红色(red),输出:请停车\n输入黄色(yellow),输出:准备停车/尽快通行\n输入绿色(green),输出:允许通行\n输入其它错误字符,输出:\"无效的颜色，请输入红色(red)、黄色(yellow)或绿色(green)\"\n解题思路：略。很简单，按题目要求完成。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 13,
+    "question": "第 05 题：判断三角形类型(day02、03的课后练习题出现过，现在完善一下这道题)",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 14,
+    "question": "题目要求：编写一个程序，让用户输入三角形的三条边长，判断并输出三角形的类型：",
+    "options": [],
+    "answer": null,
+    "code_hint": "等边三角形：三条边相等\n等腰三角形：至少有两条边相等\n直角三角形：满足勾股定理\n不是三角形：不符合三角形的边长关系"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 15,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "提示用户输入三条边长\n使用 input() 函数提示用户依次输入三条边的长度。将输入的字符串转换为浮点数（float），以便后续进行数值比较。\n定义变量存储输入值，将用户输入的三条边分别存储在变量 side1、side2 和 side3 中。\n使用条件语句判断是否构成三角形。\n三角形成立条件：任意两边之和大于第三边\n再嵌套判断是否符合三角形类型的要求。\n例如：判断side1 == side2 == side3；输出：“这是一个等边三角形”"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 16,
+    "question": "第 06 题：公园门票优惠政策模拟",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 17,
+    "question": "题目要求：编写一个 Python 程序，模拟进入公园的过程，根据以下规则判断游客是否可以免门票、享受八折优惠或需要支付全票：",
+    "options": [],
+    "answer": null,
+    "code_hint": "免门票：身高(height )小于等于130cm或年龄(age)小于等于6岁或年龄(age )大于等于80岁。\n门票八折：有学生证(student_card)。折后价格(final_price).\n其它情况：需要支付全票(full_price)。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 18,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "定义变量height，和age，分别从控制台提示并获取身高和年龄。\n初始化公园全票为：full_price = 100。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 19,
+    "question": "使用if/else判断是否符合免票条件：",
+    "options": [],
+    "answer": null,
+    "code_hint": "符合--输出：您符合免费入园条件！"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 20,
+    "question": "不符合--进一步判断：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 21,
+    "question": "不符合--进一步判断：",
+    "options": [],
+    "answer": null,
+    "code_hint": "有学生证--计算最终价格(final_price),并输出：您有学生证，可享8折如园！需支付票价为：\", final_price, \"元\"\n无学生证--输出：\"您需支付全票：\", full_price, \"元\""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 22,
+    "question": "第 07 题：实现一个简易计算器",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：编写一个简单的 Python 程序，模拟一个基本的计算器。\n用户可以输入两个数字和一个运算符（+、-、*、/），程序将根据运算符执行相应的计算操作，并输出结果。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 23,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 24,
+    "question": "1.提示用户输入：",
+    "options": [],
+    "answer": null,
+    "code_hint": "提示用户依次输入两个数字和一个运算符。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 25,
+    "question": "2.验证运算符的有效性：",
+    "options": [],
+    "answer": null,
+    "code_hint": "检查运算符是否为 +、-、* 或 / 中的一个。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 26,
+    "question": "3.根据输入的运算符执行相应的计算操作：",
+    "options": [],
+    "answer": null,
+    "code_hint": "使用条件语句（如 if-elif-else）根据运算符执行加法、减法、乘法或除法。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 27,
+    "question": "4.处理除以零的情况：",
+    "options": [],
+    "answer": null,
+    "code_hint": "如果用户尝试除以零，给出适当的错误提示。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 28,
+    "question": "5.输出计算结果：",
+    "options": [],
+    "answer": null,
+    "code_hint": "显示最终的计算结果"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 29,
+    "question": "第 08 题：计算应缴纳的车辆购置税",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 30,
+    "question": "题目要求：编写一段代码，要求用户输入车辆的购置价格，并根据以下规则计算应缴纳的车辆购置税：",
+    "options": [],
+    "answer": null,
+    "code_hint": "如果购置价格不超过10万元（含），税率为5%。\n如果购置价格超过10万元但不超过30万元（含），超过10万元的部分按10%交税。\n如果购置价格超过30万元但不超过50万元（含），超过30万元的部分按15%交税。\n如果购置价格超过50万元，前三个档次的税额加上超过50万元部分按20%交税。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 31,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "提示用户输入车辆购置价格。\n定义一个变量price，使用 input() 函数提示用户输入车辆的购置价格（单位：万元），并将其转换为浮点数类型（float）\n初始化车辆购置税\n初始化变量 purchase_tax 为0，用于存储计算出的车辆购置税。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 32,
+    "question": "判断-使用嵌套的 if-elif-else 结构来处理不同的价格范围：",
+    "options": [],
+    "answer": null,
+    "code_hint": "如果购置价格不超过10万元，则按5 % 交税。\n如果购置价格在10万到30万元之间，则超过10万元的部分按10 % 交税，并加上第一档已交税额。\n如果购置价格在30万到50万元之间，则超过30万元的部分按15 % 交税，并加上前两档已交税额。\n如果购置价格超过50万元，则前三个档次的税额加上超过50万元部分按20 % 交税。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 33,
+    "question": "输出应缴纳的车辆购置税：",
+    "options": [],
+    "answer": null,
+    "code_hint": "使用 print() 函数输出计算结果。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 34,
+    "question": "第 09 题：书籍借阅最大借阅量",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 35,
+    "question": "题目要求：编写一段Python代码，根据用户输入得会员类型和借阅书架的数量判断是否允许借阅，要求如下：",
+    "options": [],
+    "answer": null,
+    "code_hint": "普通会员最多可借阅5本书。\nVIP会员最多可借阅10本书。\n如果用户已经是最大借阅量，则不能继续借阅，并给出提示信息。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 36,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 37,
+    "question": "第 10 题：存款利率计算",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 38,
+    "question": "题目要求：编写一个 Python 程序，模拟存款利息的计算。用户可以输入存款金额和存款期限（年），程序将根据以下规则计算到期后的总金额并输出结果：",
+    "options": [],
+    "answer": null,
+    "code_hint": "年利率为3%。\n如果存款期限超过5年，超出部分的年利率为2%。\n利息计算使用简单利息公式：利息 = 本金 × 利率 × 时间。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 39,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": "定义变量principal、time，分别让用户输入存款金额（float型数据）和存款期限（int型数据）。\n初始化利息（interest = 0）和总金额（total_amount = principal）"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 40,
+    "question": "根据存款期限计算利息：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 41,
+    "question": "如果(if)存款期限超过5年：",
+    "options": [],
+    "answer": null,
+    "code_hint": "计算前5年的利息（按3%的年利率）。\n计算超过5年的部分的利息（按2%的年利率）。"
+  },
+  {
+    "type": "code",
+    "day": 4,
+    "number": 42,
+    "question": "如果(if)存款期限不超过5年：",
+    "options": [],
+    "answer": null,
+    "code_hint": "直接根据存款期限和3%的年利率计算利息。\n判断结束后：计算到期后的总金额（total_amount）\n输出到期后的总金额。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 1,
+    "question": "第 01 题：用户登陆",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：编写一个Python程序，需要用户输入用户名（admin）和密码（password）后重复三次后登录成功。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 2,
+    "question": "具体要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "密码用户名每正确1次提示1次，记录3次输入中正确的次数。\n3次均符合要求：提示登录成功，反之提示失败，并给出失败次数。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 3,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 4,
+    "question": "第 02 题：用符号*打印正方形图案",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：见图案\n图形规律：从图形可见。5行5列。所有只需要打印5行，每次打印5个*就行。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 5,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 6,
+    "question": "第 03 题：用符号*打印一个正直角三角形",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：见图案\n图形规律：观察图形，图形有5行，每一行的*是逐行增加的，直到第五行有5个星号。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 7,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 8,
+    "question": "第 04 题：用符号*打印一个倒直角三角形",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：见图所示"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 9,
+    "question": "观察图形，发现规律：",
+    "options": [],
+    "answer": null,
+    "code_hint": "总共有5行。\n第1行有5个星号，第2行有4个星号，依此类推，直到第5行只有1个星号。\n每行的星号之间有两个空格。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 10,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 11,
+    "question": "第  05  题：for循环实现99乘法表",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 12,
+    "question": "题目要求：",
+    "options": [],
+    "answer": null,
+    "code_hint": "for循环实现99乘法表。【结合02、03题的用法】\n规律说明\n99乘法表是对称的。是一个9x9的表格。每一行和每一列的数字从1递增到9。\n假设行数是 i  、列数是 j\n行：由外层循环变量 i 控制，表示当前是第几行，也决定了该行的第一个乘数。\n列：由内层循环变量 j 控制，表示当前行中的第几个乘法表达式(行数（i）和列数（j）的乘积)。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 13,
+    "question": "解题步骤：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 14,
+    "question": "简单的来说：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 15,
+    "question": "第 06 题：存钱罐【简单的for循环训练】",
+    "options": [],
+    "answer": null,
+    "code_hint": "题目要求：你有一个存钱罐，每天存入相同数量的硬币。\n编写一个Python程序，通过用户输入每天存入的硬币数量和总天数，使用for循环计算并输出从第1天到指定天数，你总共存入了多少硬币。"
+  },
+  {
+    "type": "code",
+    "day": 5,
+    "number": 16,
+    "question": "解题思路：",
+    "options": [],
+    "answer": null,
+    "code_hint": ""
+  }
+]
