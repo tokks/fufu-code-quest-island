@@ -891,6 +891,59 @@ function confirmModal() {
     closeModal();
 }
 
+let rewardCallback = null;
+
+function showRewardModal(data, callback) {
+    const modal = document.getElementById('rewardModal');
+    const body = document.getElementById('rewardModalBody');
+    
+    let achievementsHtml = '';
+    if (data.newly_unlocked && data.newly_unlocked.length > 0) {
+        achievementsHtml = `
+            <h5>🎉 解锁新成就！</h5>
+            ${data.newly_unlocked.map(ach => `
+                <div class="reward-item">
+                    <i class="fas fa-trophy text-yellow"></i>
+                    <span>${ach.name}: +${ach.reward} 金币</span>
+                </div>
+            `).join('')}
+        `;
+    }
+    
+    let regionUnlockHtml = '';
+    if (data.all_completed && data.next_region) {
+        regionUnlockHtml = `
+            <h5>🌟 新区域解锁！</h5>
+            <p>恭喜完成该区域所有关卡！</p>
+        `;
+    }
+    
+    body.innerHTML = `
+        <h4>✓ 回答正确！</h4>
+        <div class="reward-item">
+            <i class="fas fa-star text-yellow"></i>
+            <span>获得 ${data.exp_reward} 经验值</span>
+        </div>
+        <div class="reward-item">
+            <i class="fas fa-coins text-yellow"></i>
+            <span>获得 ${data.gold_reward} 金币</span>
+        </div>
+        ${achievementsHtml}
+        ${regionUnlockHtml}
+    `;
+    
+    rewardCallback = callback;
+    modal.classList.add('show');
+}
+
+function closeRewardModal() {
+    document.getElementById('rewardModal').classList.remove('show');
+    if (rewardCallback) {
+        rewardCallback();
+        rewardCallback = null;
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
     const customModal = document.getElementById('customModal');
     if (customModal) {
@@ -972,46 +1025,15 @@ function submitChoice(answer) {
         const feedback = document.getElementById('levelFeedback');
         
         if (data.success) {
-            feedback.innerHTML = `
-                <div class="reward-box">
-                    <h4>✓ 回答正确！</h4>
-                    <div class="reward-item">
-                        <i class="fas fa-star text-yellow"></i>
-                        <span>获得 ${data.exp_reward} 经验值</span>
-                    </div>
-                    <div class="reward-item">
-                        <i class="fas fa-coins text-yellow"></i>
-                        <span>获得 ${data.gold_reward} 金币</span>
-                    </div>
-                    ${data.newly_unlocked && data.newly_unlocked.length > 0 ? `
-                        <div class="mt-3">
-                            <h5>🎉 解锁新成就！</h5>
-                            ${data.newly_unlocked.map(ach => `
-                                <div class="reward-item">
-                                    <i class="fas fa-trophy text-yellow"></i>
-                                    <span>${ach.name}: +${ach.reward} 金币</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    ` : ''}
-                    ${data.all_completed && data.next_region ? `
-                        <div class="mt-3">
-                            <h5>🌟 新区域解锁！</h5>
-                            <p>恭喜完成该区域所有关卡！</p>
-                        </div>
-                    ` : ''}
-                </div>
-            `;
-            
             updatePlayer(data.player);
             
             if (data.newly_unlocked && data.newly_unlocked.length > 0) {
                 setTimeout(() => {
                     showAchievementModal(data.newly_unlocked);
-                }, 1000);
+                }, 500);
             }
             
-            setTimeout(() => {
+            showRewardModal(data, function() {
                 if (data.all_completed && data.next_region) {
                     switchSection('world-map');
                 } else {
@@ -1028,7 +1050,7 @@ function submitChoice(answer) {
                             }
                         });
                 }
-            }, 1500);
+            });
         } else {
             let damageHtml = '';
             const playerData = data.player;
@@ -1161,40 +1183,9 @@ function submitAnswer() {
         const feedback = document.getElementById('levelFeedback');
         
         if (data.success) {
-            feedback.innerHTML = `
-                <div class="reward-box">
-                    <h4>✓ 回答正确！</h4>
-                    <div class="reward-item">
-                        <i class="fas fa-star text-yellow"></i>
-                        <span>获得 ${data.exp_reward} 经验值</span>
-                    </div>
-                    <div class="reward-item">
-                        <i class="fas fa-coins text-yellow"></i>
-                        <span>获得 ${data.gold_reward} 金币</span>
-                    </div>
-                    ${data.newly_unlocked && data.newly_unlocked.length > 0 ? `
-                        <div class="mt-3">
-                            <h5>🎉 解锁新成就！</h5>
-                            ${data.newly_unlocked.map(ach => `
-                                <div class="reward-item">
-                                    <i class="fas fa-trophy text-yellow"></i>
-                                    <span>${ach.name}: +${ach.reward} 金币</span>
-                                </div>
-                            `).join('')}
-                        </div>
-                    ` : ''}
-                    ${data.all_completed && data.next_region ? `
-                        <div class="mt-3">
-                            <h5>🌟 新区域解锁！</h5>
-                            <p>恭喜完成该区域所有关卡！</p>
-                        </div>
-                    ` : ''}
-                </div>
-            `;
-            
             updatePlayer(data.player);
             
-            setTimeout(() => {
+            showRewardModal(data, function() {
                 if (data.all_completed && data.next_region) {
                     switchSection('world-map');
                 } else {
@@ -1211,7 +1202,7 @@ function submitAnswer() {
                             }
                         });
                 }
-            }, 1500);
+            });
         } else {
             // 显示答错反馈和HP变化
             let damageHtml = '';

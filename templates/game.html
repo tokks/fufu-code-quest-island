@@ -242,6 +242,20 @@
         </div>
     </div>
 
+    <div id="rewardModal" class="custom-modal">
+        <div class="reward-modal-content">
+            <div class="reward-modal-header">
+                <i class="fas fa-trophy reward-icon"></i>
+                <h3>✓ 回答正确！</h3>
+            </div>
+            <div class="reward-modal-body" id="rewardModalBody">
+            </div>
+            <div class="reward-modal-footer">
+                <button class="btn btn-primary reward-btn" onclick="closeRewardModal()">继续</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script src="{{ url_for('static', filename='js/game.js') }}?v=9"></script>
 </body>
