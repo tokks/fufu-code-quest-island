@@ -146,7 +146,8 @@
     "question": "使用print函数输出一行内容：'hello，富富'",
     "options": [],
     "answer": "print('hello，富富')",
-    "code_hint": "提示：可以参考下面的模板\nprint()",
+    "code_template": "print()",
+    "code_hint": "提示：可以参考下面的模板",
     "total_order": 11
   },
   {
@@ -156,7 +157,8 @@
     "question": "使用print函数输出两行内容：第一行'欢迎来到Python世界'，第二行'开始你的编程之旅吧'",
     "options": [],
     "answer": "print('欢迎来到Python世界')\nprint('开始你的编程之旅吧')",
-    "code_hint": "提示：可以参考下面的模板\nprint()\nprint()",
+    "code_template": "print()\nprint()",
+    "code_hint": "提示：可以参考下面的模板",
     "total_order": 12
   },
   {
